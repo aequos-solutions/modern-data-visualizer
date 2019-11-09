@@ -1,0 +1,41 @@
+site_name: aequos - Modern Data Visualizer for SharePoint Online
+nav:
+    - Home: index.md
+    - Getting Started:
+        - Activate standalone license: getting_started/setup_standalone.md
+        - Available data sources: getting_started/builtin_datasources.md
+        - Available layouts: getting_started/builtin_datasources.md
+    - Customize templates:
+        - Templating guidelines: templating/guidelines.md
+    - Extensibility Library:
+        - Getting started: extensibility/extensibility.md
+        - Create a custom Data Source: extensibility/datasource.md
+        - Create a custom Layout: extensibility/layout.md
+        - Create a custom Web Component: extensibility/component.md 
+    - Frequently Asked Questions: faq/faq.md
+theme:
+  name: 'material'
+  palette:
+    primary: 'grey'
+  feature:
+    tabs: true
+  logo: 'assets/aequos_logo.png'
+  font:
+    text: 'Nunito'
+    code: 'Ubuntu Mono'
+extra_css:
+  - 'extra.css'
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+extra:
+  social:
+    - type: 'twitter'
+      link: 'https://twitter.com/aequos_ca'
+    - type: 'link'
+      link: 'www.aequos.ca'
+repo_url: https://github.com/aequos-solutions/aequos.github.io
+edit_uri: blob/master/docs
