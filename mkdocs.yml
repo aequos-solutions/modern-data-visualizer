@@ -1,12 +1,13 @@
-site_name: aequos - Modern Data Visualizer for SharePoint Online
+site_name: Modern Data Visualizer solution for SharePoint Online
 nav:
     - Home: index.md
     - Getting Started:
         - Activate standalone license: getting_started/setup_standalone.md
         - Available data sources: getting_started/builtin_datasources.md
-        - Available layouts: getting_started/builtin_datasources.md
+        - Available layouts: getting_started/builtin_layouts.md
     - Customize templates:
         - Templating guidelines: templating/guidelines.md
+        - Tokens: templating/tokens.md
     - Extensibility Library:
         - Getting started: extensibility/extensibility.md
         - Create a custom Data Source: extensibility/datasource.md

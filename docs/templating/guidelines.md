@@ -35,11 +35,11 @@ If you need to use current site theme colors, fonts and so on you can use the `t
 
 For the cards and details list layouts, une the `@theme` context property instead:
 
-![Theme usage in fields](./assets/theme_field.png "Theme usage in fields")
+![Theme usage in fields](../assets/theme_field.png "Theme usage in fields")
 
 A good way to see all available values for the current theme is to switch to the debug layout and inspect these values:
 
-![Theme properties](./assets/theme_debug.png "Theme properties")
+![Theme properties](../assets/theme_debug.png "Theme properties")
 
 # Work with placeholders
 
@@ -90,7 +90,7 @@ If no placeholder is present in the template, a default one will be loaded.
 
 The cards layout provides the following options:
 
-![Card layout options](./assets/cards_layout_options.png "Card layout options")
+![Card layout options](../assets/cards_layout_options.png "Card layout options")
 
 
 | Option | Description

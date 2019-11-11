@@ -37,7 +37,7 @@ The OData data source allows you to get data from the following APIs
 - **Azure Active Directoy secured API** like an Azure function, Azure Web Application, etc.
 - **Anonymous API**
 
-    !["OData API types](./assets/odata_http_api_type.png "OData API types")
+    !["OData API types](../assets/odata_http_api_type.png "OData API types")
 
 
 ## Microsoft Graph
@@ -87,7 +87,7 @@ The only method allowed are `GET` or `POST`. For each, you have the ability so s
     }
 
 
-> If you specify a `POST` request, you can also benefit of [builtin tokens](./tokens.md).
+> If you specify a `POST` request, you can also benefit of [builtin tokens](../templating/tokens.md).
 
     {
         "ItemsCount": "{itemsCountPerPage}",
@@ -125,7 +125,7 @@ If unchecked, it will be **your URL** to be executed to get the next page result
 
         <your_sharepoint_site_url>/_api/lists?$top={itemsCountPerPage}&$skip={startRow}
 
-    If you want to control the paging by yourself, you will have to provide a `$skip` value manually using builtin tokens. You can use the `{itemsCountPerPage}` and `{startRow}` [tokens](./tokens.md) where `{startRow}` corresponds to the number or items per page * the current page number (start from 0) and `{itemsCountPerPage}` to the number of items per page configured in the property pane. The URL and the items count will be resolved dynamically based on these token values as long as you move through pages. Because we can't determine the total number of items, in some cases, the last page could be empty. It happens for example when the 'total items count'/'items count per page' is even (i.e. exact same number of items for each page).
+    If you want to control the paging by yourself, you will have to provide a `$skip` value manually using builtin tokens. You can use the `{itemsCountPerPage}` and `{startRow}` [tokens](../templating/tokens.md) where `{startRow}` corresponds to the number or items per page * the current page number (start from 0) and `{itemsCountPerPage}` to the number of items per page configured in the property pane. The URL and the items count will be resolved dynamically based on these token values as long as you move through pages. Because we can't determine the total number of items, in some cases, the last page could be empty. It happens for example when the 'total items count'/'items count per page' is even (i.e. exact same number of items for each page).
 
 ### Static paging
 

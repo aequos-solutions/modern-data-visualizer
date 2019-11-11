@@ -3,7 +3,7 @@
 The Modern Data Visualizer solution allows you to customize the Web Part behavior in several ways:
 
 -   **Custom Data Source**: add your own data source options with personalized property pane fields
-    ![Custom data source](./assets/custom_datasource.png "Custom data source")
+    ![Custom data source](../assets/custom_datasource.png "Custom data source")
 -   **Custom Layouts**: add you own layouts options with a custon Handlebars template
 -   **Custom Web Components**: add you own components to be used in Handlebars template without the need to create a layout.
 

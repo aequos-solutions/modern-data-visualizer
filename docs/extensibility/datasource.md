@@ -69,7 +69,7 @@ IMAGE_HERE
 
 4. Your custom data source will appear automatically in the Data Visualizer Web Part with associated property pane fields if specified:
 
-  !["Custom data source"](./assets/custom_datasource.png "OData API types")
+  !["Custom data source"](../assets/custom_datasource.png "OData API types")
 
 ### Debug your data source
 
@@ -181,4 +181,4 @@ We also provide custom services to help you building your data source. To consum
 
         this.tokenService.resolveTokens(<your_string_property>);
 
-    See [Tokens](./tokens.md) to get the list of all supported tokens. 
+    See [Tokens](../templating/tokens.md) to get the list of all supported tokens. 
