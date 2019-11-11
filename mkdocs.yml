@@ -13,7 +13,8 @@ nav:
         - Create a custom Data Source: extensibility/datasource.md
         - Create a custom Layout: extensibility/layout.md
         - Create a custom Web Component: extensibility/component.md 
-    - Frequently Asked Questions: faq/faq.md
+    - Frequently Asked Questions: faq.md
+    - Changelog: changelog.md
 theme:
   name: 'material'
   palette:
