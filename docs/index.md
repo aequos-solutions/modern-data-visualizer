@@ -1,4 +1,7 @@
-# Welcome to MkDocs
+# aequos Data Visualizer solution
+
+The 'aequos Data Visualizer' solution is a designed for SharePoint Online. It corresponds to enhanced the product version and the well known 'PnP Modern Searc' solution 
+It is totally modern and built with the latest SharePoint Framework version.
 
 For full documentation visit [mkdocs.org](https://mkdocs.org).
 

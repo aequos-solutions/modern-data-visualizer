@@ -1,10 +1,13 @@
 site_name: Modern Data Visualizer solution for SharePoint Online
 nav:
-    - Home: index.md
+    - Introduction: index.md
     - Getting Started:
+        - Get and deploy the solution:  getting_started/get_and_install-solution.md
         - Activate standalone license: getting_started/setup_standalone.md
         - Available data sources: getting_started/builtin_datasources.md
         - Available layouts: getting_started/builtin_layouts.md
+    - Basic usage: 
+      - Data Visualizer: basic/usage/data-visualizer/introduction.md
     - Customize templates:
         - Templating guidelines: templating/guidelines.md
         - Tokens: templating/tokens.md

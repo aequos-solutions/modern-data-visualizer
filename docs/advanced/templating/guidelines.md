@@ -10,6 +10,15 @@ This solution has been tested on the following browsers:
 
 TODO test versions
 
+# Slots
+
+The following fields are provided automatically by the system and you can uise them as slots:
+
+- AutoPreviewImageUrl: Let the system determines the best URL to use for the thumbnail according to the item properties and configured slots.
+- AutoPreviewUrl:  Let the system determines the best URL to use for the preview callout according to the item properties and configured slots.
+- AutoSiteId: needed for preview (CAML only)
+- AutoListId: needed for preview (CAML only)
+
 # Use SharePoint theme in your templates
 
 If you need to use current site theme colors, fonts and so on you can use the `theme` property available in the root Handlebars context like this:
