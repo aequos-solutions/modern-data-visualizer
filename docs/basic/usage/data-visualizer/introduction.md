@@ -29,6 +29,8 @@ The first page allows you to select a data source. By default, the following dat
 | **OData** | Retrieve data from an OData REST API such as **Microsoft Graph**, **Azure Active Directory API**, **SharePoint REST API (v1 or v2)** or **OData anonymous API**.
 | **Static Data** | Gets data from a static JSON object defined in the Web Part.
 
+> Be careful, when you switch the data source in the property pane, all the previous data source properties are lost. We do this to avoid polluting the Web Part property bag.
+
 ### 2. Select a layout
 
 

@@ -1,6 +1,6 @@
-# SharePoint search' data source
+# 'SharePoint search' data source
 
-The SharePoint Search data source retrieve items from the SharePoint search engine.
+The _'SharePoint Search'_ data source retrieve items from the SharePoint search engine.
 
 > The SharePoint search is different from the Microsoft Graph search.
 

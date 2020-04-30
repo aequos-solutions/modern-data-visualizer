@@ -23,6 +23,8 @@ This data source allows you to define your own data schema (i.e. fields) that yo
 
 > Don't forget the quotes '"' for property names.
 
+> Even if you don't return items, you must specifiy this property. In this case, pass an empty array.
+
 ## How to use this data source: a practical example
 
 Let say you want to display a static list of useful links for your organization on the home page. Open the code editor and enter the following data:
@@ -50,5 +52,7 @@ The data could be look like this:
 ```
 
 Now to consume this data, you can either start from an existing layout, or use a custom one. 
+
+Use slots
 
 **TODO**
