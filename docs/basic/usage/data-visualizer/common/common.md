@@ -1,5 +1,3 @@
-# Common
-
 Common general options for all data sources
 
 | Setting | Description | Default value |

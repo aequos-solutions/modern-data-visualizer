@@ -1,4 +1,4 @@
-site_name: Modern Data Visualizer solution for SharePoint Online
+site_name: aequos Modern Data Visualizer solution for SharePoint Online
 nav:
     - Introduction: index.md
     - Getting Started:
@@ -6,36 +6,35 @@ nav:
         - Activate standalone license: getting_started/setup_standalone.md
         - Available data sources: getting_started/builtin_datasources.md
         - Available layouts: getting_started/builtin_layouts.md
-    - Basic usage: 
-      - Data Visualizer: basic/usage/data-visualizer/introduction.md
-    - Customize templates:
-        - Templating guidelines: templating/guidelines.md
-        - Tokens: templating/tokens.md
-    - Extensibility Library:
-        - Getting started: extensibility/extensibility.md
-        - Create a custom Data Source: extensibility/datasource.md
-        - Create a custom Layout: extensibility/layout.md
-        - Create a custom Web Component: extensibility/component.md 
+    - Data Visualizer:
+      - Usage: basic/usage/data-visualizer/introduction.md
+      - Data sources: basic/usage/data-visualizer/data-sources/index.md
+      - Slots: basic/usage/data-visualizer/slots.md
+      - Tokens: basic/usage/data-visualizer/tokens.md
+      - Layouts: basic/usage/data-visualizer/layouts/index.md
+      - Connections: index.md
+      - Extensibility: index.md
     - Frequently Asked Questions: faq.md
-    - Changelog: changelog.md
 theme:
   name: 'material'
   palette:
-    primary: 'grey'
+    primary: 'black'
   feature:
     tabs: true
   logo: 'assets/aequos_logo.png'
   font:
-    text: 'Nunito'
     code: 'Ubuntu Mono'
 extra_css:
-  - 'extra.css'
+  - 'assets/extra.css'
 markdown_extensions:
+  - attr_list
   - admonition
   - codehilite:
       guess_lang: false
   - toc:
       permalink: true
+  - markdown_include.include:
+          base_path: docs
 extra:
   social:
     - type: 'twitter'

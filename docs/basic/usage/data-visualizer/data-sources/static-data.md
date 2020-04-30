@@ -1,10 +1,8 @@
-# 'Static data' data source
-
 The _'Static data'_ is the simplest data source you can use. With this data ssource, items are retrieved from a static JSON object that you define and does not require any asynchronous call.
 
 !["Static Data"](../../../../assets/webparts/data_visualizer/page1/static_data_intro.png)
 
-## When to use this data source?
+#### When to use this data source?
 
 This data source allows you to define your own data schema (i.e. fields) that you can consume in your template. However, to be consumed by templates, the data must follow this JSON strcuture: 
 
@@ -25,7 +23,7 @@ This data source allows you to define your own data schema (i.e. fields) that yo
 
 > Even if you don't return items, you must specifiy this property. In this case, pass an empty array.
 
-## How to use this data source: a practical example
+#### How to use this data source: a practical example
 
 Let say you want to display a static list of useful links for your organization on the home page. Open the code editor and enter the following data:
 

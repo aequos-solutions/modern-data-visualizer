@@ -1,8 +1,6 @@
-# Tokens
+Tokens give you the ability to write dynamic queries for your data sources by using the special syntax `{<TokenName>}`.
 
-Tokens are an important part of the solution as well. They give you the ability to write dynamic queries for your data sources by using the special syntax `{<TokenName>}`.
-
-## Where can I use tokens?
+#### Where can I use tokens?
 
 You can use tokens in the following locations:
 
@@ -16,22 +14,24 @@ You can use tokens in the following locations:
             - Anywhere in the CAML XML text if you are in _'Advanced'_ mode.
         - **OData**
             - URL field.
+    - Layouts
+        - In the _'See all'_ link.
     - Anywhere in custom data sources code using the `TokenService` and `resolveTokens()` method.
 
 - **Data Verticals Web Part**
     - In the link URL when the vertical item is a link.
 
-## Supported tokens (all data sources)
+#### Supported tokens (all data sources)
 
 > Tokens are case insensitive
 
-### Page tokens
+##### Page tokens
 
 |**Token**|**Definition**|
 |:-----|:-----|
 |{Page.&lt;FieldName&gt;}  <br/> | The value of a field on the page from where the query was issued. For example, if the page from where the query was issued contained a site column named "ContentOwner," specifying {Page.ContentOwner} would allow you to query for the value of "ContentOwner." FieldName is the internal name of the field. When used with taxonomy columns, use `{Page.<FieldName>.Label}` or `{Page.<FieldName>.TermID}` <br/> |
 
-### Connections tokens
+##### Connections tokens
 
 Tokens related to connected Web Parts in the Data Visualizer.
 
@@ -42,7 +42,7 @@ Tokens related to connected Web Parts in the Data Visualizer.
 |{itemsCountPerPage} | The number of items count per page configured in teh Web Part. Useful for the OData source to specify a `$top={itemsCountPerPage}` parameter.
 |{startRow} | The next start row number according to current paging. Useful for the OData source to specify a `$skipToken={startRow}` or `$skip={startRow}` parameters.
 
-### Context tokens
+##### Context tokens
 
 |**Token**|**Definition**|
 |:-----|:-----|
@@ -53,7 +53,7 @@ Tokens related to connected Web Parts in the Data Visualizer.
 |{CurrentDisplayLCID}  <br/> |Numeric value of the current display language based on MUI in _ll-cc format_.  <br/> |
 |{TenantUrl}  <br/> |URL of the tenant (root site)<br/> |
 
-### Site, web, hub, etc. tokens
+##### Site, web, hub, etc. tokens
 
 Except for `{Hub}`, these a shortands to the `{PageContext}` tokens. They retunrs the same values.
 
@@ -65,7 +65,7 @@ Except for `{Hub}`, these a shortands to the `{PageContext}` tokens. They retunr
 | {List.&lt;PropertyName&gt;} | Resolves current list related tokens. Ex `{List.id._guid}` or `{List.absoluteUrl}`.
 | {Web.&lt;PropertyName&gt;} | Resolves current web related tokens  You can use the 'Debug' layout and the `context` property to see all available values for a site. Ex `{Web.id._guid}` or `{Web.absoluteUrl}`.
 
-### User tokens
+##### User tokens
 
 |**Token**|**Definition**|
 |:-----|:-----|
@@ -75,7 +75,7 @@ Except for `{Hub}`, these a shortands to the `{PageContext}` tokens. They retunr
 |{User.PreferredDisplayLanguage}  <br/> |Language as specified as Preferred Display Language in the profile of the user who issued the query.  <br/> |
 |{User.\<property\>}  <br/> |Any property from the user profile of the user who issued the query — for example, SPS-Interests, including custom properties.  <br/> |
 
-### Date tokens
+##### Date tokens
 
 |**Token**|**Definition**|
 |:-----|:-----|
@@ -84,13 +84,13 @@ Except for `{Hub}`, these a shortands to the `{PageContext}` tokens. They retunr
 |{CurrentDate}  <br/> | Today's date, 1-31 <br/> |
 |{Today+/- \<integer value for number of days\>}  <br/> |A date calculated by adding/subtracting the specified number of days to/from the date when the query is issued. Date format is YYYY-MM-DD (Ex: `{Today+5}`) <br/> |
 
-## SharePoint search query variables
+#### SharePoint search query variables
 
-### Supported variables
+##### Supported variables
 
 The SharePoint Search engine already supports tokens by default (i.e query variables, ex: `{Site.ID}`). You can use them in the **Query template** field only. To see the all the supported tokens natively, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/sharepoint/technical-reference/query-variables).
 
-### Use the 'OR' operator
+##### Use the 'OR' operator
 
 To deal with mutli valued properties (like taxonomy multi or choices SharePoint fields), you can use the 'OR' operator syntax `{|<property><operator><multi_values_property>}`. The search query will be expanded to the following KQL query:
 

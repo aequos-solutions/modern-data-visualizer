@@ -1,24 +1,22 @@
-# Data source slots
-
 The _'slots'_ are a very important part of this solution and their use becomes very handy when it comes to create your own layouts. The slots feature is available for all data sources, including builtin and custom ones.
 
-!["Data source slots"](../../../assets/webparts/data_visualizer/page1/data_source_slots.png)
+!["Data source slots"](../../../assets/webparts/data_visualizer/page1/data_source_slots.png){: .center}
 
-## What is 'slot'?
+#### What is a 'slot'?
 
 > A slot is a mapping between a data source specific field and a placeholder variable used in layout templates.
 
 To illustrate this concept, here are a single card from the 'Cards' layout. You can see how slots apply to the UI:
 
-!["Slots concept"](../../../assets/webparts/data_visualizer/page1/slot_concept.png)
+!["Slots concept"](../../../assets/webparts/data_visualizer/page1/slot_concept.png){: .center}
 
 Slot definitions will be replaced dynamically by the underlying field values you specified in the mappings list. In the end, from a template perspective, an URL is an URL regardless of the source. Slots are used individually depending of the requirements of the chosen layout. 
 
-## Why I would need them?
+#### Why I would need them?
 
 They allow you to get your data source (custom or builtin) work with all templates without the need of refactoring them and to adapt your data source specific fields. **Basically, it is a convenient, time saving feature making your templates reusable**.
 
-## Builtin slots
+#### Builtin slots
 
 Here are all the builtin slots the solution provides. 
 
@@ -32,7 +30,7 @@ Here are all the builtin slots the solution provides.
 | **Date** | A date associated to the item. Can be for instance, the created date, modified date or publishing date.
 | **FileType** | The file type. This can be an extension (ex: `docx`) or the complete path of the item including the file extension (ex: `https://mycompany.sharepoint.com/sites/mysite/Shared Documents/MyFile.pdf`).
 | **PreviewImageUrl** | The image thumbnail URL to display for an item. You can use the builtin `AutoPreviewImageUrl` field here to get a default image if applicable.
-| **PreviewUrl** | Same as preview image URL but for the interactive preview of the item (ex: a Word document). You can use the builtin `AutoPreviewUrl` field here to get a default image if applicable. 
+| **PreviewUrl** | Same as preview image URL but for the interactive preview of the item (ex: a Word document). You can use the builtin `AutoPreviewUrl` field here to get a default image if applicable. In this case, the Web Part will use a generic Microsoft Graph URL to generate the preview. More information on [supported file types](https://support.microsoft.com/en-us/office/file-types-supported-for-previewing-files-in-onedrive-sharepoint-and-teams-e054cd0f-8ef2-4ccb-937e-26e37419c5e4).
 | **Author** | An author associated to the item.
 | **Tags** | Tags associated to the item. Can be for instance taxonomy terms.
 | **SiteId** | The SharePoint site ID associated to the item. With `ListId` and `ItemId` this value is used to generate the preview URL.
@@ -45,7 +43,7 @@ Here are all the builtin slots the solution provides.
 
 > A slot can be empty.
 
-## Define your custom slots
+#### Define your custom slots
 
 In addition to builtin ones, you can add your own slots and use them in layouts. To do so, first add your slot in the list:
 

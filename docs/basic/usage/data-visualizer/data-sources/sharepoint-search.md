@@ -1,11 +1,11 @@
-# 'SharePoint search' data source
-
 The _'SharePoint Search'_ data source retrieve items from the SharePoint search engine.
 
 > The SharePoint search is different from the Microsoft Graph search.
 
-| Setting | Description | Default value |
-| ------- |---------------- | ---------- | -----------|
+#### Source configuration
+
+| Setting | Description | Default value 
+| ------- |---------------- | ---------- |
 | **Query text** | The input query text to pass to the search engine. This setting is not configurable directly in the data source options. To enable it you use go the the third configuration page of the Web Part and selected either a static or dynamic value (Ex: from a connected search box Web Part). See [the connection documentation](#) for more information on how to configure this option. This value can be then used in the **Query template** using the `{searchTerms}` token. Also this value can be a [Keyword Query Language expression (KQL)](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference). | None.
 | **Query template** | The search query template to use. It allows you to use dynamic tokens according to the context or specifiy conditions that should always apply to the query. | `{searchTerms}`
 | **Result source ID** | Can be either a builtin result source ID listed in the dropdown or a custom result source GUID that you type. In this case to take effect, you must press _'Enter'_ to save the value. | LocalSharePointResults
@@ -16,5 +16,5 @@ The _'SharePoint Search'_ data source retrieve items from the SharePoint search 
 | **Enable query rules** | Whether or not apply SharePoint query rules. | False.
 | **Include OneDrive for Business results** | Whether or not include OneDrive for business results. | False.
 | **Enable audience targeting** | Whether or not results should be targeted according to the audiences that the current user belongs to. [More information about modern audiences and how to configure them](https://support.microsoft.com/en-us/office/target-navigation-news-and-files-to-specific-audiences-33d84cb6-14ed-4e53-a426-74c38ea32293). | False.
-| **Enable localization** | If enabled, the Web Part will try to translate the taxonomy term IDs found in result item properties and refinement values to their corresponding label according to the curent UI language. To get it work, you must map a new refinable managed property associated with ows_taxId_ crawled property and turn this toggle 'on': !["Static Data"](../../../../assets/webparts/data_visualizer/page1/localization_crawled_property.png) If enabled and depending how many items are currently displayed, this could be slightly decrease loading performances. | False.
+| **Enable localization** | If enabled, the Web Part will try to translate the taxonomy term IDs found in result item properties and refinement values to their corresponding label according to the curent UI language. To get it work, you must map a new refinable managed property associated with ows_taxId_ crawled property and turn this toggle 'on': [!["Static Data"](../../../../assets/webparts/data_visualizer/page1/localization_crawled_property.png)](../../../../assets/webparts/data_visualizer/page1/localization_crawled_property.png) If enabled and depending how many items are currently displayed, this could be slightly decrease loading performances. | False.
 

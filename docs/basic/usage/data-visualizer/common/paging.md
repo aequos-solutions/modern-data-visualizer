@@ -1,5 +1,3 @@
-# Paging
-
 The paging options are available for all data sources.
 
 | Setting | Description | Default value |
@@ -11,7 +9,7 @@ The paging options are available for all data sources.
 |**Hide first/last navigation buttons** | Self explicit.
 |**Hide navigation buttons (prev, next, first, last) if they are disabled.** | Self explicit.
 
-## Data source paging behaviors
+**Data source paging behaviors**
 
 Paging is available for all data sources. However, they can handle it differently.
 

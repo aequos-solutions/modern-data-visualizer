@@ -1,5 +1,3 @@
-# Caching
-
 For all data sources, you have the option to cache the data to improve performances during the first page load.
 
 !["Data source slots"](../../../../assets/webparts/data_visualizer/common/caching_options.png)
@@ -12,4 +10,4 @@ Notice the data are **won't be put in the cache** when:
 - The current page number is greater than 1.
 - The input query text changes.
 
-> Data in the cache are stored in the browser local storage under the following name: `aequosDataVisualizer_DataSourceDataFirstPage_<WebPart instance ID>`
+> Data in the cache are stored in the browser local storage under the following name: aequosDataVisualizer_DataSourceDataFirstPage_&lt;WebPart instance ID&gt;.

@@ -10,7 +10,7 @@ Absolutely not! We started the code from scratch with a completely new design ap
 
 > _I don't want a subscription based model. Can I just buy a 'standalone' version and can keep the solution forever?_
 
-Of course! Along the subscription based model, we provide a standalone option with a license key. All you need is to setup a tenant property in your Office 365 tenant to get it work. It is slightly more expensive than the subscription based model, but it all depends how long you plan to use this solution.
+Of course! Along the subscription based model, we provide a standalone option with a license key. All you need is to setup a tenant property in your Office 365 tenant to get it work. It is slightly more expensive than the subscription based model, but it all depends how long you plan to use this solution. For more informationa on how to setup your standalone license, refer to the [documentation](./getting_started/setup_standalone.md).
 
 ## Features
 
