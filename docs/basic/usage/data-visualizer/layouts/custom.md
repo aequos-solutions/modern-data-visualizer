@@ -1,0 +1,3 @@
+The 'custom' layout ...
+
+!["Custom layout"](../../../../assets/webparts/data_visualizer/layouts/custom_layout.png){: .center} 
