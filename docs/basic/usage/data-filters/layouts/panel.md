@@ -1,0 +1,14 @@
+Display filters as an side panel. Useful to gain space on the page.
+
+!["Panel"](../../../../assets/webparts/data_filters/layouts/panel_layout.png){: .center}
+
+#### Layout options
+
+!["Panel layout options"](../../../../assets/webparts/data_filters/layouts/panel_options.png){: .center}
+
+| Setting | Description | Default value 
+| ------- |---------------- | ----------
+| **Button label to display** | The label to display to open the panel. | "Show filters".
+| **Modal** | If enabled, the panel will be modal (you can't select elemtns outside the panel). | True.
+| **Light dismiss** | If enabled, dismiss the panel when click outside. | True.
+| **Panel size** | The filter panel size to display. | Small (right).

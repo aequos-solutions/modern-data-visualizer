@@ -29,7 +29,7 @@ You can use tokens in the following locations:
 
 |**Token**|**Definition**|
 |:-----|:-----|
-|{Page.&lt;FieldName&gt;}  <br/> | The value of a field on the page from where the query was issued. For example, if the page from where the query was issued contained a site column named "ContentOwner," specifying {Page.ContentOwner} would allow you to query for the value of "ContentOwner." FieldName is the internal name of the field. When used with taxonomy columns, use `{Page.<FieldName>.Label}` or `{Page.<FieldName>.TermID}` <br/> |
+|**{Page.&lt;FieldName&gt;}**  <br/> | The value of a field on the page from where the query was issued. For example, if the page from where the query was issued contained a site column named "ContentOwner," specifying {Page.ContentOwner} would allow you to query for the value of "ContentOwner." FieldName is the internal name of the field. When used with taxonomy columns, use `{Page.<FieldName>.Label}` or `{Page.<FieldName>.TermID}` <br/> |
 
 ##### Connections tokens
 
@@ -37,21 +37,21 @@ Tokens related to connected Web Parts in the Data Visualizer.
 
 |**Token**|**Definition**|
 |:-----|:-----|
-|{inputQueryText}<br/> | The query value entered into a search box on a page. The value depends on the configuration of input text connection of the Data Visualizer Web Part. <br/> |
-|{filters.&lt;FilterName&gt;} | The current selected filters. You can use deep paths here to access properties. _'FilterName'_ corresponds to the filter name specified in the Data Filters Web Part (not the display name). Only single value taxonomy filters and data range filters are supported. For date range filters you can access start/end date values using `{filters.MyDateRangeFilter.startDate}` or `{filters.MyDateRangeFilter.endDate}`. For taxonomy filters, the token `{filters.MyTaxonomyFilter}` will return the taxonomy item ID currently selected.
-|{itemsCountPerPage} | The number of items count per page configured in teh Web Part. Useful for the OData source to specify a `$top={itemsCountPerPage}` parameter.
-|{startRow} | The next start row number according to current paging. Useful for the OData source to specify a `$skipToken={startRow}` or `$skip={startRow}` parameters.
+|**{inputQueryText}**<br/> | The query value entered into a search box on a page. The value depends on the configuration of input text connection of the Data Visualizer Web Part. <br/> |
+|**{filters.&lt;FilterName&gt;}** | The current selected filters. You can use deep paths here to access properties. _'FilterName'_ corresponds to the filter name specified in the Data Filters Web Part (not the display name). Only single value taxonomy filters and data range filters are supported. For date range filters you can access start/end date values using `{filters.MyDateRangeFilter.startDate}` or `{filters.MyDateRangeFilter.endDate}`. For taxonomy filters, the token `{filters.MyTaxonomyFilter}` will return the taxonomy item ID currently selected.
+|**{itemsCountPerPage}** | The number of items count per page configured in teh Web Part. Useful for the OData source to specify a `$top={itemsCountPerPage}` parameter.
+|**{startRow}** | The next start row number according to current paging. Useful for the OData source to specify a `$skipToken={startRow}` or `$skip={startRow}` parameters.
 
 ##### Context tokens
 
 |**Token**|**Definition**|
 |:-----|:-----|
-|{PageContext.&lt;PropertyName&gt;} | Resolves current SPFx page context related tokens. You can use deep paths here to access properties. Ex: `{PageContext.site.absoluteUrl}`. <br/>
-| {LegacyPageContext.&lt;PropertyName&gt;} | Resolves current SPFx legacy page context related tokens. You can use deep paths here to access properties. Ex: `{LegacyPageContext.aadTenantId}`. <br/>
-|{QueryString.&lt;ParameterName&gt;} <br/> | A value from a query string in the URL of the current page. For example, if the URL of the current page contains a query string such as ItemNumber=567, you could obtain the value 567 by specifying `{QueryString.ItemNumber}`. <br/> |
-|{CurrentDisplayLanguage}  <br/> |The current display language based on MUI in _ll-cc format_.  <br/> |
-|{CurrentDisplayLCID}  <br/> |Numeric value of the current display language based on MUI in _ll-cc format_.  <br/> |
-|{TenantUrl}  <br/> |URL of the tenant (root site)<br/> |
+|**{PageContext.&lt;PropertyName&gt;}** | Resolves current SPFx page context related tokens. You can use deep paths here to access properties. Ex: `{PageContext.site.absoluteUrl}`. <br/>
+| **{LegacyPageContext.&lt;PropertyName&gt;}** | Resolves current SPFx legacy page context related tokens. You can use deep paths here to access properties. Ex: `{LegacyPageContext.aadTenantId}`. <br/>
+|**{QueryString.&lt;ParameterName&gt;}** <br/> | A value from a query string in the URL of the current page. For example, if the URL of the current page contains a query string such as ItemNumber=567, you could obtain the value 567 by specifying `{QueryString.ItemNumber}`. <br/> |
+|**{CurrentDisplayLanguage}** <br/> |The current display language based on MUI in _ll-cc format_.  <br/> |
+|**{CurrentDisplayLCID}**  <br/> |Numeric value of the current display language based on MUI in _ll-cc format_.  <br/> |
+|**{TenantUrl}**  <br/> |URL of the tenant (root site)<br/> |
 
 ##### Site, web, hub, etc. tokens
 
@@ -59,30 +59,30 @@ Except for `{Hub}`, these a shortands to the `{PageContext}` tokens. They retunr
 
 |**Token**|**Definition**|
 |:-----|:-----|
-| {Site.&lt;PropertyName&gt;} | Resolves current site related tokens. You can use the 'Debug' layout and the `context` property to see all available values for a site. Ex `{Site.id._guid}` or `{Site.absoluteUrl}`.
-| {Hub.&lt;PropertyName&gt;} | Resolves current hub site related tokens. Valid property names are `{Hub.HubSiteId}`, `{Hub.Id}` and `{Hub.IsHubSite}`.
-| {Group.&lt;PropertyName&gt;} | Resolves current Office 365 group related tokens. You can use the 'Debug' layout and the `context` property to see all available values for a site.
-| {List.&lt;PropertyName&gt;} | Resolves current list related tokens. Ex `{List.id._guid}` or `{List.absoluteUrl}`.
-| {Web.&lt;PropertyName&gt;} | Resolves current web related tokens  You can use the 'Debug' layout and the `context` property to see all available values for a site. Ex `{Web.id._guid}` or `{Web.absoluteUrl}`.
+| **{Site.&lt;PropertyName&gt;}**| Resolves current site related tokens. You can use the 'Debug' layout and the `context` property to see all available values for a site. Ex `{Site.id._guid}` or `{Site.absoluteUrl}`.
+| **{Hub.&lt;PropertyName&gt;}** | Resolves current hub site related tokens. Valid property names are `{Hub.HubSiteId}`, `{Hub.Id}` and `{Hub.IsHubSite}`.
+| **{Group.&lt;PropertyName&gt;}** | Resolves current Office 365 group related tokens. You can use the 'Debug' layout and the `context` property to see all available values for a site.
+| **{List.&lt;PropertyName&gt;}** | Resolves current list related tokens. Ex `{List.id._guid}` or `{List.absoluteUrl}`.
+| **{Web.&lt;PropertyName&gt;}** | Resolves current web related tokens  You can use the 'Debug' layout and the `context` property to see all available values for a site. Ex `{Web.id._guid}` or `{Web.absoluteUrl}`.
 
 ##### User tokens
 
 |**Token**|**Definition**|
-|:-----|:-----|
-|{User} or {User.Name}  <br/> |Display name of the user who issued the query. For example, this value can be used to query content of the managed property Author.  <br/> |
-|{User.Email}  <br/> |Email address of the user who issued the query. For example, this value can be used to query content of the managed property WorkEmail.  <br/> |
-|{User.PreferredContentLanguage}  <br/> |Language as specified as Preferred Content Language in the profile of the user who issued the query.  <br/> |
-|{User.PreferredDisplayLanguage}  <br/> |Language as specified as Preferred Display Language in the profile of the user who issued the query.  <br/> |
-|{User.\<property\>}  <br/> |Any property from the user profile of the user who issued the query — for example, SPS-Interests, including custom properties.  <br/> |
+|-----|-----|
+|**{User}** or **{User.Name}**  |Display name of the user who issued the query. For example, this value can be used to query content of the managed property Author.  <br/> |
+|**{User.Email}**  |Email address of the user who issued the query. For example, this value can be used to query content of the managed property WorkEmail.  <br/> |
+|**{User.PreferredContentLanguage}**  |Language as specified as Preferred Content Language in the profile of the user who issued the query.  <br/> |
+|**{User.PreferredDisplayLanguage}**  |Language as specified as Preferred Display Language in the profile of the user who issued the query.  <br/> |
+|**{User.\<property\>}** |Any property from the user profile of the user who issued the query — for example, SPS-Interests, including custom properties.  <br/> |
 
 ##### Date tokens
 
-|**Token**|**Definition**|
-|:-----|:-----|
-|{CurrentYear}  <br/> | Todays's date four digits, 2018 <br/> |
-|{CurrentMonth}  <br/> | Today's month, 1-12 <br/> |
-|{CurrentDate}  <br/> | Today's date, 1-31 <br/> |
-|{Today+/- \<integer value for number of days\>}  <br/> |A date calculated by adding/subtracting the specified number of days to/from the date when the query is issued. Date format is YYYY-MM-DD (Ex: `{Today+5}`) <br/> |
+|**Token**|**Definition**
+|-----|-----|
+| **{CurrentYear}** |Todays's date four digits, 2018 <br/> 
+| **{CurrentMonth}** |Today's month, 1-12 <br/> 
+| **{CurrentDate}** |Today's date, 1-31 <br/> 
+| **{Today+/- \&lt;integer value for number of days&gt;}**  <br/> |A date calculated by adding/subtracting the specified number of days to/from the date when the query is issued. Date format is YYYY-MM-DD (Ex: `{Today+5}`) <br/> 
 
 #### SharePoint search query variables
 

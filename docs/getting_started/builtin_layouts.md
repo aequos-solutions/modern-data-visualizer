@@ -5,7 +5,7 @@ Icon type
 
 # People layout
 
-By default, the user profile pictures are fetched from the SharePoint User Profile Service. If your user pictures are stored in Active Directoy, make sure you synchronized them with SharePoint User Profile Service. Otherwise, a placeholder image will be displayed.
+
 
 ### Hover card
 

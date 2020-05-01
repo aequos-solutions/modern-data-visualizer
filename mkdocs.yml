@@ -12,8 +12,11 @@ nav:
       - Slots: basic/usage/data-visualizer/slots.md
       - Tokens: basic/usage/data-visualizer/tokens.md
       - Layouts: basic/usage/data-visualizer/layouts/index.md
-      - Connections: index.md
-      - Extensibility: index.md
+      - Connections: basic/usage/data-visualizer/connections/index.md
+      - Extensibility: basic/usage/data-visualizer/extensibility/index.md
+    - Data Filters:
+      - Usage: basic/usage/data-filters/introduction.md
+      - Layouts: basic/usage/data-filters/layouts/index.md
     - Frequently Asked Questions: faq.md
 theme:
   name: 'material'
