@@ -28,7 +28,7 @@ Here are all the builtin slots the solution provides.
 | **Path**  | The absolute URL of an item. 
 | **Summary** | A short description of the item.
 | **Date** | A date associated to the item. Can be for instance, the created date, modified date or publishing date.
-| **FileType** | The file type. This can be an extension (ex: `docx`) or the complete path of the item including the file extension (ex: `https://mycompany.sharepoint.com/sites/mysite/Shared Documents/MyFile.pdf`).
+| **FileType** | The file type. This can be an extension (ex: `docx`) or the complete path of the item including the file extension (ex: `https://mycompany.sharepoint.com/sites/mysite/Shared Documents/MyFile.pdf`). This slot is mainly used to retrieve the correct file icon for the item.
 | **PreviewImageUrl** | The image thumbnail URL to display for an item. You can use the builtin `AutoPreviewImageUrl` field here to get a default image if applicable.
 | **PreviewUrl** | Same as preview image URL but for the interactive preview of the item (ex: a Word document). You can use the builtin `AutoPreviewUrl` field here to get a default image if applicable. In this case, the Web Part will use a generic Microsoft Graph URL to generate the preview. More information on [supported file types](https://support.microsoft.com/en-us/office/file-types-supported-for-previewing-files-in-onedrive-sharepoint-and-teams-e054cd0f-8ef2-4ccb-937e-26e37419c5e4).
 | **Author** | An author associated to the item.
