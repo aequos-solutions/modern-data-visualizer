@@ -17,6 +17,10 @@ nav:
     - Data Filters:
       - Usage: basic/usage/data-filters/introduction.md
       - Layouts: basic/usage/data-filters/layouts/index.md
+    - Data Verticals:
+      - Usage: basic/usage/data-verticals/introduction.md 
+    - Search Box:
+      - Usage: basic/usage/search-box/introduction.md 
     - Frequently Asked Questions: faq.md
 theme:
   name: 'material'

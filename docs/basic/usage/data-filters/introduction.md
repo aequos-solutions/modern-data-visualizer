@@ -1,6 +1,11 @@
 # Data Filters Web Part
 
-The 'Data Filters' Web Part is higly configurable to meet you requirements and it works for all data sources .
+The 'Data Filters' Web Part allows to filter the current results displayed in a 'Data Visualizer' Web Part. This component is higly configurable to meet you requirements and it works for all data sources.
+
+!["aequos Search Box Web Part"](../../../assets/webparts/data_filters/data_filters_wp_picker.png){: .center}
+
+!["aequos Search Box Web Part"](../../../assets/webparts/data_filters/data_filters_wp_default.png){: .center}
+
 
 ## Configuration
 
@@ -24,7 +29,7 @@ The filter settings are as follow:
 
 !["Filter settings panel"](../../../assets/webparts/data_filters/filter_settings_panel.png){: .center} 
 
-| **Setting** | Description |
+| **Setting** | **Description** |
 |------------|-----------------|
 | **Display Name** | A friendly name for the filter |
 | **Filter field** | The internal data source field to use as filter. Here you can select a field from the current data source (if data have been already retrieved) of type your own custom value (press enter to validate).
@@ -49,3 +54,4 @@ The Web Part supports two types of filters (_'Static'_ and _'Refiner'_). However
 
 - **Refiner**: a 'Refiner' filter means the filter gets its values from the data source and sends back the selected ones the data source. If the data source has no result, there won't be any refiner values, simple as that.
 - **Static filter**: a 'Static' filter means the filter doesn't care about filter values sent by the data source and provides its own arbitrary values regardless of input values. A date range picker or a taxonomy picker (or any picker) are good examples of what an 'Static' filter is. Such a filter do not need necessarily need a Data Visualizer connection.
+
