@@ -2,7 +2,7 @@ site_name: aequos Modern Data Visualizer solution for SharePoint Online
 nav:
     - Getting Started:
         - Introduction: getting_started.md
-        - Get and deploy the solution:  get_and_install-solution.md
+        - Get and deploy the solution:  get_and_install_solution.md
         - Activate standalone license: setup_standalone.md
     - Data Visualizer:
       - Usage: basic/usage/data-visualizer/introduction.md
@@ -18,7 +18,15 @@ nav:
     - Data Verticals:
       - Usage: basic/usage/data-verticals/introduction.md 
     - Search Box:
-      - Usage: basic/usage/search-box/introduction.md 
+      - Usage: basic/usage/search-box/introduction.md
+    - Extensibility:
+      - Introduction: basic/extensibility/introduction.md
+      - Templating: basic/extensibility/templating.md
+      - Custom data source: basic/extensibility/custom_data_source.md
+      - Custom layout: basic/extensibility/custom_layout.md
+      - Custom web component: basic/extensibility/custom_web_component.md
+      - Custom suggestions provider: basic/extensibility/custom_suggestions_provider.md
+      - Custom Handlebars customizations: basic/extensibility/introduction.md
     - Frequently Asked Questions: faq.md
 theme:
   name: 'material'
