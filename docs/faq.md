@@ -2,7 +2,7 @@
 
 ## How I can get updates for this solution?
 
-Updates takes form of SharePoint Framework packages. We highly recommend to deploy the solution in a test  environment prior to production. 
+Updates are released as SharePoint Framework packages (.sppkg) in the public GitHub repository. Just update the solution in your app catalog and your are good to go! However, **we highly recommend to deploy the solution in a test  environment prior to production**. 
 
 ## PnP Modern Search VS aequos Data Visualizer
 

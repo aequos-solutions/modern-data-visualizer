@@ -1,9 +1,12 @@
 site_name: aequos Modern Data Visualizer solution for SharePoint Online
 nav:
     - Getting Started:
-        - Introduction: getting_started.md
-        - Get and deploy the solution:  get_and_install_solution.md
-        - Activate standalone license: setup_standalone.md
+        - Introduction: index.md
+        - Get and deploy the solution:  getting_started/get_and_install_solution.md
+        - Activate a standalone license: getting_started/setup_standalone.md
+        - Troubleshoot the solution: getting_started/troubleshooting.md
+        - Connections overview: getting_started/connections_chart.md
+        - Sample scenarios: getting_started/sample_scenarios.md
     - Data Visualizer:
       - Usage: basic/usage/data-visualizer/introduction.md
       - Data sources: basic/usage/data-visualizer/data-sources/index.md

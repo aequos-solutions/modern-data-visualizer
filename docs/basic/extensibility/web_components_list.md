@@ -105,9 +105,9 @@ Here are the list of all **reusable** web components you can use to customize yo
     
 ## `<aequos-panel>`
 
-- **Description**: display a panel with wrapped content when the associated open element is clicked.
+- **Description**: display a panel with (`panel-content`) content when the associated outer `panel-open` element is clicked.
 
-TODO
+!["Panel component"](../../assets/extensibility/web_components/panel_component.png){: .center}
 
 - **Usage**
 ```html
@@ -115,13 +115,19 @@ TODO
     data-is-open="false" 
     data-is-light-dismiss="true"
     data-is-blocking="true"
-    data-size="2">
+    data-size="2"
+    data-panel-header-text="Panel header!">
 
-    <template>
-        <div slot="open">Open the panel!</div>
-        <div slot="content">
-            My Content!
-        </div>
+    <template id="panel-open">
+        <!-- All the content here will be wrapped with an onclick event opening/hiding the panel -->
+
+        Click me!
+    </template>
+
+    <template id="panel-content">
+        <!-- Panel content goes here -->
+    
+        Panel content!
     </template>
     
 </aequos-panel>
@@ -129,7 +135,7 @@ TODO
 
 ## `<aequos-collapsible>`
 
-- **Description**: expand/collapse the wrapped content when the text is clicked.
+- **Description**: expand/collapse the `collapsible-content` contetn when the text with `data-group-name` is clicked.
 
 !["Collapsible component"](../../assets/extensibility/web_components/collapsible_component.png){: .center}
 
@@ -140,9 +146,15 @@ TODO
     data-group-name="Collapsible content" 
     data-is-default-collapsed="true">
 
-    <template class="content">
+    <template id="collapsible-content">
         <div>
             My Content!
+        </div>
+    </template>
+
+    <template id="collapsible-footer">
+        <div>
+            My Footer!
         </div>
     </template>
 

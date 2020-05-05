@@ -49,8 +49,4 @@ The data could be look like this:
 }
 ```
 
-Now to consume this data, you can either start from an existing layout, or use a custom one. 
-
-Use slots
-
-**TODO**
+Now to consume this data, you can either start from an existing layout, or use a custom one. See the [templating documentation](../../../../extensibility/templating.md) to know more.
