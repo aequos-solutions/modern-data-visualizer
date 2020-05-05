@@ -29,7 +29,7 @@ nav:
       - Custom Handlebars customizations: basic/extensibility/introduction.md
     - Frequently Asked Questions: faq.md
 theme:
-  name: 'material'
+  name: 'readthedocs'
   palette:
     primary: 'black'
   feature:

@@ -6,12 +6,14 @@ A web component is a custom HTML element that can be used in your templates to i
 
 !["Custom web component"](../../assets/extensibility/web_components/custom_web_component.png){: .center}
 
+By default, several components are available ([see the complete list](./web_components_list.md)). If these does not fit your requirement, you can still create your own.
+
 ## Web component creation process
 
 Web component creation process comes in two distinct steps:
 
-1. [Create the component class and its React sub components](#create-the-data-source-logic).
-2. [Register the component information for discovery](#register-data-source-information).
+1. [Create the component class and its React sub components](#create-the-component-logic-and-sub-components).
+2. [Register the component information for discovery](#register-component-information).
 
 
 ### Create the component logic and sub components
@@ -87,9 +89,9 @@ public async connectedCallback() {
 } 
 ```
 
-The `resolveAttributes()` method will look at all `data-*` HTML attributes in your web component custom element node and return a corresponding key/value pair object with values in their guessed type that you can pass directly to your React component as props. By convention, web component attributes have to be passed using **camel case** to be tranformed into React component props. For instance: a `data-my-string-param` HTML attribute becomes `myStringParam` prop.
+The `resolveAttributes()` method will look at all `data-*` HTML attributes in your web component custom element node and return a corresponding key/value pair object with values **in their guessed type** that you can pass directly to your React component as props. By convention, web component attributes have to be passed using **camel case** to be tranformed into React component props. For instance: a `data-my-string-param` HTML attribute becomes `myStringParam` prop.
 
-Supported types for attributes are **boolean**, **string**, **date**, **number** and **object**. HTML attributes must use the **data-*** prefix to be retrieved correctly.
+Supported guessed types for attributes are **boolean**, **string**, **date** and **object**. All non supported types will be passed a **string**. HTML attributes must use the **data-** prefix to be retrieved correctly.
 
 To pass JSON objects, you can use the `JSONstringify` Handlebars helper. If valid JSON, they will be returned as **objects** by the `resolveAttributes()` method.
 
@@ -99,13 +101,10 @@ To pass JSON objects, you can use the `JSONstringify` Handlebars helper. If vali
     data-my-string-param="Default value" 
     data-my-object-param="{{JSONstringify this 2}}"
     data-my-date-param="01/01/2020"
-    data-my-number-param="46"
     data-my-boolean-param="true"
 >
 </my-custom-component>
 ```
-
-!["Attributes types"](../../assets/extensibility/web_components/debug_types.png){: .center}
 
 ### Register component information
 

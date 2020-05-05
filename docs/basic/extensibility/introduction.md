@@ -2,7 +2,7 @@
 
 This solution supports different levels of customizations depending your requirements:
 
-- **'Basic' customizations**: these include custom settings for data sources, search box, verticals and filters Web Parts + minor updates to existing layouts by adding custom HTML markup (ex: add a custom field display from a data source), updates to builting layouts fields ('Cards','Details List' and 'People'), etc. **They only require HTML, CSS and Handlebars skills to be done**. Typically a super user or a webmaster could do that.
+- **'Basic' customizations**: these include custom settings for data sources, search box, verticals and filters Web Parts + minor updates to existing layouts by adding custom HTML markup (ex: add a custom field in the UI from a data source), updates to builtin layouts fields ('Cards','Details List' and 'People'), etc. **They only require HTML, CSS and Handlebars skills to be done**. Typically a super user or a webmaster could do that.
 - **'Advanced' customizations**: these include major updates like adding a new data source, layout, component or suggestions provider. **These are build from scratch and require SharePoint Framework development skills to be done**. Typically, a front-end/SharePoint developer could do that.
 
 ## 'Basic' customizations
@@ -13,7 +13,7 @@ TEMPLATING
 
 The solution uses the concept of **'extensibility libraries'**. Basically, these are [SharePoint Framework library components](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/library-component-tutorial) you put in the global or site collection app catalog that will be loaded automatically by Web Parts to enhance the experience and options (ex: new data source with new options, custom layout, etc.). Simple as that!
 
-> As a demonstration of capabilities, all builtin data sources, layouts, web components or suggestions providers are built using **the same exact interfaces and methods** that are publically available. We took no shortcuts or cheats whatsoever here so you could theorically get the same output!
+> As a demonstration of capabilities, all builtin data sources, layouts, web components or suggestions providers are built using **the same exact interfaces and methods** that are publically available in the [`@aequos/extensibility`](https://www.npmjs.com/package/@aequos/extensibility) npm package. We took no shortcuts or cheats whatsoever in our code so you could theorically get the same output!
 
 > All documentation procedures for extensions are based on the demo extensibility library available in the GitHub repository that you can use as reference.
 
@@ -59,9 +59,18 @@ To create an extensibility library, you have the choice to reuse the one provide
     !["Extensibility manifests registration"](../../assets/extensibility/aequos_extensibility_npm.png){: .center}
 3. In the main entry point, implement the `IExtensibilityLibrary` interface. Provide all method implementations (return empty arrays if you don't implement specific extensions).
     !["Extensibility interface implementation"](../../assets/extensibility/implement_interface.png){: .center}
-5. Implement your extension(s) depending the type (data source, layout, web component, suggestions providers or Handlebars customizations).
-6. Bundle `gulp bundle --ship` and package `gulp package-solution --ship` and add the solution to the global or site collecition catalog (for this one, it must be the same site collection where belong the Web Part loading that extension(s)).
-7. Register your manifest ID in the target Web Part instance.
+5. Implement your extension(s) depending of the type:
+    - [Data source](./custom_data_source.md)
+    - [Layout](./custom_layout.md)
+    - [Web component](./custom_web_component.md)
+    - [Suggestions providers](./custom_suggestions_provider.md)
+    - [Handlebars customizations](./handlebars_customizations.md)
+
+    Creation process always follows more or less the same pattern:
+    1. Create the extension data logic or render logic.
+    2. Register the information about the extension to be discovered and instanciated by the target Web Part by implementing the corresponding method according to the `IExtensibilityLibrary` interface.
+6. Bundle `gulp bundle --ship` and package `gulp package-solution --ship` and add the solution to the global or site collection catalog (for this one, it must be the same site collection where the Web Part loading that extension(s) is present).
+7. [Register your manifest ID in the target Web Part instance](#register-your-extensibility-library-with-a-web-part).
 8. Enjoy!
 
 #### Debug a library component
