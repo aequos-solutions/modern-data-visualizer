@@ -2,9 +2,7 @@ site_name: aequos Modern Data Visualizer solution for SharePoint Online
 nav:
     - Getting Started:
         - Introduction: index.md
-        - Get and deploy the solution:  getting_started/get_and_install_solution.md
-        - Activate a standalone license: getting_started/setup_standalone.md
-        - Troubleshoot the solution: getting_started/troubleshooting.md
+        - Activate a standalone license: setup_standalone.md
         - Connections overview: getting_started/connections_chart.md
         - Sample scenarios: getting_started/sample_scenarios.md
     - Data Visualizer:
@@ -16,23 +14,22 @@ nav:
       - Connections: basic/usage/data-visualizer/connections/index.md
       - Extensibility: basic/usage/data-visualizer/extensibility/index.md
     - Data Filters:
-      - Usage: basic/usage/data-filters/introduction.md
+      - Usage: basic/usage/data-filters/index.md
       - Layouts: basic/usage/data-filters/layouts/index.md
     - Data Verticals:
-      - Usage: basic/usage/data-verticals/introduction.md 
+      - Usage: basic/usage/data-verticals/index.md 
     - Search Box:
-      - Usage: basic/usage/search-box/introduction.md
+      - Usage: basic/usage/search-box/index.md
     - Extensibility:
-      - Introduction: basic/extensibility/introduction.md
+      - Introduction: basic/extensibility/index.md
       - Templating: basic/extensibility/templating.md
       - Custom data source: basic/extensibility/custom_data_source.md
       - Custom layout: basic/extensibility/custom_layout.md
       - Custom web component: basic/extensibility/custom_web_component.md
       - Custom suggestions provider: basic/extensibility/custom_suggestions_provider.md
       - Custom Handlebars customizations: basic/extensibility/introduction.md
-    - Frequently Asked Questions: faq.md
 theme:
-  name: 'readthedocs'
+  name: 'material'
   palette:
     primary: 'black'
   feature:
