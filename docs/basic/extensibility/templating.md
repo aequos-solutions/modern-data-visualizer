@@ -75,6 +75,82 @@ Inside an HTML template (or layout field), you can write your own CSS styles usi
 
 However, all CSS rules (including `@media` rules) will be all prefixed automatically by an unique ID (**aequos-template_&lt;Web Part instance ID&gt;**) to make sure styles are isolated from other Web Parts on the page. We do this to avoid conflicts between classes in the global context.
 
+## Use SharePoint theme in your templates
+
+If you need to use current site theme colors, fonts and so on you can use the `theme` property available in the `@root` Handlebars context like this:
+
+```html
+<content id="data-content">
+
+        <style>
+            .example-themePrimary {
+                color: {{@root.theme.palette.themePrimary}};
+            }
+            ...
+        </styles>
+
+        ...
+
+        <span class="example-themePrimary">{{Title}}</span>
+
+        ...
+
+</content>
+```
+
+> You can also use this variable in the 'Details List' and 'Cards' layouts in field expresions.
+
+![Theme usage in fields](../assets/theme_field.png)
+
+A good way to see all available values for the current theme is to switch to the debug layout and inspect these values:
+
+![Theme properties](../assets/theme_debug.png)
+
+## Work with placeholders
+
+To indicate the data are loading, you can create placeholders (shimmers) using the `<content id="placeholder-content">` section of your HTML template:
+The placeholder is only loaded during first data load. For subsequent requests, a overlay will be displayed.
+
+```
+<content id="placeholder-content">
+
+    <style>
+
+        .placeholder .icon {
+            width: 20px;
+            height: 16px;
+            margin-right: 5px;
+        }
+
+        .placeholder ul {
+            list-style: none;
+        }
+
+        .placeholder ul li {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+        }
+            
+    </style>
+
+    <div class="placeholder">
+        <ul>
+            {{#times 5}}   
+                <li>
+                    <div class="icon placeholder--shimmer"></div>
+                    <span class="placeholder--shimmer placeholder--line" style="width: 60%"></span>                
+                </li>
+            {{/times}}
+        </ul>
+    </div>
+</content>
+```
+
+Use CSS classes `placeholder--shimmer` and `placeholder--line` to build your placeholders. Basically, you can reuse the same HTML structure as your template content markup, but using these these classes instead to fill areas.
+
+If no placeholder is present in the template, a default one will be loaded.
+
 ## Microsoft Graph Toolkit
 
 > The Microsoft Graph Toolkit is a collection of reusable, framework-agnostic web components and helpers for accessing and working with Microsoft Graph. The components are fully functional right of out of the box, with built in providers that authenticate with and fetch data from Microsoft Graph.

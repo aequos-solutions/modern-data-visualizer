@@ -27,6 +27,19 @@ Here is a overview video on how to build a complete search center in minutes usi
 
 TODO VIDEO
 
+## Supported browsers
+
+Here is the list of supported browsers:
+
+- Chrome
+- Firefox
+- Edge
+- Edge Chromium
+- Brave
+- Safari
+
+**We don't support Internet Explorer 11**. We think there are plenty of other options for enteprise scenarios in the market. Maybe it's time to move on. For developers, it represents an **huge** ammount of time to make the solution compatible for a very low benefit. Hope you understand, ain't personal ;).
+
 ## Extensibility model
 
 By getting this solution, you also benefit from an advanced [extensibility model](./basic/extensibility/index.md) allowing you to customize the solution according to your requirements if default features don't do the job for you. 
