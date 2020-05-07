@@ -9,8 +9,7 @@
 
     | Requested API permission | Used for |
     | -------------- | --------- |
-    | _Sites.Read.All_ | The default SharePoint REST API v2 in the OData data source. |
-    | _User.Read_ | The Microsoft Graph Toolkit persona card in the people layout.  |
+    | _User.Read_ | The Microsoft Graph Toolkit [persona card](https://docs.microsoft.com/en-us/graph/toolkit/components/person-card#microsoft-graph-permissions) in the people layout.  |
     | _People.Read_ | Same as above.
     | _Contacts.Read_ | Same as above.
     | _User.ReadBAsic.All_ | Same as above.
