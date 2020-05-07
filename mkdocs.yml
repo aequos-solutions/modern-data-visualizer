@@ -2,11 +2,12 @@ site_name: aequos Modern Data Visualizer solution for SharePoint Online
 nav:
     - Getting Started:
         - Introduction: index.md
+        - Installation: installation.md
         - Activate a standalone license: setup_standalone.md
         - Connections overview: getting_started/connections_chart.md
         - Sample scenarios: getting_started/sample_scenarios.md
     - Data Visualizer:
-      - Usage: basic/usage/data-visualizer/introduction.md
+      - Usage: basic/usage/data-visualizer/index.md
       - Data sources: basic/usage/data-visualizer/data-sources/index.md
       - Slots: basic/usage/data-visualizer/slots.md
       - Tokens: basic/usage/data-visualizer/tokens.md
@@ -27,7 +28,7 @@ nav:
       - Custom layout: basic/extensibility/custom_layout.md
       - Custom web component: basic/extensibility/custom_web_component.md
       - Custom suggestions provider: basic/extensibility/custom_suggestions_provider.md
-      - Custom Handlebars customizations: basic/extensibility/introduction.md
+      - Custom Handlebars customizations: basic/extensibility/handlebars_customizations.md
 theme:
   name: 'material'
   palette:

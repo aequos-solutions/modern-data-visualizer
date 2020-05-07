@@ -1,4 +1,5 @@
-!["aequos"](./assets/aequos_logo_noir.png){: .center .logo}
+
+<p align="center"><img width="200px" src="./assets/aequos_logo_noir.png"/></p>
 
 # aequos Data Visualizer solution
 
@@ -23,7 +24,7 @@ This repository hosts the official documentation for the solution + the public r
 
 ### Solution documentation
 
-- [Documentation](https://)
+- [Documentation](https://aequos-solutions.github.io/modern-data-visualizer/)
 
 ### Demo projects
 
