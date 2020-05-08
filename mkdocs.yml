@@ -7,28 +7,28 @@ nav:
         - Connections overview: getting_started/connections_chart.md
         - Sample scenarios: getting_started/sample_scenarios.md
     - Data Visualizer:
-      - Usage: basic/usage/data-visualizer/index.md
-      - Data sources: basic/usage/data-visualizer/data-sources/index.md
-      - Slots: basic/usage/data-visualizer/slots.md
-      - Tokens: basic/usage/data-visualizer/tokens.md
-      - Layouts: basic/usage/data-visualizer/layouts/index.md
-      - Connections: basic/usage/data-visualizer/connections/index.md
-      - Extensibility: basic/usage/data-visualizer/extensibility/index.md
+      - Usage: usage/data-visualizer/index.md
+      - Data sources: usage/data-visualizer/data-sources/index.md
+      - Slots: usage/data-visualizer/slots.md
+      - Tokens: usage/data-visualizer/tokens.md
+      - Layouts: usage/data-visualizer/layouts/index.md
+      - Connections: usage/data-visualizer/connections/index.md
+      - Extensibility: extensibility/index.md
     - Data Filters:
-      - Usage: basic/usage/data-filters/index.md
-      - Layouts: basic/usage/data-filters/layouts/index.md
+      - Usage: usage/data-filters/index.md
+      - Layouts: usage/data-filters/layouts/index.md
     - Data Verticals:
-      - Usage: basic/usage/data-verticals/index.md 
+      - Usage: usage/data-verticals/index.md 
     - Search Box:
-      - Usage: basic/usage/search-box/index.md
+      - Usage: usage/search-box/index.md
     - Extensibility:
-      - Introduction: basic/extensibility/index.md
-      - Templating: basic/extensibility/templating.md
-      - Custom data source: basic/extensibility/custom_data_source.md
-      - Custom layout: basic/extensibility/custom_layout.md
-      - Custom web component: basic/extensibility/custom_web_component.md
-      - Custom suggestions provider: basic/extensibility/custom_suggestions_provider.md
-      - Custom Handlebars customizations: basic/extensibility/handlebars_customizations.md
+      - Introduction: extensibility/index.md
+      - Templating: extensibility/templating.md
+      - Custom data source: extensibility/custom_data_source.md
+      - Custom layout: extensibility/custom_layout.md
+      - Custom web component: extensibility/custom_web_component.md
+      - Custom suggestions provider: extensibility/custom_suggestions_provider.md
+      - Custom Handlebars customizations: extensibility/handlebars_customizations.md
 theme:
   name: 'material'
   palette:

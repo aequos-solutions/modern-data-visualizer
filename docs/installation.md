@@ -5,11 +5,11 @@
 
     !["App Catalog "](./assets/app_catalog.png){: .center}
 
-    > The solution is deployed in the general Office 365 CDN meaning **we don't host any code on our side**.
+    > * The solution is deployed in the general Office 365 CDN meaning **we don't host any code on our side**.
 
-    > You can choose to make the solution available in [all sites](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-scoped-deployment) or force to install an app to the site every time.
+    > * You can choose to make the solution available in [all sites](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-scoped-deployment) or force to install an app to the site every time.
 
-    > The solution asks the following API permissions by defailt to enhance the experience. These permissions are **not mandatory**. If you don't accept them, you will simpy have less available features.
+    > * The solution asks the following API permissions by defailt to enhance the experience. These permissions are **not mandatory**. If you don't accept them, you will simpy have less available features.
 
     | Requested API permission | Used for |
     | -------------- | --------- |
@@ -18,13 +18,13 @@
     | _Contacts.Read_ | Same as above.
     | _User.ReadBAsic.All_ | Same as above.
 
-3. Get a valid license from our [website](www.aequos.ca). 
+3. Get a valid license from our [website](https://www.aequos.ca). 
 
     !["Get license"](./assets/licenses.png){: .center}
 
     Register **the Office 365 tenant ID where you want to use this solution**. If you don't know how to get your tenant ID, you can:
 
-    - Follow this [procedure](https://docs.microsoft.com/en-us/onedrive/find-your-office-365-tenant-id).
+    - Follow this [procedure](https://docs.microsoft.com/en-us/onedrive/find-your-office-365-tenant-id) OR
     - Deploy and use Web Parts without license and get the tenant ID from the error message or in the third Web Part configuration page:
     
     !["Get tenant ID "](./assets/get_tenant_id.png){: .center}

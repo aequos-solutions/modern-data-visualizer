@@ -16,10 +16,10 @@ The solution includes the following Web Parts:
 
 | Component | Description |
 | --------- | ----------- |
-| **[Data Visualizer](./basic/usage/data-visualizer/index.md)** | Retrieve data from a data source and render them in a specific layout.
-| **[Data Filters](./basic/usage/data-filters/index.md)** | Filter and refine data displayed in 'Data Visualizer' Web Parts.
-| **[Data Verticals](./basic/usage/data-verticals/index.md)** | Browse data as silos (i.e. tabs) from multiple data sources.
-| **[Search box](./basic/usage/search-box/index.md)** | Let users enter free text queries sent to 'Data Visualizer' Web Parts.
+| **[Data Visualizer](./usage/data-visualizer/index.md)** | Retrieve data from a data source and render them in a specific layout.
+| **[Data Filters](./usage/data-filters/index.md)** | Filter and refine data displayed in 'Data Visualizer' Web Parts.
+| **[Data Verticals](./usage/data-verticals/index.md)** | Browse data as silos (i.e. tabs) from multiple data sources.
+| **[Search box](./usage/search-box/index.md)** | Let users enter free text queries sent to 'Data Visualizer' Web Parts.
 
 **Overview video: let's build a complete search center**
 
@@ -41,15 +41,15 @@ Here is the list of supported browsers:
 
 ## Extensibility model
 
-By getting this solution, you also benefit from an advanced [extensibility model](./basic/extensibility/index.md) allowing you to customize the solution according to your requirements if default features don't do the job for you. 
+By getting this solution, you also benefit from an advanced [extensibility model](./extensibility/index.md) allowing you to customize the solution according to your requirements if default features don't do the job for you. 
 
 **The supported extensions are:**
 
-- [Custom data sources](./basic/extensibility/custom_data_source.md).
-- [Custom layouts](./basic/extensibility/custom_layout.md).
-- [Custom web components](./basic/extensibility/custom_web_component.md).
-- [Custom suggestions providers](./basic/extensibility/custom_suggestions_provider.md).
-- [Custom Handlebars customization (helpers, partials, etc.)](./basic/extensibility/handlebars_customizations.md).
+- [Custom data sources](./extensibility/custom_data_source.md).
+- [Custom layouts](./extensibility/custom_layout.md).
+- [Custom web components](./extensibility/custom_web_component.md).
+- [Custom suggestions providers](./extensibility/custom_suggestions_provider.md).
+- [Custom Handlebars customization (helpers, partials, etc.)](./extensibility/handlebars_customizations.md).
 
 With these available customizations options, you can do pretty much anything!
 

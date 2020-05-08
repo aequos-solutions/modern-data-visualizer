@@ -1,7 +1,1 @@
-- Create a search center with multiple verticals adn sources
-    - People directory Azure AD
-    - SharePoint search
-    - List item rollup
-- Condtionnal formatting details list columns
-- Conditional formatting with 
-- People directoy
+Coming soon...
