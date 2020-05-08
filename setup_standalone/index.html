@@ -787,10 +787,9 @@
 
 </li>
 <li>
-<p>Create a <a href="https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-set/">new tenant property</a> named <code>AEQUOS_DATAVISUALIZER_LICENSE_KEY</code> with, as value, the key you received by email after your purchase:</p>
-<div class="codehilite"><pre><span></span><code>TODO IMAGE EMAIL SENDOWL
-
-spo storageentity set -k AEQUOS_DATAVISUALIZER_LICENSE_KEY -v &lt;your_key&gt; -d &#39;aequos Data Visualizer solution license key&#39; -u https://contoso.sharepoint.com/sites/appcatalog
+<p>Create a <a href="https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-set/">new tenant property</a> named <code>AEQUOS_DATAVISUALIZER_LICENSE_KEY</code> with, as value, the key you received by email after your purchase:
+        <img alt="&quot;License mail&quot;" class="center" src="../assets/license_mail.png" /></p>
+<div class="codehilite"><pre><span></span><code>spo storageentity set -k AEQUOS_DATAVISUALIZER_LICENSE_KEY -v &lt;your_key&gt; -d &#39;aequos Data Visualizer solution license key&#39; -u https://contoso.sharepoint.com/sites/appcatalog
 </code></pre></div>
 
 
@@ -807,7 +806,7 @@ spo storageentity set -k AEQUOS_DATAVISUALIZER_LICENSE_KEY -v &lt;your_key&gt; -
 </li>
 </ol>
 <blockquote>
-<p>With a standalone license, <strong>our license validation check endpoint won't be hit</strong>. The validation is done in-place using a magic algorithm ;).</p>
+<p>With a standalone license, <strong>our license validation check endpoint won't be hit</strong>. The validation is done in-place.</p>
 </blockquote>
                 
                   
