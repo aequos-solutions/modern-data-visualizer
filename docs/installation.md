@@ -1,9 +1,13 @@
 # Installation
 
-1. Download the latest SharePoint Framework package (**aequos-modern-data-visualizer.sppkg**) from our public GitHub repository:
-2. Add the package to your global app catalog or site collection app catalog. If you don't have an app catalog, follow this [procedure](https://docs.microsoft.com/en-us/sharepoint/use-app-catalog) to create one. You can choose to deploy the solution globally or via app (more info [here](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-scoped-deployment)).
+1. Download the latest SharePoint Framework package (**aequos-modern-data-visualizer.sppkg**) from our public [GitHub repository](https://github.com/aequos-solutions/modern-data-visualizer/releases).
+2. Add the package to your global app catalog or site collection app catalog. If you don't have an app catalog, follow this [procedure](https://docs.microsoft.com/en-us/sharepoint/use-app-catalog) to create one.
+
+    !["App Catalog "](./assets/app_catalog.png){: .center}
 
     > The solution is deployed in the general Office 365 CDN meaning **we don't host any code on our side**.
+
+    > You can choose to make the solution available in [all sites](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-scoped-deployment) or force to install an app to the site every time.
 
     > The solution asks the following API permissions by defailt to enhance the experience. These permissions are **not mandatory**. If you don't accept them, you will simpy have less available features.
 
@@ -14,9 +18,18 @@
     | _Contacts.Read_ | Same as above.
     | _User.ReadBAsic.All_ | Same as above.
 
-3. Get a valid license from our website. Don't forget to register the Office 365 tenant ID where you want to use this solution.
+3. Get a valid license from our [website](www.aequos.ca). 
 
-    !["Licences"](./assets/licenses.png){: .center}
+    !["Get license"](./assets/licenses.png){: .center}
+
+    Register **the Office 365 tenant ID where you want to use this solution**. If you don't know how to get your tenant ID, you can:
+
+    - Follow this [procedure](https://docs.microsoft.com/en-us/onedrive/find-your-office-365-tenant-id).
+    - Deploy and use Web Parts without license and get the tenant ID from the error message or in the third Web Part configuration page:
+    
+    !["Get tenant ID "](./assets/get_tenant_id.png){: .center}
+
+    !["Get tenant ID 2"](./assets/get_tenant_id2.png){: .center}
 
     > **If you chose a standalone license, you must follow these [additional steps](./setup_standalone.md).**
 

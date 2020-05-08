@@ -1,6 +1,6 @@
 {
   "name": "aequos-extensibility-demo",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": false,
   "main": "lib/index.js",
   "engines": {
