@@ -36,7 +36,7 @@
     
     
       
-        <title>Sample scenarios - aequos Modern Data Visualizer solution for SharePoint Online</title>
+        <title>Custom data source - aequos Modern Data Visualizer solution for SharePoint Online</title>
       
     
     
@@ -87,6 +87,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#create-a-custom-data-source" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -109,7 +113,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Sample scenarios
+                Custom data source
               
             </span>
           
@@ -188,7 +192,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../.." class="md-tabs__link md-tabs__link--active">
+        <a href="../.." class="md-tabs__link">
           Getting Started
         </a>
       
@@ -253,7 +257,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../extensibility/" class="md-tabs__link">
+        <a href="../" class="md-tabs__link md-tabs__link--active">
           Extensibility
         </a>
       
@@ -308,12 +312,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       Getting Started
@@ -367,7 +369,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../connections_chart/" title="Connections overview" class="md-nav__link">
+    <a href="../../getting_started/connections_chart/" title="Connections overview" class="md-nav__link">
       Connections overview
     </a>
   </li>
@@ -377,18 +379,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Sample scenarios" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../getting_started/sample_scenarios/" title="Sample scenarios" class="md-nav__link">
       Sample scenarios
     </a>
-    
   </li>
 
         
@@ -494,7 +489,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/" title="Extensibility" class="md-nav__link">
+    <a href="../" title="Extensibility" class="md-nav__link">
       Extensibility
     </a>
   </li>
@@ -629,10 +624,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       Extensibility
@@ -650,7 +647,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/" title="Introduction" class="md-nav__link">
+    <a href="../" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -662,7 +659,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/templating/" title="Templating" class="md-nav__link">
+    <a href="../templating/" title="Templating" class="md-nav__link">
       Templating
     </a>
   </li>
@@ -672,11 +669,96 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../extensibility/custom_data_source/" title="Custom data source" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Custom data source
+      </label>
+    
+    <a href="./" title="Custom data source" class="md-nav__link md-nav__link--active">
       Custom data source
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-source-creation-process" class="md-nav__link">
+    Data source creation process
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-data-source-logic" class="md-nav__link">
+    Create the data source logic
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basedatasource-methods" class="md-nav__link">
+    BaseDataSource - Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basedatasource-properties" class="md-nav__link">
+    BaseDataSource - Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-service-scope-to-get-service-instances" class="md-nav__link">
+    Using service scope to get service instances
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-data-source-information" class="md-nav__link">
+    Register data source information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -686,7 +768,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/custom_layout/" title="Custom layout" class="md-nav__link">
+    <a href="../custom_layout/" title="Custom layout" class="md-nav__link">
       Custom layout
     </a>
   </li>
@@ -698,7 +780,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/custom_web_component/" title="Custom web component" class="md-nav__link">
+    <a href="../custom_web_component/" title="Custom web component" class="md-nav__link">
       Custom web component
     </a>
   </li>
@@ -710,7 +792,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/custom_suggestions_provider/" title="Custom suggestions provider" class="md-nav__link">
+    <a href="../custom_suggestions_provider/" title="Custom suggestions provider" class="md-nav__link">
       Custom suggestions provider
     </a>
   </li>
@@ -722,7 +804,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/handlebars_customizations/" title="Custom Handlebars customizations" class="md-nav__link">
+    <a href="../handlebars_customizations/" title="Custom Handlebars customizations" class="md-nav__link">
       Custom Handlebars customizations
     </a>
   </li>
@@ -740,17 +822,268 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-source-creation-process" class="md-nav__link">
+    Data source creation process
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-data-source-logic" class="md-nav__link">
+    Create the data source logic
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basedatasource-methods" class="md-nav__link">
+    BaseDataSource - Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basedatasource-properties" class="md-nav__link">
+    BaseDataSource - Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-service-scope-to-get-service-instances" class="md-nav__link">
+    Using service scope to get service instances
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-data-source-information" class="md-nav__link">
+    Register data source information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/aequos-solutions/aequos.github.io/blob/master/docs/getting_started/sample_scenarios.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/aequos-solutions/aequos.github.io/blob/master/docs/extensibility/custom_data_source.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Sample scenarios</h1>
-                
-                <p>Coming soon...</p>
+                <h1 id="create-a-custom-data-source">Create a custom data source<a class="headerlink" href="#create-a-custom-data-source" title="Permanent link">&para;</a></h1>
+<p><img alt="&quot;Custom data source&quot;" class="center" src="../../assets/extensibility/data_source/custom_data_source.png" /></p>
+<h2 id="data-source-creation-process">Data source creation process<a class="headerlink" href="#data-source-creation-process" title="Permanent link">&para;</a></h2>
+<p>Data source creation process comes in two distinct steps:</p>
+<ol>
+<li><a href="#create-the-data-source-logic">Create the data source itself (i.e. the logic to get data, etc.)</a>.</li>
+<li><a href="#register-data-source-information">Register the data source information for discovery</a>.</li>
+</ol>
+<h3 id="create-the-data-source-logic">Create the data source logic<a class="headerlink" href="#create-the-data-source-logic" title="Permanent link">&para;</a></h3>
+<p>The first step is to create the core logic of the data source:</p>
+<ul>
+<li>In your extensibility library project, create a new <code>MyDataSource.ts</code> TypeScript file.</li>
+<li>Create an interface for your data source properties, typically the ones you want to persist in the Web Part property bag. Data source properties are isolated from the other general Web Part properties under the property <code>dataSourceProperties</code> in the property bag object.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>    <span class="kr">export</span> <span class="kr">interface</span> <span class="nx">ICustomDataSourceProperties</span> <span class="p">{</span>
+        <span class="nx">myProperty</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+
+<p><img alt="&quot;Custom data source properties&quot;" class="center" src="../../assets/extensibility/data_source/data_source_properties.png" /></p>
+<ul>
+<li>Implement the <code>BaseDataSource</code> abstract class using your properties interface:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>    <span class="kr">export</span> <span class="kr">class</span> <span class="nx">CustomDataSource</span> <span class="kr">extends</span> <span class="nx">BaseDataSource</span><span class="o">&lt;</span><span class="nx">ICustomDataSourceProperties</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="p">...</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+
+<ul>
+<li>Implement your data source logic according to the available methods and properties.</li>
+</ul>
+<h4 id="basedatasource-methods">BaseDataSource - Methods<a class="headerlink" href="#basedatasource-methods" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onInit()</code></td>
+<td>The initialization method of your data source (ex: initialize your properties, etc.). You can perform asynchronous calls here. This method will be called when the data source is instanciated by the main Web Part.</td>
+</tr>
+<tr>
+<td><code>getData()</code></td>
+<td>Probably the most important method in a data source. Returns the data of your data source, for instance, after an asynchronous call to your API. The data must follow the <code>IDataSourceData</code> interface. As input, you will receive all the data context with useful information to get your data (ex: the current selected page, current selected filters, etc.).</td>
+</tr>
+<tr>
+<td><code>getPropertyPaneGroupsConfiguration()</code></td>
+<td>Returns the property pane fields to display when your data source is selected. These are regular SPFx property fields and groups. Data source properties are isolated from the other general Web Part properties under the property <code>dataSourceProperties</code>. It means you must include that path in your property pane controls get the value persisted: </br> <p align="center"><img alt="&quot;Custom data source properties&quot;" src="../../assets/extensibility/data_source/property_bag.png" /></p>. Defining fields or groups is not mandatory for a data source. If you don't want to expose any option, just return an empty array.</td>
+</tr>
+<tr>
+<td><code>getPagingBehavior()</code></td>
+<td>The paging behavior of the data source. If <strong>'Dynamic'</strong>, the paging will be done using the pre-calculated <code>paging.links</code> array property returned by the data source. In this mode, this is your responsibility to populate these links (ex: using a <code>@odata.nextLink</code> information from your API). If <strong>'Static'</strong>, the paging will be done statically based on the <code>items</code> array property returned by the data source. If <strong>'None'</strong>, no paging will be performed.</td>
+</tr>
+<tr>
+<td><code>getFilterBehavior()</code></td>
+<td>The filter behavior of the data source. If <strong>'Dynamic'</strong>, the available filters and values will be the ones returned by the data source in the <code>filters</code> array property. If <strong>'Static'</strong>, the available filters and values will be determined using the current results set returned by the data source (using objects properties from the <code>items</code> array property).</td>
+</tr>
+<tr>
+<td><code>getAppliedFilters()</code></td>
+<td>If any, returns the list of filters (i.e data source fields) applied by the data source to filter results. Set this information in your data source is <code>FilterType.Static</code> but you still want filter initial result with 'Static' filters (like Taxonomy Picker and Date Range). These will be excluded by the main Web Part during the static filtering operation. If you forgot to set these values, data will be filtered statically using the current selected filters.</td>
+</tr>
+<tr>
+<td><code>getItemCount()</code></td>
+<td>Returns the total of items. This can be the <code>items</code> array length or the total of items in general. This information will be used to generate page numbers.</td>
+</tr>
+<tr>
+<td><code>getTemplateSlots()</code></td>
+<td>Returns the available template slots for this data source. <a href="../../usage/data-visualizer/slots/">More information about slots</a>.</td>
+</tr>
+<tr>
+<td><code>onPropertyUpdate()</code></td>
+<td>The method will be called when a property pane value is updated. The main Web Part in <code>Reactive</code> mode for property pane fields.</td>
+</tr>
+<tr>
+<td><code>render()</code></td>
+<td>Call this method to force a render of the main Web Part.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="basedatasource-properties">BaseDataSource - Properties<a class="headerlink" href="#basedatasource-properties" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>properties</code></td>
+<td>The Web Part properties in the property bag. Corresponds to the isolated <code>dataSourceProperties</code> property in the global property bag. You won't be able to access any other general properties of the Web Part.</td>
+</tr>
+<tr>
+<td><code>context</code></td>
+<td>The Web Part context given by the main Web Part.</td>
+</tr>
+<tr>
+<td><code>serviceKeys</code></td>
+<td>The available service scope keys you can use to get shared service instances like the <code>TokenService</code>. Example: </br> <p align="center"><img alt="&quot;Service keys usage&quot;" src="../../assets/extensibility/data_source/service_keys.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="using-service-scope-to-get-service-instances">Using service scope to get service instances<a class="headerlink" href="#using-service-scope-to-get-service-instances" title="Permanent link">&para;</a></h4>
+<p>If your data source needs to use <code>SPHttpClient</code>, <code>HttpClient</code>, etc. services to retrieve data, you have multiple ways to get instances for these.</p>
+<ul>
+<li>Use the <code>this.context</code> property:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>    <span class="kr">const</span> <span class="nx">spHttpClient</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">context</span><span class="p">.</span><span class="nx">spHttpClient</span><span class="p">;</span>
+</code></pre></div>
+
+
+<p><strong>OR</strong></p>
+<ul>
+<li>Use the parent service scope to consume an existing instance:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>    <span class="kr">private</span> <span class="nx">spHttpClient</span>: <span class="kt">SPHttpClient</span><span class="p">;</span>
+
+    <span class="kr">constructor</span><span class="p">(</span><span class="nx">serviceScope</span>: <span class="kt">ServiceScope</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="kr">super</span><span class="p">(</span><span class="nx">serviceScope</span><span class="p">);</span>
+
+        <span class="nx">serviceScope</span><span class="p">.</span><span class="nx">whenFinished</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">spHttpClient</span> <span class="o">=</span> <span class="nx">serviceScope</span><span class="p">.</span><span class="nx">consume</span><span class="p">(</span><span class="nx">SPHttpClient</span><span class="p">.</span><span class="nx">serviceKey</span><span class="p">);</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+
+<blockquote>
+<p>We recommend to use the second approach especially if you also use shared instances like the <code>TokenService</code>.</p>
+</blockquote>
+<h3 id="register-data-source-information">Register data source information<a class="headerlink" href="#register-data-source-information" title="Permanent link">&para;</a></h3>
+<p>The next step is to fill information about your new data source. In the library main entry point (i.e. the class implementing the <code>IExtensibilityLibrary</code> in interface) return a new <code>IDataSourceDefinition</code> object in the <code>getCustomDataSources()</code> method using these properties: </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>The friendly name of your data source that will show up in tiles.</td>
+</tr>
+<tr>
+<td><code>iconName</code></td>
+<td>An Office UI Fabric icon for your data source.</td>
+</tr>
+<tr>
+<td><code>key</code></td>
+<td>An unique internal key for your data source.</td>
+</tr>
+<tr>
+<td><code>serviceKey</code></td>
+<td>A service key used to instanciate your data source class. Builtin or custom data sources are instanciated dynamically using <a href="https://docs.microsoft.com/en-us/javascript/api/sp-core-library/servicescope?view=sp-typescript-latest">SPFx service scopes</a>.</td>
+</tr>
+</tbody>
+</table>
+<div class="codehilite"><pre><span></span><code>  <span class="kr">public</span> <span class="nx">getCustomDataSources</span><span class="p">()</span><span class="o">:</span> <span class="nx">IDataSourceDefinition</span><span class="p">[]</span> <span class="p">{</span>
+
+    <span class="k">return</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;My Custom Source&#39;</span><span class="p">,</span>
+          <span class="nx">iconName</span><span class="o">:</span> <span class="s1">&#39;Code&#39;</span><span class="p">,</span>
+          <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;CustomDataSource&#39;</span><span class="p">,</span>
+          <span class="nx">serviceKey</span>: <span class="kt">ServiceKey.create</span><span class="o">&lt;</span><span class="nx">IDataSource</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;MyCompany:CustomDataSource&#39;</span><span class="p">,</span> <span class="nx">CustomDataSource</span><span class="p">)</span>
+      <span class="p">},</span>
+    <span class="p">];</span>
+  <span class="p">}</span>
+</code></pre></div>
                 
                   
                 
@@ -772,7 +1105,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../connections_chart/" title="Connections overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../templating/" title="Templating" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -781,19 +1114,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Connections overview
+                Templating
               </span>
             </div>
           </a>
         
         
-          <a href="../../usage/data-visualizer/" title="Usage" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../custom_layout/" title="Custom layout" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Usage
+                Custom layout
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

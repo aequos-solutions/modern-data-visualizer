@@ -36,7 +36,7 @@
     
     
       
-        <title>Sample scenarios - aequos Modern Data Visualizer solution for SharePoint Online</title>
+        <title>Custom layout - aequos Modern Data Visualizer solution for SharePoint Online</title>
       
     
     
@@ -87,6 +87,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#create-a-custom-layout" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -109,7 +113,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Sample scenarios
+                Custom layout
               
             </span>
           
@@ -188,7 +192,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../.." class="md-tabs__link md-tabs__link--active">
+        <a href="../.." class="md-tabs__link">
           Getting Started
         </a>
       
@@ -253,7 +257,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../extensibility/" class="md-tabs__link">
+        <a href="../" class="md-tabs__link md-tabs__link--active">
           Extensibility
         </a>
       
@@ -308,12 +312,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       Getting Started
@@ -367,7 +369,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../connections_chart/" title="Connections overview" class="md-nav__link">
+    <a href="../../getting_started/connections_chart/" title="Connections overview" class="md-nav__link">
       Connections overview
     </a>
   </li>
@@ -377,18 +379,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Sample scenarios" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../getting_started/sample_scenarios/" title="Sample scenarios" class="md-nav__link">
       Sample scenarios
     </a>
-    
   </li>
 
         
@@ -494,7 +489,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/" title="Extensibility" class="md-nav__link">
+    <a href="../" title="Extensibility" class="md-nav__link">
       Extensibility
     </a>
   </li>
@@ -629,10 +624,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       Extensibility
@@ -650,7 +647,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/" title="Introduction" class="md-nav__link">
+    <a href="../" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -662,7 +659,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/templating/" title="Templating" class="md-nav__link">
+    <a href="../templating/" title="Templating" class="md-nav__link">
       Templating
     </a>
   </li>
@@ -674,7 +671,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/custom_data_source/" title="Custom data source" class="md-nav__link">
+    <a href="../custom_data_source/" title="Custom data source" class="md-nav__link">
       Custom data source
     </a>
   </li>
@@ -684,11 +681,96 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../extensibility/custom_layout/" title="Custom layout" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Custom layout
+      </label>
+    
+    <a href="./" title="Custom layout" class="md-nav__link md-nav__link--active">
       Custom layout
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#layout-creation-process" class="md-nav__link">
+    Layout creation process
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-layout" class="md-nav__link">
+    Create the layout
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baselayout-methods" class="md-nav__link">
+    BaseLayout - Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baselayout-properties" class="md-nav__link">
+    BaseLayout - Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-html-template-file" class="md-nav__link">
+    Create the HTML template file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-layout-information" class="md-nav__link">
+    Register layout information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -698,7 +780,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/custom_web_component/" title="Custom web component" class="md-nav__link">
+    <a href="../custom_web_component/" title="Custom web component" class="md-nav__link">
       Custom web component
     </a>
   </li>
@@ -710,7 +792,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/custom_suggestions_provider/" title="Custom suggestions provider" class="md-nav__link">
+    <a href="../custom_suggestions_provider/" title="Custom suggestions provider" class="md-nav__link">
       Custom suggestions provider
     </a>
   </li>
@@ -722,7 +804,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../extensibility/handlebars_customizations/" title="Custom Handlebars customizations" class="md-nav__link">
+    <a href="../handlebars_customizations/" title="Custom Handlebars customizations" class="md-nav__link">
       Custom Handlebars customizations
     </a>
   </li>
@@ -740,17 +822,241 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#layout-creation-process" class="md-nav__link">
+    Layout creation process
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-layout" class="md-nav__link">
+    Create the layout
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baselayout-methods" class="md-nav__link">
+    BaseLayout - Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baselayout-properties" class="md-nav__link">
+    BaseLayout - Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-html-template-file" class="md-nav__link">
+    Create the HTML template file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-layout-information" class="md-nav__link">
+    Register layout information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/aequos-solutions/aequos.github.io/blob/master/docs/getting_started/sample_scenarios.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/aequos-solutions/aequos.github.io/blob/master/docs/extensibility/custom_layout.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Sample scenarios</h1>
-                
-                <p>Coming soon...</p>
+                <h1 id="create-a-custom-layout">Create a custom layout<a class="headerlink" href="#create-a-custom-layout" title="Permanent link">&para;</a></h1>
+<p><img alt="&quot;Custom layout&quot;" class="center" src="../../assets/extensibility/layout/custom_layout.png" /></p>
+<blockquote>
+<p>Custom layouts are only supported for the 'Data Visualizer' Web Part. You can't add custom layout for the 'Data Filter' Web Part.</p>
+</blockquote>
+<h2 id="layout-creation-process">Layout creation process<a class="headerlink" href="#layout-creation-process" title="Permanent link">&para;</a></h2>
+<p>Same as data source, the layout creation process comes in three distinct steps:</p>
+<ol>
+<li><a href="#create-the-layout">Create the layout class (i.e. define the property pane options)</a>.</li>
+<li><a href="#create-the-html-template-file">Create the HTML template associated to that layout</a>.</li>
+<li><a href="#register-layout-information">Register the layout information for discovery</a>.</li>
+</ol>
+<h3 id="create-the-layout">Create the layout<a class="headerlink" href="#create-the-layout" title="Permanent link">&para;</a></h3>
+<ul>
+<li>In your extensibility library project, create a new <code>MyLayout.ts</code> TypeScript file.</li>
+<li>Create an interface for your layout properties, typically the ones you want to persist in the Web Part property bag. Layout properties are isolated from the other general Web Part properties under the property <code>layoutProperties</code> in the property bag object.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>    <span class="kr">export</span> <span class="kr">interface</span> <span class="nx">ICustomLayoutProperties</span> <span class="p">{</span>
+        <span class="nx">myTextProperty</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+
+<p><img alt="&quot;Custom layout properties&quot;" class="center" src="../../assets/extensibility/layout/layout_properties.png" /></p>
+<ul>
+<li>Implement the <code>BaseLayout</code> abstract class using your properties interface:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>    <span class="kr">export</span> <span class="kr">class</span> <span class="nx">Customlayout</span> <span class="kr">extends</span> <span class="nx">BaseLayout</span><span class="o">&lt;</span><span class="nx">ICustomLayoutProperties</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="p">...</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+
+<ul>
+<li>Implement your layout logic according to the available methods and properties.</li>
+</ul>
+<h4 id="baselayout-methods">BaseLayout - Methods<a class="headerlink" href="#baselayout-methods" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onInit()</code></td>
+<td>The initialization method of your layout (ex: initialize your properties, etc.). You can perform asynchronous calls here. This method will be called when the layout is instanciated by the main Web Part.</td>
+</tr>
+<tr>
+<td><code>getPropertyPaneGroupsConfiguration()</code></td>
+<td>Returns the property pane fields to display when your layout is selected. These are regular SPFx property fields and groups. Layout properties are isolated from the other general Web Part properties under the property <code>layoutProperties</code>. It means you must include that path in your property pane controls get the value persisted (same thing as custom data source). Defining fields or groups is not mandatory for a layout. If you don't want to expose any option, just return an empty array.</td>
+</tr>
+<tr>
+<td><code>onPropertyUpdate()</code></td>
+<td>The method will be called when a property pane value is updated. The main Web Part in <code>Reactive</code> mode for property pane fields.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="baselayout-properties">BaseLayout - Properties<a class="headerlink" href="#baselayout-properties" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>properties</code></td>
+<td>The Web Part properties in the property bag. Corresponds to the isolated <code>layoutProperties</code> property in the global property bag. You won't be able to access any other general properties of the Web Part.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-the-html-template-file">Create the HTML template file<a class="headerlink" href="#create-the-html-template-file" title="Permanent link">&para;</a></h3>
+<p>In your extensibility library project, create a new <code>custom-layout.html</code> HTML file. A layout template is split into two distinct parts:</p>
+<p>A <code>template</code> part, containing the HTML markup to display your data <strong>once fetched</strong>. This part is mandatory to display your data.</p>
+<div class="codehilite"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">content</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;template&quot;</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- Your template content here --&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">content</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<p>A <code>placeholder</code> part, containing the HTML markup to display as placeholder <strong>while the data are getting fetched</strong>. This part is optional.</p>
+<div class="codehilite"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">content</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;placeholder&quot;</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- Your placeholder content here --&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">content</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<blockquote>
+<p>In a template, you must use Handlebars expressions to access and display your data.</p>
+</blockquote>
+<p><strong>Example: iterating through all items</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="cp">{{</span><span class="m m-Attribute">#each</span> <span class="nv">data.items</span> <span class="nv">as</span> <span class="err">|</span><span class="nv">item</span><span class="err">|</span><span class="cp">}}</span><span class="x"></span>
+<span class="x">    &lt;!-- Access &#39;item&#39; data source fields from here (ex: item.Title)--&gt;</span>
+<span class="cp">{{</span><span class="m m-Attribute">/each</span><span class="cp">}}</span><span class="x"></span>
+</code></pre></div>
+
+
+<h3 id="register-layout-information">Register layout information<a class="headerlink" href="#register-layout-information" title="Permanent link">&para;</a></h3>
+<p>The next step is to fill information about your new layout. In the library main entry point (i.e. the class implementing the <code>IExtensibilityLibrary</code> in interface) return a new <code>ILayoutDefinition</code> object in the <code>getCustomLayouts()</code> method using these properties: </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>The friendly name of your layout that will show up in tiles.</td>
+</tr>
+<tr>
+<td><code>iconName</code></td>
+<td>An Office UI Fabric icon for your layout.</td>
+</tr>
+<tr>
+<td><code>key</code></td>
+<td>An unique internal key for your layout.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>The layout type (<code>LayoutType.Results</code> is for the 'Data Visualizer' Web Part, <code>LayoutType.Filter</code> for the 'Data Filter' Web Part). Only <strong><code>LayoutType.Results</code></strong> is supported for now. You can't add custom layout for the 'Data Filter' Web Part.</td>
+</tr>
+<tr>
+<td><code>templateContent</code></td>
+<td>The template HTML content as string. Use a <code>require</code> statement to get the string content from your HTML file.</td>
+</tr>
+<tr>
+<td><code>serviceKey</code></td>
+<td>A service key used to instanciate your layout class. Builtin or custom data layouts are instanciated dynamically using <a href="https://docs.microsoft.com/en-us/javascript/api/sp-core-library/servicescope?view=sp-typescript-latest">SPFx service scopes</a>.</td>
+</tr>
+</tbody>
+</table>
+<div class="codehilite"><pre><span></span><code><span class="kr">public</span> <span class="nx">getCustomLayouts</span><span class="p">()</span><span class="o">:</span> <span class="nx">ILayoutDefinition</span><span class="p">[]</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;My custom layout&#39;</span><span class="p">,</span>
+            <span class="nx">iconName</span><span class="o">:</span> <span class="s1">&#39;Color&#39;</span><span class="p">,</span>
+            <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;CustomLayout&#39;</span><span class="p">,</span>
+            <span class="nx">type</span>: <span class="kt">LayoutType.Results</span><span class="p">,</span>
+            <span class="nx">templateContent</span>: <span class="kt">require</span><span class="p">(</span><span class="s1">&#39;../custom-layout.html&#39;</span><span class="p">),</span>
+            <span class="nx">serviceKey</span>: <span class="kt">ServiceKey.create</span><span class="o">&lt;</span><span class="nx">ILayout</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;MyCompany:CustomLayout&#39;</span><span class="p">,</span> <span class="nx">Customlayout</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div>
                 
                   
                 
@@ -772,7 +1078,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../connections_chart/" title="Connections overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../custom_data_source/" title="Custom data source" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -781,19 +1087,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Connections overview
+                Custom data source
               </span>
             </div>
           </a>
         
         
-          <a href="../../usage/data-visualizer/" title="Usage" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../custom_web_component/" title="Custom web component" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Usage
+                Custom web component
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
