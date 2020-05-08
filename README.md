@@ -1,6 +1,7 @@
-!["aequos"](./assets/aequos_logo_noir.png){: .center .logo}
 
-# aequos Data Visualizer solution
+<p align="center"><img width="200px" src="./assets/aequos_logo_noir.png"/></p>
+
+# aequos Modern Data Visualizer solution
 
 The 'Data Visualizer' solution is a set of SharePoint Online modern Web Parts allowing SharePoint super users, webmasters and developers to create highly flexible and personalized data viewing and filtering experiences in minutes!
 
@@ -8,8 +9,7 @@ It is the enhanced product version of the well known ["Pattern & Practices Moder
 
 Refer to out website to see [differences]() between the two solutions.
 
-To get a valid license, refer to the official [website](https://www
-aequos.ca).
+To get a valid license, refer to the official [website](https://www.aequos.ca).
 
 > Don't be wrong: **we still continue to invest time and support for the open-source**. If it suits your current requirement, feel free to go with it.We will never push someone to purchase the licensed solution. It is up to you.
 
@@ -23,7 +23,7 @@ This repository hosts the official documentation for the solution + the public r
 
 ### Solution documentation
 
-- [Documentation](https://)
+- [Documentation](https://aequos-solutions.github.io/modern-data-visualizer/)
 
 ### Demo projects
 
