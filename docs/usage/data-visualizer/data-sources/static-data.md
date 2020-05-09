@@ -1,6 +1,6 @@
 The _'Static data'_ is the simplest data source you can use. With this data ssource, items are retrieved from a static JSON object that you define and does not require any asynchronous call.
 
-!["Static Data"](../../../assets/webparts/data_visualizer/page1/static_data_intro.png)
+!["Static Data"](../../../assets/webparts/data_visualizer/page1/static_data_intro.png){: .center}
 
 #### When to use this data source?
 
@@ -27,7 +27,7 @@ This data source allows you to define your own data schema (i.e. fields) that yo
 
 Let say you want to display a static list of useful links for your organization on the home page. Open the code editor and enter the following data:
 
-!["Static Data - Update"](../../../assets/webparts/data_visualizer/page1/static_data_modify.png)
+!["Static Data - Update"](../../../assets/webparts/data_visualizer/page1/static_data_modify.png){: .center}
 
 The data could be look like this:
 

@@ -1,3 +1,7 @@
-## Flow connectin between Web Parts
+## Connection diagram between Web Parts
 
-T
+The included Web Parts can be connected together to create a complete search center according to this schema:
+
+!["Connections diagram"](../assets/connections_flow.png){: .center}
+
+> The connection between a _Data Visualizer_ and _Data Filters_ is a **two-ways** connection. All other connection are **one-way**.

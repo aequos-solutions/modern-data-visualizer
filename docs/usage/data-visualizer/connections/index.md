@@ -6,11 +6,11 @@ The 'Data Visualizer' Web Part can be used alone but also connected to other Web
 
 ## Input query text
 
-The input query text can be either static or dynamic. In all case, this value can be used using the `{inputQueryText}` token. See [tokens](../tokens.md) for more information.
+The input query text can be either static or dynamic. In all cases, this value can be used using the `{inputQueryText}` token. See [tokens](../tokens.md) for more information.
 
 **Static value**
 
-It corresponds to a free text keyrwors that you want to pass to your data source:
+It corresponds to a free text keywords that you want to pass to your data source:
 
 !["Static value"](../../../assets/webparts/data_visualizer/connections/input_text_static.png){: .center}
 
