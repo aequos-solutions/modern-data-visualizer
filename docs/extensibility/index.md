@@ -67,8 +67,10 @@ To create an extensibility library, you have the choice to reuse the one provide
     - [Handlebars customizations](./handlebars_customizations.md)
 
     Creation process always follows more or less the same pattern:
+
     1. Create the extension data logic or render logic.
     2. Register the information about the extension to be discovered and instanciated by the target Web Part by implementing the corresponding method according to the `IExtensibilityLibrary` interface.
+
 6. Bundle `gulp bundle --ship` and package `gulp package-solution --ship` and add the solution to the global or site collection catalog (for this one, it must be the same site collection where the Web Part loading that extension(s) is present).
 7. [Register your manifest ID in the target Web Part instance](#register-your-extensibility-library-with-a-web-part).
 8. Enjoy!
