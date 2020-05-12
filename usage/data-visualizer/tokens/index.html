@@ -1047,7 +1047,7 @@
 </tr>
 <tr>
 <td align="left"><strong>{filters.&lt;FilterName&gt;}</strong></td>
-<td align="left">The current selected filters. You can use deep paths here to access properties. <em>'FilterName'</em> corresponds to the filter name specified in the Data Filters Web Part (not the display name). Only single value taxonomy filters and data range filters are supported. For date range filters you can access start/end date values using <code>{filters.MyDateRangeFilter.startDate}</code> or <code>{filters.MyDateRangeFilter.endDate}</code>. For taxonomy filters, the token <code>{filters.MyTaxonomyFilter}</code> will return the taxonomy item ID currently selected.</td>
+<td align="left">The current selected filters. You can use deep paths here to access properties. <em>'FilterName'</em> corresponds to the filter name specified in the Data Filters Web Part (not the display name). Only single value taxonomy filters and data range filters are supported. For date range filters you can access start/end date values (as ISO8601 strings) using <code>{filters.MyDateRangeFilter.startDate}</code> or <code>{filters.MyDateRangeFilter.endDate}</code>. For taxonomy filters, the token <code>{filters.MyTaxonomyFilter}</code> will return the taxonomy item ID currently selected.</td>
 </tr>
 <tr>
 <td align="left"><strong>{itemsCountPerPage}</strong></td>
@@ -1153,7 +1153,7 @@
 </tr>
 <tr>
 <td><strong>{User.\&lt;property>}</strong></td>
-<td>Any property from the user profile of the user who issued the query — for example, SPS-Interests, including custom properties.  <br/></td>
+<td>Any property from the user profile of the user who issued the query — for example, <code>SPS-Interests</code>, <code>userprofile_guid</code>, <code>accountname</code>, etc. including custom properties.  <br/></td>
 </tr>
 </tbody>
 </table>

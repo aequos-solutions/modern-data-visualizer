@@ -997,13 +997,17 @@
 <li><a href="custom_suggestions_provider/">Suggestions providers</a></li>
 <li><a href="handlebars_customizations/">Handlebars customizations</a></li>
 </ul>
-<p>Creation process always follows more or less the same pattern:
-1. Create the extension data logic or render logic.
-2. Register the information about the extension to be discovered and instanciated by the target Web Part by implementing the corresponding method according to the <code>IExtensibilityLibrary</code> interface.
-6. Bundle <code>gulp bundle --ship</code> and package <code>gulp package-solution --ship</code> and add the solution to the global or site collection catalog (for this one, it must be the same site collection where the Web Part loading that extension(s) is present).
-7. <a href="#register-your-extensibility-library-with-a-web-part">Register your manifest ID in the target Web Part instance</a>.
-8. Enjoy!</p>
+<p>Creation process always follows more or less the same pattern:</p>
+<ol>
+<li>Create the extension data logic or render logic.</li>
+<li>Register the information about the extension to be discovered and instanciated by the target Web Part by implementing the corresponding method according to the <code>IExtensibilityLibrary</code> interface.</li>
+</ol>
 </li>
+<li>
+<p>Bundle <code>gulp bundle --ship</code> and package <code>gulp package-solution --ship</code> and add the solution to the global or site collection catalog (for this one, it must be the same site collection where the Web Part loading that extension(s) is present).</p>
+</li>
+<li><a href="#register-your-extensibility-library-with-a-web-part">Register your manifest ID in the target Web Part instance</a>.</li>
+<li>Enjoy!</li>
 </ol>
 <h4 id="debug-a-library-component">Debug a library component<a class="headerlink" href="#debug-a-library-component" title="Permanent link">&para;</a></h4>
 <p>Debugging a library component is exactly the same as debugging an SPFx Web Part. Run <code>gulp serve</code> in the hosted workbench and put a <em>'Data Visualizer'</em>,<em>'Data Filters'</em> or <em>'Search Box'</em> Web Part depending the extension you want to test. If registered correctly, your breakpoints will be triggerred by the main Web Part loading your extension.</p>
