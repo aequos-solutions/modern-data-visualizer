@@ -14,11 +14,15 @@ It corresponds to a free text keywords that you want to pass to your data source
 
 !["Static value"](../../../assets/webparts/data_visualizer/connections/input_text_static.png){: .center}
 
+This value will be applied **every time** to your data source.
+
 **Dynamic value**
 
 You can connect a dynamic value from the page environment (ex: a query string parameter, the top bar search box, etc.) or a search box already added to the page.
 
 !["Dynamic value"](../../../assets/webparts/data_visualizer/connections/input_text_dynamic.png){: .center}
+
+Optionaly, you can set a default query text **when there is no value for the connected source** (ex: an empty search box at page load). 
 
 ## Filters Web Part
 

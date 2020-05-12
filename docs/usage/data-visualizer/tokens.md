@@ -38,7 +38,7 @@ Tokens related to connected Web Parts in the Data Visualizer.
 |**Token**|**Definition**|
 |:-----|:-----|
 |**{inputQueryText}**<br/> | The query value entered into a search box on a page. The value depends on the configuration of input text connection of the Data Visualizer Web Part. <br/> |
-|**{filters.&lt;FilterName&gt;}** | The current selected filters. You can use deep paths here to access properties. _'FilterName'_ corresponds to the filter name specified in the Data Filters Web Part (not the display name). Only single value taxonomy filters and data range filters are supported. For date range filters you can access start/end date values using `{filters.MyDateRangeFilter.startDate}` or `{filters.MyDateRangeFilter.endDate}`. For taxonomy filters, the token `{filters.MyTaxonomyFilter}` will return the taxonomy item ID currently selected.
+|**{filters.&lt;FilterName&gt;}** | The current selected filters. You can use deep paths here to access properties. _'FilterName'_ corresponds to the filter name specified in the Data Filters Web Part (not the display name). Only single value taxonomy filters and data range filters are supported. For date range filters you can access start/end date values (as ISO8601 strings) using `{filters.MyDateRangeFilter.startDate}` or `{filters.MyDateRangeFilter.endDate}`. For taxonomy filters, the token `{filters.MyTaxonomyFilter}` will return the taxonomy item ID currently selected.
 |**{itemsCountPerPage}** | The number of items count per page configured in teh Web Part. Useful for the OData source to specify a `$top={itemsCountPerPage}` parameter.
 |**{startRow}** | The next start row number according to current paging. Useful for the OData source to specify a `$skipToken={startRow}` or `$skip={startRow}` parameters.
 
@@ -73,7 +73,7 @@ Except for `{Hub}`, these a shortands to the `{PageContext}` tokens. They retunr
 |**{User.Email}**  |Email address of the user who issued the query. For example, this value can be used to query content of the managed property WorkEmail.  <br/> |
 |**{User.PreferredContentLanguage}**  |Language as specified as Preferred Content Language in the profile of the user who issued the query.  <br/> |
 |**{User.PreferredDisplayLanguage}**  |Language as specified as Preferred Display Language in the profile of the user who issued the query.  <br/> |
-|**{User.\<property\>}** |Any property from the user profile of the user who issued the query — for example, SPS-Interests, including custom properties.  <br/> |
+|**{User.\<property\>}** |Any property from the user profile of the user who issued the query — for example, `SPS-Interests`, `userprofile_guid`, `accountname`, etc. including custom properties.  <br/> |
 
 ##### Date tokens
 

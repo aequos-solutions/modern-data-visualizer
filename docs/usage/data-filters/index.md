@@ -48,7 +48,7 @@ The filter settings are as follow:
 
 You can select the operator to use between filters (OR or AND).
 
-# Filter types: 'Static' filter versus 'Refiner' filter
+## Filter types: 'Static' filter versus 'Refiner' filter
 
 The Web Part supports two types of filters (_'Static'_ and _'Refiner'_). However, there are some differences that are important to understand between these two if you want to use them properly:
 

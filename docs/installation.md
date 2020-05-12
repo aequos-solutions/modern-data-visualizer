@@ -22,17 +22,21 @@
 
     !["Get license"](./assets/licenses.png){: .center}
 
-    Register **the Office 365 tenant ID where you want to use this solution**. If you don't know how to get your tenant ID, you can:
-
-    - Follow this [procedure](https://docs.microsoft.com/en-us/onedrive/find-your-office-365-tenant-id) OR
-    - Deploy and use Web Parts without license and get the tenant ID from the error message or in the third Web Part configuration page:
-    
-    !["Get tenant ID "](./assets/get_tenant_id.png){: .center}
-
-    !["Get tenant ID 2"](./assets/get_tenant_id2.png){: .center}
+    Register **the Office 365 tenant ID where you want to use this solution**. If you don't know how to get your tenant ID, you can refer to this [procedure](#get-your-office-365-tenant-id)
 
     > **If you chose a standalone license, you must follow these [additional steps](./setup_standalone.md).**
 
 4. Add the Web Parts to a SharePoint and start building!
 
 !["Available Web Parts"](./assets/webparts.png){: .center}
+
+## Get your Office 365 tenant ID
+
+To get your Office 365 tenant unique ID, you can:
+
+- Follow this [procedure](https://docs.microsoft.com/en-us/onedrive/find-your-office-365-tenant-id) OR
+- [Download](https://github.com/aequos-solutions/modern-data-visualizer/releases), deploy and use Web Parts without license and get the tenant ID from the error message or in the third Web Part configuration page:
+
+!["Get tenant ID "](./assets/get_tenant_id.png){: .center}
+
+!["Get tenant ID 2"](./assets/get_tenant_id2.png){: .center}

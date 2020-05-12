@@ -25,7 +25,7 @@ The solution includes the following Web Parts:
 
 Here is a overview video on how to build a complete search center in minutes using all available Web Parts whithin a SharePoint page including multiple data sources.
 
-TODO VIDEO
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EECqOBWq3wo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Supported browsers
 
