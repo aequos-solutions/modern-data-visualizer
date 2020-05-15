@@ -45,6 +45,7 @@ For all layouts, some common settings are available:
 | **Show a 'See all' link** | Allows you to specify a 'See all' link at the top right of the Web Part along the Web Part title. You can set the text that will appear plus the link to use. Tokens are supported in the link URL. <p align="center">!["Common options"](../../../assets/webparts/data_visualizer/layouts/see_all_link.png)</p> | Disabled.
 | **Hide this web part if there's nothing to show** | If there is no results, the Web Part will remain blank in display mode (title and 'See all' link included). In edit mode, you will see a message indicating there is no results. <p align="center">!["Common options"](../../../assets/webparts/data_visualizer/layouts/hide_webpart.png)</p> | Disabled.
 | **Show results count** | Hide or display the results count for the current query. | Enabled.
+| **Use Microsoft Graph Toolkit** | Enable or disable the Microsoft Graph Toolkit to be used in Handlebars template. Refer to the [MGT documentation](https://docs.microsoft.com/en-us/graph/toolkit/overview) to see available components.
 
 ### Result types
 
