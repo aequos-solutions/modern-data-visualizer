@@ -55,7 +55,7 @@ Tokens related to connected Web Parts in the Data Visualizer.
 
 ##### Site, web, hub, etc. tokens
 
-Except for `{Hub}`, these a shortands to the `{PageContext}` tokens. They retunrs the same values.
+Except for `{Hub}`, these a shortands to the `{PageContext}` tokens. They returns the same values. **&lt;PropertyName&gt;** is **case sensitive**.
 
 |**Token**|**Definition**|
 |:-----|:-----|
