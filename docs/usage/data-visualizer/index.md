@@ -11,14 +11,11 @@ This Web Part can be used **alone** or **connected to other Web Parts** to add d
 
 !["aequos Data Visualizer Web Part"](../../assets/webparts/data_visualizer/data_visualizer_wp_placeholder.png){: .center}
 
+## Configuration
 
-### Data sources
+The data visualizer Web Part configuration is divided into four parts each corresponding to a property pane page:
 
-{!usage/data-visualizer/data-sources/sharepoint-search.md!}
-
-> Be careful, when you switch the data source in the property pane, all the previous data source properties are lost. We do this to avoid polluting the Web Part property bag.
-
-### 2. Select a layout
-
-
-## Use the Web Part with other Web Parts using connections
+1. [**Data source**](./data-sources/index.md): From where to retrieve the data. Includes the [slots configuration](./slots.md) and [tokens usage](./tokens.md).
+2. [**Layouts**](./layouts/index.md): How to render them.
+3. [**Connections**](./connections/index.md): How the Web Part will be connected to others in the page.
+3. [**Extensibility**](../../extensibility/index.md): How the Web Part will be connected to others in the page.

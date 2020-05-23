@@ -18,7 +18,7 @@ Activating this option may slightly reduce loading performances because the user
 
  The hover card uses Microsoft Graph Toolkit. This means you can add additional information providing your own template like this:
 
- ```html
+```html
  <mgt-person-card inherit-details>
     <template data-type="additional-details">
     <h3>Stuffed Animal Friends:</h3>
@@ -29,5 +29,5 @@ Activating this option may slightly reduce loading performances because the user
     </ul>
     </template>
 </mgt-person-card>
- ```
+```
 More information [here](https://docs.microsoft.com/en-us/graph/toolkit/components/person-card).
