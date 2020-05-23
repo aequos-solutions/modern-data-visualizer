@@ -6,7 +6,7 @@ The 'Modern Data Visualizer' solution is a set of SharePoint Online modern Web P
 
 It is the enhanced product version of the well known ["Pattern & Practices Modern Search"](https://github.com/microsoft-search/pnp-modern-search) open-source solution **that we also created**.
 
-Refer to out website to see [differences]() between the two solutions.
+Refer to out website to see [differences](https://www.aequos.ca/features) between the two solutions.
 
 > Don't be wrong: **we still continue to invest time and support for the open-source solution**. If it suits your current requirement, feel free to go with it. We will never push someone to purchase the licensed solution. It is completely up to you.
 
