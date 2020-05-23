@@ -818,18 +818,20 @@
 <p>Activating this option may slightly reduce loading performances because the user information are fecthed individually for each user (i.e result). <strong>This option shouldn't be used with large page count.</strong></p>
 <h5 id="microsoft-graph-toolkit">Microsoft Graph Toolkit<a class="headerlink" href="#microsoft-graph-toolkit" title="Permanent link">&para;</a></h5>
 <p>The hover card uses Microsoft Graph Toolkit. This means you can add additional information providing your own template like this:</p>
-<p><code>html
- &lt;mgt-person-card inherit-details&gt;
-    &lt;template data-type="additional-details"&gt;
-    &lt;h3&gt;Stuffed Animal Friends:&lt;/h3&gt;
-    &lt;ul&gt;
-        &lt;li&gt;Giraffe&lt;/li&gt;
-        &lt;li&gt;lion&lt;/li&gt;
-        &lt;li&gt;Rabbit&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;/template&gt;
-&lt;/mgt-person-card&gt;</code>
-More information <a href="https://docs.microsoft.com/en-us/graph/toolkit/components/person-card">here</a>.</p>
+<div class="codehilite"><pre><span></span> <span class="p">&lt;</span><span class="nt">mgt-person-card</span> <span class="na">inherit-details</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">template</span> <span class="na">data-type</span><span class="o">=</span><span class="s">&quot;additional-details&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Stuffed Animal Friends:<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Giraffe<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>lion<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Rabbit<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">mgt-person-card</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>More information <a href="https://docs.microsoft.com/en-us/graph/toolkit/components/person-card">here</a>.</p>
                 
                   
                 

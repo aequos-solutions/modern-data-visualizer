@@ -446,35 +446,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-sources" class="md-nav__link">
-    Data sources
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#source-configuration" class="md-nav__link">
-    Source configuration
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-select-a-layout" class="md-nav__link">
-    2. Select a layout
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-the-web-part-with-other-web-parts-using-connections" class="md-nav__link">
-    Use the Web Part with other Web Parts using connections
+  <a href="#configuration" class="md-nav__link">
+    Configuration
   </a>
   
 </li>
@@ -816,35 +789,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-sources" class="md-nav__link">
-    Data sources
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#source-configuration" class="md-nav__link">
-    Source configuration
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-select-a-layout" class="md-nav__link">
-    2. Select a layout
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-the-web-part-with-other-web-parts-using-connections" class="md-nav__link">
-    Use the Web Part with other Web Parts using connections
+  <a href="#configuration" class="md-nav__link">
+    Configuration
   </a>
   
 </li>
@@ -877,83 +823,14 @@
 </ol>
 <p><img alt="&quot;aequos Data Visualizer Web Part&quot;" class="center" src="../../assets/webparts/data_visualizer/data_visualizer_wp_picker.png" /></p>
 <p><img alt="&quot;aequos Data Visualizer Web Part&quot;" class="center" src="../../assets/webparts/data_visualizer/data_visualizer_wp_placeholder.png" /></p>
-<h3 id="data-sources">Data sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h3>
-<p>The <em>'SharePoint Search'</em> data source retrieve items from the SharePoint search engine.</p>
-<blockquote>
-<p>The SharePoint search is different from the Microsoft Graph search.</p>
-</blockquote>
-<h4 id="source-configuration">Source configuration<a class="headerlink" href="#source-configuration" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Description</th>
-<th>Default value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Query text</strong></td>
-<td>The input query text to pass to the search engine. This setting is not configurable directly in the data source options. To enable it you use go the the third configuration page of the Web Part and selected either a static or dynamic value (Ex: from a connected search box Web Part). See <a href="#">the connection documentation</a> for more information on how to configure this option. This value can be then used in the <strong>Query template</strong> using the <code>{searchTerms}</code> token. Also this value can be a <a href="https://docs.microsoft.com/en-us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference">Keyword Query Language expression (KQL)</a>.</td>
-<td>None.</td>
-</tr>
-<tr>
-<td><strong>Query template</strong></td>
-<td>The search query template to use. It allows you to use dynamic tokens according to the context or specifiy conditions that should always apply to the query.</td>
-<td><code>{searchTerms}</code></td>
-</tr>
-<tr>
-<td><strong>Result source ID</strong></td>
-<td>Can be either a builtin result source ID listed in the dropdown or a custom result source GUID that you type. In this case to take effect, you must press <em>'Enter'</em> to save the value.</td>
-<td>LocalSharePointResults</td>
-</tr>
-<tr>
-<td><strong>Selected properties</strong></td>
-<td>The SharePoint managed properties to retrieve from the results. They can be used with the same name in layouts and slots afterwards.</td>
-<td><ul><li>Title</li><li>Path</li><li>DefaultEncodingURL</li><li>FileType</li><li>HitHighlightedSummary</li><li>AuthorOWSUSER</li><li>owstaxidmetadataalltagsinfo</li><li>Created</li><li>UniqueID</li><li>NormSiteID</li><li>NormListID</li><li>NormUniqueID</li><li>ContentTypeId</li><li>UserName</li><li>JobTitle</li><li>WorkPhone</ul></td>
-</tr>
-<tr>
-<td><strong>Sort order</strong></td>
-<td>The initial results sort order. You will be able to select only <em>'Sortable'</em> managed properties here. Make sure the selected  properties satisfy this criteria in the <a href="https://docs.microsoft.com/en-us/sharepoint/technical-reference/crawled-and-managed-properties-overview">SharePoint search schema</a>.</td>
-<td>None.</td>
-</tr>
-<tr>
-<td><strong>Refinement filters</strong></td>
-<td>The initial refinement filters to apply to the query. Both KQL (Keyword Query Language) and FQL (<a href="https://docs.microsoft.com/en-us/sharepoint/dev/general-development/fast-query-language-fql-syntax-reference">Fast Query Language</a>) expressions work here (Ex: KQL <code>FileType:docx</code>, FQL: <code>FileType:equals('docx')</code>). They will be apply every time to the current search query regarless selected filters from connected Web Parts.</td>
-<td>None.</td>
-</tr>
-<tr>
-<td><strong>Language of the search request</strong></td>
-<td>The language to use for the search request. By default the search request will be made using the current user interface language. This parameter is mainly use to process diacritics, plurals, etc. correctly according to the language.</td>
-<td>Current UI language.</td>
-</tr>
-<tr>
-<td><strong>Enable query rules</strong></td>
-<td>Whether or not apply SharePoint query rules.</td>
-<td>False.</td>
-</tr>
-<tr>
-<td><strong>Include OneDrive for Business results</strong></td>
-<td>Whether or not include OneDrive for business results.</td>
-<td>False.</td>
-</tr>
-<tr>
-<td><strong>Enable audience targeting</strong></td>
-<td>Whether or not results should be targeted according to the audiences that the current user belongs to. <a href="https://support.microsoft.com/en-us/office/target-navigation-news-and-files-to-specific-audiences-33d84cb6-14ed-4e53-a426-74c38ea32293">More information about modern audiences and how to configure them</a>.</td>
-<td>False.</td>
-</tr>
-<tr>
-<td><strong>Enable localization</strong></td>
-<td>If enabled, the Web Part will try to translate the taxonomy term IDs found in result item properties and refinement values to their corresponding label according to the curent UI language. To get it work, you must map a new refinable managed property associated with ows_taxId_ crawled property and turn this toggle 'on': <a href="../../../assets/webparts/data_visualizer/localization_crawled_property.png"><img src="../../../assets/webparts/data_visualizer/localization_crawled_property.png"/></a> If enabled and depending how many items are currently displayed, this could be slightly decrease loading performances.</td>
-<td>False.</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Be careful, when you switch the data source in the property pane, all the previous data source properties are lost. We do this to avoid polluting the Web Part property bag.</p>
-</blockquote>
-<h3 id="2-select-a-layout">2. Select a layout<a class="headerlink" href="#2-select-a-layout" title="Permanent link">&para;</a></h3>
-<h2 id="use-the-web-part-with-other-web-parts-using-connections">Use the Web Part with other Web Parts using connections<a class="headerlink" href="#use-the-web-part-with-other-web-parts-using-connections" title="Permanent link">&para;</a></h2>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<p>The data visualizer Web Part configuration is divided into four parts each corresponding to a property pane page:</p>
+<ol>
+<li><a href="data-sources/"><strong>Data source</strong></a>: From where to retrieve the data. Includes the <a href="slots/">slots configuration</a> and <a href="tokens/">tokens usage</a>.</li>
+<li><a href="layouts/"><strong>Layouts</strong></a>: How to render them.</li>
+<li><a href="connections/"><strong>Connections</strong></a>: How the Web Part will be connected to others in the page.</li>
+<li><a href="../../extensibility/"><strong>Extensibility</strong></a>: How the Web Part will be connected to others in the page.</li>
+</ol>
                 
                   
                 

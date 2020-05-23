@@ -1198,48 +1198,50 @@
 <p>Activating this option may slightly reduce loading performances because the user information are fecthed individually for each user (i.e result). <strong>This option shouldn't be used with large page count.</strong></p>
 <h5 id="microsoft-graph-toolkit">Microsoft Graph Toolkit<a class="headerlink" href="#microsoft-graph-toolkit" title="Permanent link">&para;</a></h5>
 <p>The hover card uses Microsoft Graph Toolkit. This means you can add additional information providing your own template like this:</p>
-<p><code>html
- &lt;mgt-person-card inherit-details&gt;
-    &lt;template data-type="additional-details"&gt;
-    &lt;h3&gt;Stuffed Animal Friends:&lt;/h3&gt;
-    &lt;ul&gt;
-        &lt;li&gt;Giraffe&lt;/li&gt;
-        &lt;li&gt;lion&lt;/li&gt;
-        &lt;li&gt;Rabbit&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;/template&gt;
-&lt;/mgt-person-card&gt;</code>
-More information <a href="https://docs.microsoft.com/en-us/graph/toolkit/components/person-card">here</a></p>
+<div class="codehilite"><pre><span></span> <span class="p">&lt;</span><span class="nt">mgt-person-card</span> <span class="na">inherit-details</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">template</span> <span class="na">data-type</span><span class="o">=</span><span class="s">&quot;additional-details&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Stuffed Animal Friends:<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Giraffe<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>lion<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Rabbit<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">mgt-person-card</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>More information <a href="https://docs.microsoft.com/en-us/graph/toolkit/components/person-card">here</a></p>
 <h3 id="debug">Debug<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h3>
 <p>The 'debug' layout allows you to see all relevant data used by layout templates or data sources during render.</p>
 <p><img alt="&quot;Debug layout&quot;" class="center" src="../../../assets/webparts/data_visualizer/layouts/debug_layout.png" /> </p>
 <p>The template context object exposes the following properties:</p>
-<div class="codehilite"><pre><span></span>    <span class="s2">&quot;paging&quot;</span><span class="err">:</span> <span class="p">{</span>
-        <span class="nt">&quot;currentPageNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;The current selected page number&gt;&quot;</span>
-    <span class="p">}</span><span class="err">,</span>
-    <span class="s2">&quot;filters&quot;</span><span class="err">:</span> <span class="p">{</span>
-        <span class="nt">&quot;selectedFilters&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;List of currently selected filters&gt;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;filterOperator&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Operator to use between filters&gt;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;instanceId&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;The connected Data Filters Web Part instance ID&gt;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;filtersConfiguration&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;The filters configuration&gt;&quot;</span>
-    <span class="p">}</span><span class="err">,</span>
-    <span class="s2">&quot;inputQueryText&quot;</span><span class="err">:</span> <span class="s2">&quot;&lt;The current input query text (Ex: search box text)&gt;&quot;</span><span class="err">,</span>
-    <span class="s2">&quot;slots&quot;</span><span class="err">:</span> <span class="s2">&quot;&lt;Hashtable of configured slots for the current data source. Usage: {{slot item @root.slots}} &gt;&quot;</span><span class="err">,</span>
-    <span class="s2">&quot;theme&quot;</span><span class="err">:</span> <span class="s2">&quot;&lt;Current theme variables&gt;&quot;</span><span class="err">,</span>
-    <span class="s2">&quot;properties&quot;</span><span class="err">:</span> <span class="s2">&quot;&lt;Web Part properties from property bag&gt;&quot;</span><span class="err">,</span>
-    <span class="s2">&quot;context&quot;</span><span class="err">:</span> <span class="p">{</span>
-        <span class="nt">&quot;site&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Contextual information for the SharePoint site collection that is hosting the page&gt;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;web&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Contextual information for the SharePoint web that is hosting the page&gt;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;list&quot;</span> <span class="p">:</span><span class="s2">&quot;&lt;Contextual information for the SharePoint list that is hosting the page&gt;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;listItem&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;Contextual information for the SharePoint list item that is hosting the page&gt;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;cultureInfo&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;It provides culture info for the current user of the application&gt;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;It provides contextual information for the SharePoint user that is accessing the page&gt;&quot;</span>
-    <span class="p">}</span><span class="err">,</span>
-    <span class="s2">&quot;data&quot;</span><span class="err">:</span> <span class="s2">&quot;&lt;The data source data&gt;&quot;</span><span class="err">,</span>
-    <span class="s2">&quot;instanceId&quot;</span><span class="err">:</span> <span class="s2">&quot;&lt;The Web Part instance ID&gt;&quot;</span><span class="err">,</span>
-    <span class="s2">&quot;utils&quot;</span><span class="err">:</span> <span class="p">{</span>
-        <span class="nt">&quot;defaultImage&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;The default image content to display when no thummbnail is available (Base64)&gt;&quot;</span>
-    <span class="p">}</span>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;paging&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;currentPageNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;The current selected page number&gt;&quot;</span>
+<span class="p">}</span><span class="err">,</span>
+<span class="s2">&quot;filters&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;selectedFilters&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;List of currently selected filters&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;filterOperator&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Operator to use between filters&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;instanceId&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;The connected Data Filters Web Part instance ID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;filtersConfiguration&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;The filters configuration&gt;&quot;</span>
+<span class="p">}</span><span class="err">,</span>
+<span class="s2">&quot;inputQueryText&quot;</span><span class="err">:</span> <span class="s2">&quot;&lt;The current input query text (Ex: search box text)&gt;&quot;</span><span class="err">,</span>
+<span class="s2">&quot;slots&quot;</span><span class="err">:</span> <span class="s2">&quot;&lt;Hashtable of configured slots for the current data source. Usage: {{slot item @root.slots}} &gt;&quot;</span><span class="err">,</span>
+<span class="s2">&quot;theme&quot;</span><span class="err">:</span> <span class="s2">&quot;&lt;Current theme variables&gt;&quot;</span><span class="err">,</span>
+<span class="s2">&quot;properties&quot;</span><span class="err">:</span> <span class="s2">&quot;&lt;Web Part properties from property bag&gt;&quot;</span><span class="err">,</span>
+<span class="s2">&quot;context&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;site&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Contextual information for the SharePoint site collection that is hosting the page&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;web&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Contextual information for the SharePoint web that is hosting the page&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;list&quot;</span> <span class="p">:</span><span class="s2">&quot;&lt;Contextual information for the SharePoint list that is hosting the page&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;listItem&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;Contextual information for the SharePoint list item that is hosting the page&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cultureInfo&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;It provides culture info for the current user of the application&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;It provides contextual information for the SharePoint user that is accessing the page&gt;&quot;</span>
+<span class="p">}</span><span class="err">,</span>
+<span class="s2">&quot;data&quot;</span><span class="err">:</span> <span class="s2">&quot;&lt;The data source data&gt;&quot;</span><span class="err">,</span>
+<span class="s2">&quot;instanceId&quot;</span><span class="err">:</span> <span class="s2">&quot;&lt;The Web Part instance ID&gt;&quot;</span><span class="err">,</span>
+<span class="s2">&quot;utils&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;defaultImage&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;The default image content to display when no thummbnail is available (Base64)&gt;&quot;</span>
+<span class="p">}</span>
 </pre></div>
 
 

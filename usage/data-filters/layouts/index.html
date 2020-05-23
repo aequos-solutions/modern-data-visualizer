@@ -1016,16 +1016,18 @@
 <p>The 'debug' layout allows you to see all relevant data used by filter templates during render.</p>
 <p><img alt="&quot;Debug&quot;" class="center" src="../../../assets/webparts/data_filters/layouts/debug_layout.png" /></p>
 <p>The template context object exposes the following properties:</p>
-<p><code>`json
-{
-    "filters": "&lt;Current filters to display in the UI (selected/unseslected)&gt;",
-    "selectedFilters": "&lt;The current submitted filters&gt;",
-    "instanceId": "&lt;The Web Part instance ID&gt;",
-    "theme": "&lt;Current theme variables&gt;",
-    "strings": "&lt;Localized strings that can be used in the Web Part&gt;",
-    "selectedOnce": "&lt;Flag indicating if a filter value has been selected at least once by the use&gt;",
-    "properties": "&lt;The filter Web Part properties&gt;"
-}</code></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;filters&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Current filters to display in the UI (selected/unseslected)&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;selectedFilters&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;The current submitted filters&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;instanceId&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;The Web Part instance ID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;theme&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Current theme variables&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;strings&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Localized strings that can be used in the Web Part&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;selectedOnce&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Flag indicating if a filter value has been selected at least once by the use&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;The filter Web Part properties&gt;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <h3 id="custom">Custom<a class="headerlink" href="#custom" title="Permanent link">&para;</a></h3>
 <p>The 'custom' layout is the minimal layout to start with if you want to create your own customized UI from scratch. You can also start from an existing layout.</p>
 <p><img alt="&quot;Custom&quot;" class="center" src="../../../assets/webparts/data_filters/layouts/custom_layout.png" /></p>
