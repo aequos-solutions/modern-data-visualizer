@@ -1,9 +1,9 @@
 ---
 name: Bug or issue report
-about: Create a report to help us improve
+about: Something isn't working.
 title: "[BUG] Your explicit issue title here"
-labels: ''
-assignees: ''
+labels: bug
+assignees: FranckyC
 
 ---
 
