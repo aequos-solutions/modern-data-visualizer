@@ -50,20 +50,23 @@ You can also call an API endpoint with no specific authentifcation like an Azure
 
 The only method allowed are `GET` or `POST`. For each, you have the ability so set your own HTTP headers. **The value must be a valid JSON value**:
 
-    {
-        "Content-Type": "application/json;odata=verbose",
-        "Accept": "application/json",
-        ...
-    }
-
+```json
+{
+    "Content-Type": "application/json;odata=verbose",
+    "Accept": "application/json",
+    ...
+}
+```
 
 > If you specify a `POST` request, you can also benefit of [builtin tokens](../tokens.md).
 
-    {
-        "ItemsCount": "{itemsCountPerPage}",
-        "MyProperty": "My Value",
-        ...
-    }
+```json
+{
+    "ItemsCount": "{itemsCountPerPage}",
+    "MyProperty": "My Value",
+    ...
+}
+```
 
 #### Pagination
 
