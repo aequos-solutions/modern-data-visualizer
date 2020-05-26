@@ -1,4 +1,4 @@
-import { BaseDataSource, IDataSourceData, ITemplateSlot, BuiltinTemplateSlots } from "@aequos/extensibility";
+import { BaseDataSource, IDataSourceData, ITemplateSlot, BuiltinTemplateSlots, IDataContext } from "@aequos/extensibility";
 import { IPropertyPaneGroup } from "@microsoft/sp-property-pane";
 import { PropertyPaneTextField } from '@microsoft/sp-webpart-base';
 
@@ -12,7 +12,7 @@ export class CustomDataSource extends BaseDataSource<ICustomDataSourceProperties
         return 0;
     }
 
-    public async getData(): Promise<IDataSourceData> {
+    public async getData(dataContext: IDataContext): Promise<IDataSourceData> {
 
         /* Your logic to get the data */
         return Promise.resolve({
