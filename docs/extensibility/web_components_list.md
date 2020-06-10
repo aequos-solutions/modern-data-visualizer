@@ -12,6 +12,8 @@ Here are the list of all **reusable** web components you can use to customize yo
 
 > All other web components you will see in builtin layout templates are considered **internal** and are not supported for custom use.
 
+> All components have an optional `data-theme-variant` attribute used to set the theme for your internal React components (for instance using Office UI Fabric). This value is typically retrieved from the root Handlebars context and reflect the current **section theme** where the Web Part belongs. **If not set, the theme of current site will be used as fallback and may not corespond to the current section theme**.
+
 ## `<aequos-iconfile>`
 
 - **Description**: Render a file icon according to an extension. 
