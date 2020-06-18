@@ -103,3 +103,14 @@ To deal with mutli valued properties (like taxonomy multi or choices SharePoint 
 - Using a page multi values choice property: `{|RefinableStringXX:{Page.myChoiceMultiColumn}}`
 
 At any time, you can see the resolved query using the 'Debug' layout an inspecting the `data.queryModification` property.
+
+
+#### OData Data Source default URL syntax
+
+The OData Data source supports a special URL syntax allowing to execute a specifc part of that URL only during the first execution by using `{{` and `}}` enclosing characters sequence. This could be convenient for an URL containing dynamic OData filter conditions like `$filter=startswith(MyField,'{inputQueryText'}` that may be invalid due to incorrect or unavailable values during first load resulting of API error.
+
+Example:
+
+!["Default URL for OData data source"](../../assets/webparts/data_visualizer/odata/default_url.png){: .center}
+
+In this example, `{{/me/people}}` means only `/me/people` part of the URL will be executed during the first load,, retrieving the all list of users without any condition. However, on subsequent requests, the complete URL `/me/people?search={inputQueryText}}` will be executed with the correct token values.
