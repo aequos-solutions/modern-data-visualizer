@@ -566,6 +566,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#odata-data-source-default-url-syntax" class="md-nav__link">
+    OData Data Source default URL syntax
+  </a>
+  
+</li>
+      
       
       
       
@@ -953,6 +960,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#odata-data-source-default-url-syntax" class="md-nav__link">
+    OData Data Source default URL syntax
+  </a>
+  
+</li>
+      
       
       
       
@@ -1200,6 +1214,11 @@
 <li>Using a page multi values choice property: <code>{|RefinableStringXX:{Page.myChoiceMultiColumn}}</code></li>
 </ul>
 <p>At any time, you can see the resolved query using the 'Debug' layout an inspecting the <code>data.queryModification</code> property.</p>
+<h4 id="odata-data-source-default-url-syntax">OData Data Source default URL syntax<a class="headerlink" href="#odata-data-source-default-url-syntax" title="Permanent link">&para;</a></h4>
+<p>The OData Data source supports a special URL syntax allowing to execute a specifc part of that URL only during the first execution by using <code>{{</code> and <code>}}</code> enclosing characters sequence. This could be convenient for an URL containing dynamic OData filter conditions like <code>$filter=startswith(MyField,'{inputQueryText'}</code> that may be invalid due to incorrect or unavailable values during first load resulting of API error.</p>
+<p>Example:</p>
+<p><img alt="&quot;Default URL for OData data source&quot;" class="center" src="../../assets/webparts/data_visualizer/odata/default_url.png" /></p>
+<p>In this example, <code>{{/me/people}}</code> means only <code>/me/people</code> part of the URL will be executed during the first load,, retrieving the all list of users without any condition. However, on subsequent requests, the complete URL <code>/me/people?search={inputQueryText}}</code> will be executed with the correct token values.</p>
                 
                   
                 
