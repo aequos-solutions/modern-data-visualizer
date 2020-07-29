@@ -606,6 +606,26 @@
     Configuration
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-verticals" class="md-nav__link">
+    Configure verticals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -793,6 +813,26 @@
     Configuration
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-verticals" class="md-nav__link">
+    Configure verticals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -821,6 +861,7 @@
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>The configuration of the 'Data Verticals' Web Part is fairly simple.</p>
 <p><img alt="&quot;Verticals configuration&quot;" class="center" src="../../assets/webparts/data_verticals/configure_verticals.png" /> </p>
+<h3 id="configure-verticals">Configure verticals<a class="headerlink" href="#configure-verticals" title="Permanent link">&para;</a></h3>
 <p>The options for a vertical are as follow:</p>
 <table>
 <thead>
@@ -831,12 +872,16 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Tab Name</strong></td>
+<td><strong>Tab name</strong></td>
 <td>The vertical name (i.e. tab)</td>
 </tr>
 <tr>
-<td><strong>Office UI Fabric icon name</strong></td>
-<td>The optional Office UI fabric icon to display for the tab. Refer to <a href="https://developer.microsoft.com/en-us/fluentui#/styles/web/icons">Office UI Fabric documentation</a> to see all available icons.</td>
+<td><strong>Tab value</strong></td>
+<td>The vertical value that will be sent to connected 'Data Visualizer' Web Parts. You can use this value using the <code>{verticals.value}</code> token. See <a href="../data-visualizer/tokens/">tokens</a> for more info.</td>
+</tr>
+<tr>
+<td><strong>Fluent UIFabric icon name</strong></td>
+<td>The optional Fluent UI icon to display for the tab. Refer to <a href="https://developer.microsoft.com/en-us/fluentui#/styles/web/icons">Office UI Fabric documentation</a> to see all available icons.</td>
 </tr>
 <tr>
 <td><strong>Is hyperlink</strong></td>
@@ -850,12 +895,17 @@
 <td><strong>Open behavior</strong></td>
 <td>If the tab is an hyperlink, the opening behavior (new tab or current tab).</td>
 </tr>
+<tr>
+<td><strong>Show link icon</strong></td>
+<td>If the tab is an hyperlink, display or hide an icon next to the tab name indicating the tab is a link (same page or external).</td>
+</tr>
 </tbody>
 </table>
 <blockquote>
 <p>The 'Data Verticals' Web Part does not need to be connected to any Web Part. However, it is meant to be used by a 'Data Visualizer' Web Part to get it work. More info about configuration <a href="../data-visualizer/connections/">here</a>.</p>
 <p>We recommend to configure the 'Data Visualizer' Web Parts that will use verticals <strong>before connecting them to the verticals Web Part</strong>.</p>
 </blockquote>
+<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
                 
                   
                 
