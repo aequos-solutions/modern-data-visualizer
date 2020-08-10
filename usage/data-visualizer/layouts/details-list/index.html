@@ -259,6 +259,19 @@
   
 
       
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../getting_started/tutorials/build_complete_search_center/" class="md-tabs__link">
+          Tutorials
+        </a>
+      
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -365,18 +378,6 @@
   <li class="md-nav__item">
     <a href="../../../../getting_started/connections_chart/" title="Connections overview" class="md-nav__link">
       Connections overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../getting_started/sample_scenarios/" title="Sample scenarios" class="md-nav__link">
-      Sample scenarios
     </a>
   </li>
 
@@ -722,6 +723,78 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Tutorials
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../getting_started/tutorials/build_complete_search_center/" title="Build a complete search center" class="md-nav__link">
+      Build a complete search center
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../getting_started/tutorials/build_people_directory_graph/" title="Build a people directory using the Microsoft Graph data source" class="md-nav__link">
+      Build a people directory using the Microsoft Graph data source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../getting_started/tutorials/build_people_directory_sharepoint_search/" title="Build a people directory using alphabetical verticals and SharePoint Search data source" class="md-nav__link">
+      Build a people directory using alphabetical verticals and SharePoint Search data source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../getting_started/tutorials/static_taxonomy_filters_sharepoint_search/" title="Use static taxonomy filters with the SharePoint search data source" class="md-nav__link">
+      Use static taxonomy filters with the SharePoint search data source
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -752,7 +825,7 @@
 <tbody>
 <tr>
 <td><strong>Manage columns</strong></td>
-<td>Allows you to build you own table view by adding or removing columns dynamically. For each column, you get the following options:<br><p align="center"><a href="../../../../assets/webparts/data_visualizer/layouts/details_list_fields.png"><img alt="&quot;Manage columns&quot;" src="../../../../assets/webparts/data_visualizer/layouts/details_list_fields.png" /></a></p><ul><li><strong>Sort order</strong>: the order of the column in the table.</li><li><strong>Column name</strong>: the column friendly name to display.</li><li><strong>Column value</strong>: you can choose here either a field from the data source current results set (from the list or as free text) without any transformation or use an Handlebars expression by clicking on the checkbox next to it. In this case, all Handlebars helpers from the main template are available and you can also add you own HTML markup in the column value. For HTML fields you can use the special variable <code>@root.theme</code> to use theme colors (ex: <code>@root.theme.palette.themePrimary</code>).<br><img alt="Handlebars Expression" src="../../../../assets/webparts/data_visualizer/layouts/details_list_hb_expr.png" /><br><br><img alt="Handlebars Expression 2" src="../../../../assets/webparts/data_visualizer/layouts/details_list_hb_expr2.png" /></li><li><strong>Minimum width in px</strong>: the minimum width of the column in pixels.</li><li><strong>Maximum width in px</strong>: the maximum width of the column in pixels.</li><li><strong>Sortable</strong>: allows you to sort column values alphabetically when the column header is clicked (ascending or descending). The sort is done statically on the current page results set.</li><li><strong>Resizable</strong>: allows you to resize the column dynamically in display mode.</li><li><strong>Multiline</strong>: if the column column should be multiline. By default only ellipsis (...) will be display for larger text.</li></ul></td>
+<td>Allows you to build you own table view by adding or removing columns dynamically. For each column, you get the following options:<br><p align="center"><a href="../../../../assets/webparts/data_visualizer/layouts/details_list_fields.png"><img alt="&quot;Manage columns&quot;" src="../../../../assets/webparts/data_visualizer/layouts/details_list_fields.png" /></a></p><ul><li><strong>Sort order</strong>: the order of the column in the table.</li><li><strong>Column name</strong>: the column friendly name to display.</li><li><strong>Column value</strong>: you can choose here either a field from the data source current results set (from the list or as free text) without any transformation or use an Handlebars expression by clicking on the checkbox next to it. In this case, all Handlebars helpers from the main template are available and you can also add you own HTML markup in the column value. For HTML fields you can use the special variable <code>@root.theme</code> to use theme colors (ex: <code>@root.theme.palette.themePrimary</code>).<br><img alt="Handlebars Expression" src="../../../../assets/webparts/data_visualizer/layouts/details_list_hb_expr.png" /><br><br><img alt="Handlebars Expression 2" src="../../../../assets/webparts/data_visualizer/layouts/details_list_hb_expr2.png" /></li><li><strong>Minimum width in px</strong>: the minimum width of the column in pixels.</li><li><strong>Maximum width in px</strong>: the maximum width of the column in pixels.</li><li><strong>Sortable</strong>: allows you to sort column values alphabetically when the column header is clicked (ascending or descending). The sort is done statically on the current page results set and works only when the column value is not an Handlebars expression.</li><li><strong>Resizable</strong>: allows you to resize the column dynamically in display mode.</li><li><strong>Multiline</strong>: if the column column should be multiline. By default only ellipsis (...) will be display for larger text.</li></ul></td>
 <td></td>
 </tr>
 <tr>

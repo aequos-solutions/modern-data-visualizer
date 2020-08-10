@@ -265,6 +265,19 @@
   
 
       
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../getting_started/tutorials/build_complete_search_center/" class="md-tabs__link">
+          Tutorials
+        </a>
+      
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -371,18 +384,6 @@
   <li class="md-nav__item">
     <a href="../../../getting_started/connections_chart/" title="Connections overview" class="md-nav__link">
       Connections overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../getting_started/sample_scenarios/" title="Sample scenarios" class="md-nav__link">
-      Sample scenarios
     </a>
   </li>
 
@@ -853,6 +854,78 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Tutorials
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../getting_started/tutorials/build_complete_search_center/" title="Build a complete search center" class="md-nav__link">
+      Build a complete search center
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../getting_started/tutorials/build_people_directory_graph/" title="Build a people directory using the Microsoft Graph data source" class="md-nav__link">
+      Build a people directory using the Microsoft Graph data source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../getting_started/tutorials/build_people_directory_sharepoint_search/" title="Build a people directory using alphabetical verticals and SharePoint Search data source" class="md-nav__link">
+      Build a people directory using alphabetical verticals and SharePoint Search data source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../getting_started/tutorials/static_taxonomy_filters_sharepoint_search/" title="Use static taxonomy filters with the SharePoint search data source" class="md-nav__link">
+      Use static taxonomy filters with the SharePoint search data source
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1023,6 +1096,7 @@
 <p><strong>Data Verticals Web Part</strong></p>
 <ul>
 <li>In the link URL when the vertical item is a link.</li>
+<li>In the vertical tab value.</li>
 </ul>
 </li>
 </ul>
@@ -1046,7 +1120,10 @@
 </tbody>
 </table>
 <h5 id="connections-tokens">Connections tokens<a class="headerlink" href="#connections-tokens" title="Permanent link">&para;</a></h5>
-<p>Tokens related to connected Web Parts in the Data Visualizer.</p>
+<p>Tokens related to connected Web Parts in the Data Visualizer. </p>
+<blockquote>
+<p>These tokens can only be used in the 'Data Visualizer' Web Part.</p>
+</blockquote>
 <table>
 <thead>
 <tr>
@@ -1065,15 +1142,15 @@
 </tr>
 <tr>
 <td align="left"><strong>{itemsCountPerPage}</strong></td>
-<td align="left">The number of items count per page configured in teh Web Part. Useful for the OData source to specify a <code>$top={itemsCountPerPage}</code> parameter.</td>
+<td align="left">The number of items count per page configured in the 'Data Visualizer' Web Part. Useful for the OData source to specify a <code>$top={itemsCountPerPage}</code> parameter.</td>
 </tr>
 <tr>
 <td align="left"><strong>{startRow}</strong></td>
 <td align="left">The next start row number according to current paging. Useful for the OData source to specify a <code>$skipToken={startRow}</code> or <code>$skip={startRow}</code> parameters.</td>
 </tr>
 <tr>
-<td align="left">**{verticals.&lt;value</td>
-<td align="left">name}&gt;}**</td>
+<td align="left"><strong>{verticals.&lt;value|name&gt;}</strong></td>
+<td align="left">If connected, get the current selected vertical tab name or associated value.</td>
 </tr>
 </tbody>
 </table>
