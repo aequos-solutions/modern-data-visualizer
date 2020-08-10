@@ -1,5 +1,5 @@
 import { BaseLayout } from "@aequos/extensibility";
-import { IPropertyPaneField, PropertyPaneTextField } from '@microsoft/sp-webpart-base';
+import { IPropertyPaneField, PropertyPaneTextField } from '@microsoft/sp-property-pane';
 
 /**
  * Custom Layout properties
