@@ -3,8 +3,8 @@
     "packageManager": "pnpm",
     "isCreatingSolution": true,
     "environment": "spo",
-    "version": "1.9.1",
-    "libraryName": "aequos-extensibility-starter",
+    "version": "1.11.0",
+    "libraryName": "aequos-extensibility-demo",
     "libraryId": "4896309f-54bc-48f2-a7ee-0785e019d195",
     "isDomainIsolated": false,
     "componentType": "library"
