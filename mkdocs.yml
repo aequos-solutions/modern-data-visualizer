@@ -1,34 +1,38 @@
 site_name: aequos Modern Data Visualizer solution for SharePoint Online
 nav:
-    - Getting Started:
-        - Introduction: index.md
-        - Installation: installation.md
-        - Activate a standalone license: setup_standalone.md
-        - Connections overview: getting_started/connections_chart.md
-        - Sample scenarios: getting_started/sample_scenarios.md
-    - Data Visualizer:
-      - Usage: usage/data-visualizer/index.md
-      - Data sources: usage/data-visualizer/data-sources/index.md
-      - Slots: usage/data-visualizer/slots.md
-      - Tokens: usage/data-visualizer/tokens.md
-      - Layouts: usage/data-visualizer/layouts/index.md
-      - Connections: usage/data-visualizer/connections/index.md
-      - Extensibility: extensibility/index.md
-    - Data Filters:
-      - Usage: usage/data-filters/index.md
-      - Layouts: usage/data-filters/layouts/index.md
-    - Data Verticals:
-      - Usage: usage/data-verticals/index.md 
-    - Search Box:
-      - Usage: usage/search-box/index.md
-    - Extensibility:
-      - Introduction: extensibility/index.md
-      - Templating: extensibility/templating.md
-      - Custom data source: extensibility/custom_data_source.md
-      - Custom layout: extensibility/custom_layout.md
-      - Custom web component: extensibility/custom_web_component.md
-      - Custom suggestions provider: extensibility/custom_suggestions_provider.md
-      - Custom Handlebars customizations: extensibility/handlebars_customizations.md
+  - Getting Started:
+    - Introduction: index.md
+    - Installation: installation.md
+    - Activate a standalone license: setup_standalone.md
+    - Connections overview: getting_started/connections_chart.md
+  - Data Visualizer:
+    - Usage: usage/data-visualizer/index.md
+    - Data sources: usage/data-visualizer/data-sources/index.md
+    - Slots: usage/data-visualizer/slots.md
+    - Tokens: usage/data-visualizer/tokens.md
+    - Layouts: usage/data-visualizer/layouts/index.md
+    - Connections: usage/data-visualizer/connections/index.md
+    - Extensibility: extensibility/index.md
+  - Data Filters:
+    - Usage: usage/data-filters/index.md
+    - Layouts: usage/data-filters/layouts/index.md
+  - Data Verticals:
+    - Usage: usage/data-verticals/index.md 
+  - Search Box:
+    - Usage: usage/search-box/index.md
+  - Extensibility:
+    - Introduction: extensibility/index.md
+    - Templating: extensibility/templating.md
+    - Custom data source: extensibility/custom_data_source.md
+    - Custom layout: extensibility/custom_layout.md
+    - Custom web component: extensibility/custom_web_component.md
+    - Custom suggestions provider: extensibility/custom_suggestions_provider.md
+    - Custom Handlebars customizations: extensibility/handlebars_customizations.md
+  - Tutorials:
+    - Build a complete search center: getting_started/tutorials/build_complete_search_center.md
+    - Build a people directory using the Microsoft Graph data source: getting_started/tutorials/build_people_directory_graph.md
+    - Build a people directory using alphabetical verticals and SharePoint Search data source: getting_started/tutorials/build_people_directory_sharepoint_search.md
+    - Use static taxonomy filters with the SharePoint search data source: getting_started/tutorials/static_taxonomy_filters_sharepoint_search.md
 theme:
   name: 'material'
   palette:

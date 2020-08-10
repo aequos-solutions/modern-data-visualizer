@@ -20,6 +20,7 @@ You can use tokens in the following locations:
 
 - **Data Verticals Web Part**
     - In the link URL when the vertical item is a link.
+    - In the vertical tab value.
 
 #### Supported tokens (all data sources)
 
@@ -33,15 +34,17 @@ You can use tokens in the following locations:
 
 ##### Connections tokens
 
-Tokens related to connected Web Parts in the Data Visualizer.
+Tokens related to connected Web Parts in the Data Visualizer. 
+
+> These tokens can only be used in the 'Data Visualizer' Web Part.
 
 |**Token**|**Definition**|
 |:-----|:-----|
 |**{inputQueryText}**<br/> | The query value entered into a search box on a page. The value depends on the configuration of input text connection of the Data Visualizer Web Part. <br/> |
 |**{filters.&lt;FilterName&gt;}** | The current selected filters. You can use deep paths here to access properties. _'FilterName'_ corresponds to the filter name specified in the Data Filters Web Part (not the display name). Only single value taxonomy filters and data range filters are supported. For date range filters you can access start/end date values (as ISO8601 strings) using `{filters.MyDateRangeFilter.startDate}` or `{filters.MyDateRangeFilter.endDate}`. For taxonomy filters, the token `{filters.MyTaxonomyFilter}` will return the taxonomy item ID currently selected.
-|**{itemsCountPerPage}** | The number of items count per page configured in teh Web Part. Useful for the OData source to specify a `$top={itemsCountPerPage}` parameter.
+|**{itemsCountPerPage}** | The number of items count per page configured in the 'Data Visualizer' Web Part. Useful for the OData source to specify a `$top={itemsCountPerPage}` parameter.
 |**{startRow}** | The next start row number according to current paging. Useful for the OData source to specify a `$skipToken={startRow}` or `$skip={startRow}` parameters.
-|**{verticals.&lt;value|name}&gt;}** | If connected, get the current selected vertical tab name or associated value.
+|**{verticals.&lt;value\|name&gt;}** | If connected, get the current selected vertical tab name or associated value.
 
 ##### Context tokens
 
