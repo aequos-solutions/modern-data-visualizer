@@ -1,6 +1,5 @@
 import { BaseDataSource, IDataSourceData, ITemplateSlot, BuiltinTemplateSlots, IDataContext } from "@aequos/extensibility";
-import { IPropertyPaneGroup } from "@microsoft/sp-property-pane";
-import { PropertyPaneTextField } from '@microsoft/sp-webpart-base';
+import { IPropertyPaneGroup, PropertyPaneTextField } from "@microsoft/sp-property-pane";
 
 export interface ICustomDataSourceProperties {
     myProperty: string;

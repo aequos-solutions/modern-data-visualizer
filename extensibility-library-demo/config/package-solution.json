@@ -1,14 +1,21 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
-  "solution": {
-    "name": "aequos - Extensibility Library Demo",
-    "id": "4896309f-54bc-48f2-a7ee-0785e019d195",
-    "version": "1.0.0.0",
-    "includeClientSideAssets": true,
-    "skipFeatureDeployment": true,
-    "isDomainIsolated": false
-  },
-  "paths": {
-    "zippedPackage": "solution/aequos-extensibility-demo.sppkg"
-  }
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+    "solution": {
+        "name": "aequos - Extensibility Library Demo",
+        "id": "4896309f-54bc-48f2-a7ee-0785e019d195",
+        "version": "1.2.0.0",
+        "includeClientSideAssets": true,
+        "skipFeatureDeployment": true,
+        "isDomainIsolated": false,
+        "developer": {
+            "mpnId": "",
+            "name": "Franck Cornu",
+            "privacyUrl": "",
+            "termsOfUseUrl": "",
+            "websiteUrl": "www.aequos.ca"
+        }
+    },
+    "paths": {
+        "zippedPackage": "solution/aequos-extensibility-demo.sppkg"
+    }
 }
