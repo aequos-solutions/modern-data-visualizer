@@ -8,7 +8,7 @@ In a basic customization scenario, super users and webmasters can customize exis
 - **Adaptive cards**
     - Use declarative Adaptive Cards JSON templates with data.
 - **Both techniques**
-    - Use data sources [slots](../data-visualizer/slots.md) 
+    - Use data sources [slots](../usage/data-visualizer/slots.md) 
     - Use default [web components](#using-builtin-web-components) provided by the solution.
     - Use [Microsoft Graph Toolkit components](#microsoft-graph-toolkit).
 
@@ -208,3 +208,13 @@ Since it is not possible to create custom functions with adaptive cards template
 
 - `string()` is here to make sure the result of the jPath expression will always be a string. **If omitted, if the slot provided (i.e. the object path) doesn't exist, it will return `null` causing a render error**. The `jPath` function always returns an array.
 - `jPath(<data>, concat('.', $root.slots['<your_slot_name>']))` where `<data>` is the JSON object used to resolve the slot. When looping through `items`, use the `$data` token representing the current item with properties. The expression `concat('.', $root.slots['<your_slot_name>']))` is to comply with the jPath syntax: every property path should be begin with a '.' (See the official jPath [documentation](https://www.npmjs.com/package/jspath)).
+
+### Styling your adaptive cards
+
+When selecting the adaptive cards mode, you can also setup styles through the [host configuration](https://docs.microsoft.com/en-us/adaptive-cards/rendering-cards/host-config). 
+
+From the official Microsoft documentation: 
+
+_"HostConfig is a cross-platform configuration object that specifies how an Adaptive Card Renderer generates UI."_.
+
+

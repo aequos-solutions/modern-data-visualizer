@@ -118,3 +118,27 @@ Example:
 !["Default URL for OData data source"](../../assets/webparts/data_visualizer/odata/default_url.png){: .center}
 
 In this example, `{{/me/people}}` means only `/me/people` part of the URL will be executed during the first load,, retrieving the all list of users without any condition. However, on subsequent requests, the complete URL `/me/people?search={inputQueryText}}` will be executed with the correct token values.
+
+#### Gor further with adaptive expressions
+
+From 1.3.x version, you can benefit from Microsoft [adaptive expressions](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-adaptive-expressions?view=azure-bot-service-4.0&tabs=arithmetic) build and/or format strings dynamically based on existing environment tokens. An adaptive expression can contain one or more explicit values, prebuilt functions, or custom functions. Refer to the official Microsoft documentation to see the compelte list.
+
+In the solution, they can be used wherever tokens are supported.
+
+> A concrete example about their utility and usage is described in the [Build a people directory using alphabetical verticals, SharePoint Search data source and adaptive expressions
+](../../../getting_started/tutorials/build_people_directory_graph) tutorial.
+
+**How to use them?**
+
+An adaptive expression is always enclosed with `${...}`. Single tokens are only enclosed with `{...}` and can be included in a expression. For instance, the following expression will evaluate the `{inputQueryText}` token value and depending if it is empty or not, the output will be different.
+
+```
+${if(empty('{inputQueryText}'),'','&$search="displayName:{inputQueryText}"')}
+```
+
+## Token resolution notes
+
+To help you to write your queries, here are some hints about the token resolution process:
+
+- If token doesn't exist in the environment, it will left untouched .Ex: `/me/people?search={tokenthatnotexists}` will be sent as is without modification.
+- If the token exists but don't have any value or empty string (ex: `null` or `''`), it will be replaced by an empty string as we don't want the string 'null' litterally.
