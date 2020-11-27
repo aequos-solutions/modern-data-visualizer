@@ -121,7 +121,7 @@ In this example, `{{/me/people}}` means only `/me/people` part of the URL will b
 
 #### Gor further with adaptive expressions
 
-From 1.3.x version, you can benefit from Microsoft [adaptive expressions](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-adaptive-expressions?view=azure-bot-service-4.0&tabs=arithmetic) build and/or format strings dynamically based on existing environment tokens. An adaptive expression can contain one or more explicit values, prebuilt functions, or custom functions. Refer to the official Microsoft documentation to see the compelte list.
+From 1.2.x version, you can benefit from Microsoft [adaptive expressions](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-adaptive-expressions?view=azure-bot-service-4.0&tabs=arithmetic) build and/or format strings dynamically based on existing environment tokens. An adaptive expression can contain one or more explicit values, prebuilt functions, or custom functions. Refer to the official Microsoft documentation to see the compelte list.
 
 In the solution, they can be used wherever tokens are supported.
 
