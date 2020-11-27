@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#build-a-people-directory-using-alphabetical-verticals-and-sharepoint-search-data-source" tabindex="0" class="md-skip">
+      <a href="#build-a-people-directory-using-alphabetical-verticals-sharepoint-search-data-source-and-adaptive-expressions" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -801,6 +801,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#step-by-step-tutorial" class="md-nav__link">
+    Step-by-step tutorial
+  </a>
+  
+</li>
+      
       
       
       
@@ -868,6 +875,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#step-by-step-tutorial" class="md-nav__link">
+    Step-by-step tutorial
+  </a>
+  
+</li>
+      
       
       
       
@@ -887,10 +901,75 @@
                   <a href="https://github.com/aequos-solutions/aequos.github.io/blob/master/docs/getting_started/tutorials/build_people_directory_graph.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="build-a-people-directory-using-alphabetical-verticals-and-sharepoint-search-data-source">Build a people directory using alphabetical verticals and SharePoint Search data source<a class="headerlink" href="#build-a-people-directory-using-alphabetical-verticals-and-sharepoint-search-data-source" title="Permanent link">&para;</a></h1>
-<p>A classic use case in a SharePoint portal. This time, instead using the SharePoint search, we use the Microsoft Graph and the <a href="https://docs.microsoft.com/en-us/graph/people-example#search-people">People API</a> to lookup relevant people based on search box Web Part input keywords.</p>
+                <h1 id="build-a-people-directory-using-alphabetical-verticals-sharepoint-search-data-source-and-adaptive-expressions">Build a people directory using alphabetical verticals, SharePoint Search data source and adaptive expressions<a class="headerlink" href="#build-a-people-directory-using-alphabetical-verticals-sharepoint-search-data-source-and-adaptive-expressions" title="Permanent link">&para;</a></h1>
+<p>A classic use case in a SharePoint portal. This time, instead of using the SharePoint search data source, we use the Microsoft Graph and the <a href="https://docs.microsoft.com/en-us/graph/people-example#search-people">People API</a> to lookup relevant people based on search box Web Part input keywords. We also add alphabetical filters as verticals and take advantage of the adaptive expressions feature to write a dynamic query.  </p>
 <h2 id="video-tutorial">Video tutorial<a class="headerlink" href="#video-tutorial" title="Permanent link">&para;</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yKkMavHAMHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mz76r7gcsQU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="step-by-step-tutorial">Step-by-step tutorial<a class="headerlink" href="#step-by-step-tutorial" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Add the <em>'Search Box'</em> Web Part on the page.</p>
+<p><img alt="&quot;Search Box - Add&quot;" class="center" src="../../../assets/scenarios/graph-people-directory10.png" /> </p>
+</li>
+<li>
+<p>Add the <em>'Data Verticals'</em> Web Part on the page.</p>
+<p><img alt="&quot;Data Verticals - Add&quot;" class="center" src="../../../assets/scenarios/graph-people-directory1.png" /> </p>
+</li>
+<li>
+<p>For each alphabetical letter, add and configure a new vertical. As the value use <code>&lt;Letter&gt;</code>. Example <code>A</code> for letter <strong>'A'</strong>. You can also add an <strong>'All'</strong> tab with an empty value.</p>
+<p><img alt="&quot;Data Verticals - Configuration&quot;" class="center" src="../../../assets/scenarios/graph-people-directory2.png" /> </p>
+<p><img alt="&quot;Data Verticals - Configuration&quot;" class="center" src="../../../assets/scenarios/graph-people-directory3.png" /> </p>
+</li>
+<li>
+<p>Add a new <em>'Data Visualizer'</em> Web Part on the page.</p>
+<p><img alt="&quot;Data Visualizer - Add&quot;" class="center" src="../../../assets/scenarios/graph-people-directory4.png" /> </p>
+</li>
+<li>
+<p>Select the <em>'OData'</em> data source and then <em>'Microsoft Graph'</em>.</p>
+<p><img alt="&quot;Data Visualizer - Select Data Source&quot;" class="center" src="../../../assets/scenarios/graph-people-directory5.png" /></p>
+</li>
+<li>
+<p>Enter the following query and press <em>'Apply'</em>: </p>
+<p><code>https://graph.microsoft.com/v1.0/users?$top={itemsCountPerPage}&amp;$count=true${if(empty('{inputQueryText}'),'','&amp;$search="displayName:{inputQueryText}"')}${if(empty("{verticals.value}"),'',"&amp;$filter=startsWith(displayName,'{verticals.value}')")}</code></p>
+<p><strong>Explanations:</strong></p>
+<ul>
+<li><code>https://graph.microsoft.com/v1.0/users</code>: Microsoft graph endpoint to retreive users from Azure Active Directory.</li>
+<li><code>?$top={itemsCountPerPage}</code>: Limits the number of results dynamically according the the number configured in the Web Part (<code>{itemsCountPerPage}</code>).</li>
+<li><code>&amp;$count=true</code>: Returns the number of total results for the query (not the same as the current number of displayed results).</li>
+<li><code>${if(empty('{inputQueryText}'),'','&amp;$search="displayName:{inputQueryText}"')}</code>: Adaptive expression to conditionally add the <code>search=</code> parameter if the input query text is not empty. Making a request with an empty text will fail otherwise. This conditions is here to cover the <strong>All</strong> scenario in verticals tab.</li>
+<li><code>${if(empty("{verticals.value}"),'',"&amp;$filter=startsWith(displayName,'{verticals.value}')")}</code>: Adaptive expression to conditionally filter on the current selected vertical tab value if present (for instance when <em>'A'</em> is selected, only filter users with the display name starts with <em>'A'</em>).</li>
+</ul>
+</li>
+<li>
+<p>In the <em>'Headers'</em> option, add the value <code>"ConsistencyLevel": "eventual"</code> to HTTP headers. This is needed by the Microsoft Graph API to get the count correctly:</p>
+<p><img alt="&quot;Data Visualizer -Configure HTTP Headers&quot;" class="center" src="../../../assets/scenarios/graph-people-directory11.png" /></p>
+</li>
+<li>
+<p>In the <em>'Connections'</em> property pane configuration page</p>
+<ul>
+<li>
+<p>Connect the <em>'Search Box'</em> Web Part:</p>
+<p><img alt="&quot;Data Visualizer - Configure Verticals&quot;" class="center" src="../../../assets/scenarios/graph-people-directory8.png" /></p>
+</li>
+<li>
+<p>Connect the <em>'Data Verticals'</em> Web Part previously added. Select <strong>all</strong> the available tabs (i.e. letters). Basically it tells the Data Visualizer Web Part to be or remain visible when user clicks on any of these letters.</p>
+<p><img alt="&quot;Data Visualizer - Configure Verticals&quot;" class="center" src="../../../assets/scenarios/graph-people-directory6.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>In <em>'Layouts'</em> property pane configuration page, select the 'People' layout.</p>
+<p><img alt="&quot;Data Visualizer - Select Layout&quot;" class="center" src="../../../assets/scenarios/graph-people-directory7.png" /></p>
+<blockquote>
+<p>Optionally, in the layout options, you can check <em>'Show persona card on hover'</em> option. To get it work, <a href="../../installation">an administrator needs to approve required API permissions</a>.</p>
+</blockquote>
+</li>
+<li>
+<p>Save your page. You can now filter people based on alphabetical letters using their first name or view all users.</p>
+<p><img alt="&quot;Data Visualizer - Final result&quot;" class="center" src="../../../assets/scenarios/graph-people-directory_final.png" /></p>
+</li>
+</ol>
                 
                   
                 

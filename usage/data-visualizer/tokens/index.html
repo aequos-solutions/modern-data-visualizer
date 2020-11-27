@@ -574,6 +574,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gor-further-with-adaptive-expressions" class="md-nav__link">
+    Gor further with adaptive expressions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token-resolution-notes" class="md-nav__link">
+    Token resolution notes
+  </a>
+  
+</li>
+      
       
       
       
@@ -1040,6 +1054,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gor-further-with-adaptive-expressions" class="md-nav__link">
+    Gor further with adaptive expressions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token-resolution-notes" class="md-nav__link">
+    Token resolution notes
+  </a>
+  
+</li>
+      
       
       
       
@@ -1298,8 +1326,27 @@
 <h4 id="odata-data-source-default-url-syntax">OData Data Source default URL syntax<a class="headerlink" href="#odata-data-source-default-url-syntax" title="Permanent link">&para;</a></h4>
 <p>The OData Data source supports a special URL syntax allowing to execute a specifc part of that URL only during the first execution by using <code>{{</code> and <code>}}</code> enclosing characters sequence. This could be convenient for an URL containing dynamic OData filter conditions like <code>$filter=startswith(MyField,'{inputQueryText'}</code> that may be invalid due to incorrect or unavailable values during first load resulting of API error.</p>
 <p>Example:</p>
-<p><img alt="&quot;Default URL for OData data source&quot;" class="center" src="../../assets/webparts/data_visualizer/odata/default_url.png" /></p>
+<p><img alt="&quot;Default URL for OData data source&quot;" class="center" src="../../../assets/webparts/data_visualizer/odata/default_url.png" /></p>
 <p>In this example, <code>{{/me/people}}</code> means only <code>/me/people</code> part of the URL will be executed during the first load,, retrieving the all list of users without any condition. However, on subsequent requests, the complete URL <code>/me/people?search={inputQueryText}}</code> will be executed with the correct token values.</p>
+<h4 id="gor-further-with-adaptive-expressions">Gor further with adaptive expressions<a class="headerlink" href="#gor-further-with-adaptive-expressions" title="Permanent link">&para;</a></h4>
+<p>From 1.2.x version, you can benefit from Microsoft <a href="https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-adaptive-expressions?view=azure-bot-service-4.0&amp;tabs=arithmetic">adaptive expressions</a> build and/or format strings dynamically based on existing environment tokens. An adaptive expression can contain one or more explicit values, prebuilt functions, or custom functions. Refer to the official Microsoft documentation to see the compelte list.</p>
+<p>In the solution, they can be used wherever tokens are supported.</p>
+<blockquote>
+<p>A concrete example about their utility and usage is described in the <a href="../../../getting_started/tutorials/build_people_directory_graph">Build a people directory using alphabetical verticals, SharePoint Search data source and adaptive expressions
+</a> tutorial.</p>
+</blockquote>
+<p><strong>How to use them?</strong></p>
+<p>An adaptive expression is always enclosed with <code>${...}</code>. Single tokens are only enclosed with <code>{...}</code> and can be included in a expression. For instance, the following expression will evaluate the <code>{inputQueryText}</code> token value and depending if it is empty or not, the output will be different.</p>
+<div class="codehilite"><pre><span></span><code>${if(empty(&#39;{inputQueryText}&#39;),&#39;&#39;,&#39;&amp;$search=&quot;displayName:{inputQueryText}&quot;&#39;)}
+</code></pre></div>
+
+
+<h2 id="token-resolution-notes">Token resolution notes<a class="headerlink" href="#token-resolution-notes" title="Permanent link">&para;</a></h2>
+<p>To help you to write your queries, here are some hints about the token resolution process:</p>
+<ul>
+<li>If token doesn't exist in the environment, it will left untouched .Ex: <code>/me/people?search={tokenthatnotexists}</code> will be sent as is without modification.</li>
+<li>If the token exists but don't have any value or empty string (ex: <code>null</code> or <code>''</code>), it will be replaced by an empty string as we don't want the string 'null' litterally.</li>
+</ul>
                 
                   
                 
