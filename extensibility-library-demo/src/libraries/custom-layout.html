@@ -9,6 +9,7 @@
         <ul class="template_defaultList">
             {{#each data.items as |item|}}
                 <li>
+                    <label data-ui-test-id="customHandlebarsHelper">{{myHelper 'custom'}}</label>
                     <my-custom-component 
                         data-my-string-param="{{@root.properties.layoutProperties.myTextProperty}}" 
                         data-my-object-param="{{JSONstringify this 2}}"
