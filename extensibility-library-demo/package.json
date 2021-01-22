@@ -12,7 +12,7 @@
     "test": "gulp test"
   },
   "dependencies": {
-    "@aequos/extensibility": "1.1.1",
+    "@aequos/extensibility": "1.2.0",
     "@microsoft/sp-component-base": "1.11.0",
     "@microsoft/sp-core-library": "1.11.0",
     "@microsoft/sp-http": "1.11.0",

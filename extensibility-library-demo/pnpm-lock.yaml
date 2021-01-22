@@ -1,5 +1,5 @@
 dependencies:
-  '@aequos/extensibility': 1.1.1_@types+react@16.8.8+react@16.8.5
+  '@aequos/extensibility': 1.2.0_@types+react@16.8.8+react@16.8.5
   '@microsoft/sp-component-base': 1.11.0
   '@microsoft/sp-core-library': 1.11.0
   '@microsoft/sp-http': 1.11.0
@@ -31,7 +31,7 @@ devDependencies:
   semver: 6.3.0
 lockfileVersion: 5.1
 packages:
-  /@aequos/extensibility/1.1.1_@types+react@16.8.8+react@16.8.5:
+  /@aequos/extensibility/1.2.0_@types+react@16.8.8+react@16.8.5:
     dependencies:
       '@microsoft/sp-component-base': 1.11.0
       '@microsoft/sp-core-library': 1.11.0
@@ -50,7 +50,7 @@ packages:
       '@types/react': '*'
       react: '*'
     resolution:
-      integrity: sha512-TRCxtzIZyx3R+ZCjhnY7Cv/d5kq4mCuyFAQZgP3IZrZsJcY67VvVCNG/Tt78czZf07+91zDXid4KZ8E32TftDQ==
+      integrity: sha512-qbNs8bThObjQWXNXcnTI50mwH0G9XPV2YMfw2pGMQ5/hdFUlVQQch4Kqvw4IDDlznFIZRLzMY8KO9Wrkwjsg5g==
   /@babel/code-frame/7.10.4:
     dependencies:
       '@babel/highlight': 7.10.4
@@ -1550,14 +1550,18 @@ packages:
       node: '>= 4.0.0'
     resolution:
       integrity: sha512-salcGninV0nPrwpGNn4VTXBb1SOuXQBiqbrNXoeizJsHrsL6ERFM2Ne3JUSBWRE6aeNJI2ROP/WEEIDUiDe3cg==
-  /ajv-errors/1.0.1_ajv@6.12.3:
-    dependencies:
-      ajv: 6.12.3
+  /ajv-errors/1.0.1:
     dev: true
     peerDependencies:
       ajv: '>=5.0.0'
     resolution:
       integrity: sha512-DCRfO/4nQ+89p/RK43i8Ezd41EqdGIU4ld7nGF8OQ14oc/we5rEntLCUa7+jrn3nn83BosfwZA0wb4pon2o8iQ==
+  /ajv-keywords/3.5.2:
+    dev: true
+    peerDependencies:
+      ajv: ^6.9.1
+    resolution:
+      integrity: sha512-5p6WTN0DdTGVQk6VjcEju19IgaHudalcfabD7yhDGeA6bcQnmL+CpveLJq/3hvfwd1aof6L386Ougkx6RfyMIQ==
   /ajv-keywords/3.5.2_ajv@6.12.3:
     dependencies:
       ajv: 6.12.3
@@ -4814,15 +4818,6 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==
-  /fsevents/2.1.3:
-    dev: true
-    engines:
-      node: ^8.16.0 || ^10.6.0 || >=11.0.0
-    optional: true
-    os:
-      - darwin
-    resolution:
-      integrity: sha512-Auw9a4AxqWpa9GUfj370BMPzzyncfBABW8Mab7BGWBYDj4Isgq+cDKtx0i6u9jcX9pQDnswsaaOTgTmA5pEjuQ==
   /fstream/1.0.12:
     dependencies:
       graceful-fs: 4.2.4
@@ -10106,8 +10101,8 @@ packages:
   /schema-utils/1.0.0:
     dependencies:
       ajv: 6.12.3
-      ajv-errors: 1.0.1_ajv@6.12.3
-      ajv-keywords: 3.5.2_ajv@6.12.3
+      ajv-errors: 1.0.1
+      ajv-keywords: 3.5.2
     dev: true
     engines:
       node: '>= 4'
@@ -12250,7 +12245,7 @@ packages:
     resolution:
       integrity: sha512-DUOKC/IhbkdLKKiV89gw9DUauTV8U/8yJl1sjf6MtDmzevLKOF2duNJ495S3MFVjqZarr+qNGCPbkg4mu4PpLw==
 specifiers:
-  '@aequos/extensibility': 1.1.1
+  '@aequos/extensibility': 1.2.0
   '@microsoft/rush-stack-compiler-3.7': 0.2.8
   '@microsoft/sp-build-web': 1.11.0
   '@microsoft/sp-component-base': 1.11.0
