@@ -26,6 +26,8 @@ You can use tokens in the following locations:
 
 > Tokens are case insensitive
 
+> You can escape curly braces characters using `'\'` to avoid: ex: `DepartmentId:\{edbfd618-ef1d-4cc5-a214-95bf44ddf4ee\}`
+
 ##### Page tokens
 
 |**Token**|**Definition**|

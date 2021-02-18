@@ -1,0 +1,75 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+      {
+        "type": "TextBlock",
+        "text": "**${$root.data.totalItemsCount}** results",
+        "size": "Medium",
+        "wrap": true
+      },
+      {
+        "type": "Container",
+        "$data": "${data.items}",
+        "items": [
+          {
+            "type": "ColumnSet",
+            "columns": [
+              {
+                "type": "Column",
+                "width": "auto",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "<div style=''padding:5px'><aequos-iconfile class='icon' data-extension='${if(empty($root.slots['FileType']),'',string(jPath($data, concat('.',$root.slots['FileType']))[0]))}'></aequos-iconfile></div>",
+                    "wrap": true
+                  }
+                ],
+                "height": "stretch"
+              },
+              {
+                "type": "Column",
+                "width": 8,
+                "horizontalAlignment": "Center",
+                "spacing": "Medium",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "[${string(jPath($data, concat('.',$root.slots['Title']))[0])}](${string(jPath($data, concat('.',$root.slots['Path']))[0])})",
+                    "weight": "Bolder",
+                    "color": "Accent",
+                    "size": "Medium",
+                    "maxLines": 3
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "Written by __${if(empty($root.slots['Author']),'',string(jPath($data, concat('.',$root.slots['Author']))[0]))}__",
+                    "spacing": "Small"
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "${if(empty($root.slots['Summary']),'',string(jPath($data, concat('.',$root.slots['Summary']))[0]))}",
+                    "wrap": true,
+                    "maxLines": 3,
+                    "spacing": "Medium"
+                  }
+                ]
+              },
+              {
+                "type": "Column",
+                "width": 2,
+                "items": [
+                  {
+                    "type": "Image",
+                    "url": "${if(empty(jPath($data, concat('.',$root.slots['PreviewImageUrl']))),'',string(jPath($data, concat('.',$root.slots['PreviewImageUrl']))[0]))}",
+                    "horizontalAlignment": "Center"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
