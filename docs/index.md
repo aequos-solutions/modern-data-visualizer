@@ -2,6 +2,8 @@
 
 # aequos Modern Data Visualizer solution
 
+!["Current version"](https://img.shields.io/github/v/release/aequos-solutions/modern-data-visualizer?include_prereleases)
+
 The 'Modern Data Visualizer' solution is a set of SharePoint Online modern Web Parts allowing SharePoint super users, webmasters and developers to create highly flexible and personalized data viewing and filtering experiences in minutes.
 
 It is the enhanced product version of the well known ["Pattern & Practices Modern Search"](https://github.com/microsoft-search/pnp-modern-search) open-source solution **that we also created**.

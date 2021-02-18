@@ -47,7 +47,11 @@ Same as data source, the layout creation process comes in three distinct steps:
 | --------- | ---------- |
 | `properties`    | The Web Part properties in the property bag. Corresponds to the isolated `layoutProperties` property in the global property bag. You won't be able to access any other general properties of the Web Part.
 
-### Create the HTML template file
+### Create the template
+
+You have the choice to use either Handlebars or Adaptive Cards as template engine:
+
+#### Option #1: Create the HTML template file (Handlebars)
 
 In your extensibility library project, create a new `custom-layout.html` HTML file. A layout template is split into two distinct parts:
 
@@ -77,6 +81,24 @@ A `placeholder` part, containing the HTML markup to display as placeholder **whi
 {{/each}}
 ```
 
+#### Option #: Create the JSON template file (Adaptive Cards)
+
+In your extensibility library project, create a new `custom-layout.json` JSON file. Refer to the official schema or use the [Adaptive Cards interactive builder](https://www.adaptivecards.io/designer/) to get started.
+
+**Example: iterating through all items**
+
+```json
+ {
+        "type": "Container",
+        "$data": "${data.items}", 
+        "items": [
+          {
+            "type": "ColumnSet",
+            "columns": [
+              {
+                ...
+```
+
 ### Register layout information
 
 The next step is to fill information about your new layout. In the library main entry point (i.e. the class implementing the `IExtensibilityLibrary` in interface) return a new `ILayoutDefinition` object in the `getCustomLayouts()` method using these properties: 
@@ -87,8 +109,9 @@ The next step is to fill information about your new layout. In the library main 
 | `iconName` | An Office UI Fabric icon for your layout.
 | `key` | An unique internal key for your layout.
 | `type` | The layout type (`LayoutType.Results` is for the 'Data Visualizer' Web Part, `LayoutType.Filter` for the 'Data Filter' Web Part). Only **`LayoutType.Results`** is supported for now. You can't add custom layout for the 'Data Filter' Web Part.
-| `templateContent` | The template HTML content as string. Use a `require` statement to get the string content from your HTML file.
+| `templateContent` | The template HTML content as string. Use a `require` statement to get the string content from your HTML file. If you reference a JSON file, you must use the stringified value (ex: `JSON.stringify(require('../custom-layout.json'), null, "\t")`)
 | `serviceKey` | A service key used to instanciate your layout class. Builtin or custom data layouts are instanciated dynamically using [SPFx service scopes](https://docs.microsoft.com/en-us/javascript/api/sp-core-library/servicescope?view=sp-typescript-latest).
+| `templateType` | The template type of the layout., Can be either `Handlebars` or `AdaptiveCards`.
 
 ```typescript
 public getCustomLayouts(): ILayoutDefinition[] {
@@ -99,7 +122,8 @@ public getCustomLayouts(): ILayoutDefinition[] {
             key: 'CustomLayout',
             type: LayoutType.Results,
             templateContent: require('../custom-layout.html'),
-            serviceKey: ServiceKey.create<ILayout>('MyCompany:CustomLayout', Customlayout)
+            serviceKey: ServiceKey.create<ILayout>('MyCompany:CustomLayout', Customlayout),
+            templateType: LayoutTemplateType.Handlebars
         }
     ];
 }

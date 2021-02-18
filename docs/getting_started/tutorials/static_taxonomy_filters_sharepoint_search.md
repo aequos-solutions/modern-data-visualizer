@@ -6,4 +6,4 @@ Static filters don't necessarily need to be connected to a Data Visualizer Web P
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/udEq2n9bqlo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-> Static filters can be used in [tokens](../usage/data-visualizer/tokens.md) as well for other data sources. 
+> Static filters can be used in [tokens](../../usage/data-visualizer/tokens.md) as well for other data sources. 

@@ -1,8 +1,9 @@
 import { ServiceKey } from "@microsoft/sp-core-library";
-import { IDataSourceDefinition, IDataSource, IExtensibilityLibrary, ILayoutDefinition, IComponentDefinition, ILayout, LayoutType, ISuggestionProviderDefinition, ISuggestionProvider } from "@aequos/extensibility";
+import { IDataSourceDefinition, IDataSource, IExtensibilityLibrary, ILayoutDefinition, IComponentDefinition, ILayout, LayoutType, ISuggestionProviderDefinition, ISuggestionProvider, LayoutTemplateType } from "@aequos/extensibility";
 import { CustomDataSource } from "../CustomDataSource";
 import { MyCustomComponentWebComponent } from "../CustomComponent";
-import { Customlayout } from "../CustomLayout";
+import { CustomlayoutHandlebars } from "../CustomLayoutHandlebars";
+import { CustomlayoutAdaptiveCards } from "../CustomLayoutAdaptiveCards";
 import { CustomSuggestionProvider } from "../CustomSuggestionProvider";
 
 export class MyCompanyLibraryLibrary implements IExtensibilityLibrary {
@@ -10,12 +11,22 @@ export class MyCompanyLibraryLibrary implements IExtensibilityLibrary {
   public getCustomLayouts(): ILayoutDefinition[] {
     return [
       {
-        name: 'My custom layout',
+        name: 'Custom Handlebars',
         iconName: 'Color',
-        key: 'CustomLayout',
+        key: 'CustomLayoutHandlebars',
         type: LayoutType.Results,
         templateContent: require('../custom-layout.html'),
-        serviceKey: ServiceKey.create<ILayout>('MyCompany:CustomLayout', Customlayout)
+        serviceKey: ServiceKey.create<ILayout>('MyCompany:CustomLayoutHandlebars', CustomlayoutHandlebars),
+        templateType: LayoutTemplateType.Handlebars
+      },
+      {
+        name: 'Custom Adaptive',
+        iconName: 'Color',
+        key: 'CustomLayoutAdaptiveCards',
+        type: LayoutType.Results,
+        templateContent: JSON.stringify(require('../custom-layout.json'), null, "\t"),
+        serviceKey: ServiceKey.create<ILayout>('MyCompany:CustomLayoutAdaptiveCards', CustomlayoutAdaptiveCards),
+        templateType: LayoutTemplateType.AdaptiveCards
       }
     ];
   }

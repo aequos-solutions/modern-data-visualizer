@@ -1,4 +1,4 @@
-<content id="template">
+<content id="data-content">
     <style>
         /* Insert your CSS overrides here */
     </style>
@@ -9,11 +9,12 @@
         <ul class="template_defaultList">
             {{#each data.items as |item|}}
                 <li>
+                    <label data-ui-test-id="customHandlebarsHelper">{{myHelper 'custom'}}</label>
                     <my-custom-component 
                         data-my-string-param="{{@root.properties.layoutProperties.myTextProperty}}" 
                         data-my-object-param="{{JSONstringify this 2}}"
                         data-my-date-param="01/01/2020"
-                        data-my-number-param="46"
+                        data-my-number-param="{{@index}}"
                         data-my-boolean-param="true"
                     >
                     </my-custom-component>
@@ -23,7 +24,7 @@
     </div>
 </content>
 
-<content id="placeholder">
+<content id="placeholder-content">
     <style>
         /* Insert your CSS overrides here */
     </style>

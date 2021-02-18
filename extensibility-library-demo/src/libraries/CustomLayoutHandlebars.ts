@@ -4,11 +4,11 @@ import { IPropertyPaneField, PropertyPaneTextField } from '@microsoft/sp-propert
 /**
  * Custom Layout properties
  */
-export interface ICustomLayoutProperties {
+export interface ICustomLayoutHandlebarsProperties {
     myTextProperty: string;
 }
 
-export class Customlayout extends BaseLayout<ICustomLayoutProperties> {
+export class CustomlayoutHandlebars extends BaseLayout<ICustomLayoutHandlebarsProperties> {
 
     public getPropertyPaneFieldsConfiguration(availableFields: string[]): IPropertyPaneField<any>[] {
 
@@ -16,7 +16,7 @@ export class Customlayout extends BaseLayout<ICustomLayoutProperties> {
         this.properties.myTextProperty  = this.properties.myTextProperty !== null ? this.properties.myTextProperty : "Default value";
  
         return [
-            PropertyPaneTextField('customLayout.myTextProperty', {
+            PropertyPaneTextField('layoutProperties.myTextProperty', {
                 label: 'A custom layout property',
                 placeholder: 'Fill a value'
             })

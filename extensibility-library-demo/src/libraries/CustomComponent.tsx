@@ -45,7 +45,7 @@ export class CustomComponent extends React.Component<ICustomComponentProps, ICus
         const myObject: IObjectParam = this.props.myObjectParam;
 
         return  <div>
-                    {this.props.myStringParam} {myObject.myProperty}
+                    My Custom component {this.props.myNumberParam} {this.props.myStringParam} {myObject.myProperty}
                 </div>;
     }
 }
