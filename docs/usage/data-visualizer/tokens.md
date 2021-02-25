@@ -43,7 +43,7 @@ Tokens related to connected Web Parts in the Data Visualizer.
 |**Token**|**Definition**|
 |:-----|:-----|
 |**{inputQueryText}**<br/> | The query value entered into a search box on a page. The value depends on the configuration of input text connection of the Data Visualizer Web Part. <br/> |
-|**{filters.&lt;FilterName&gt;}** | The current selected filters. You can use deep paths here to access properties. _'FilterName'_ corresponds to the filter name specified in the Data Filters Web Part (not the display name). Only single value taxonomy filters and data range filters are supported. For date range filters you can access start/end date values (as ISO8601 strings) using `{filters.MyDateRangeFilter.startDate}` or `{filters.MyDateRangeFilter.endDate}`. For taxonomy filters, the token `{filters.MyTaxonomyFilter}` will return the taxonomy item ID currently selected.
+|**{filters.&lt;FilterName&gt;.&lt;valueAsObject\|valueAsText\|fromDate\|toDate\|operator&gt;}** | The current selected filters. _'FilterName'_ corresponds to the filter name specified in the Data Filters Web Part (not the display name). The availablue values for a filter are as follow: <ul><li>`valueAsObject`: the filter value as JSON object. This value is intended to be used by custom adaptive expressions as parameter.</li><li>`valueAsText`: the filter value as text. For multi values filter, values will be separated by a comma `','`.</li><li>`fromDate`: if the filter is a **date range** template, the 'from' date selected by the user in UTC format.</li><li>`toDate`: if the filter is a **date range** template, the 'to' date selected by the user in UTC format.</li><li>`operator`: the operator configured to be used between filter values (ex: `'or'` or `'and'`.</ul></br>If no filter are selected (i.e. no values), the `{filters}` expression will be resolved as an empty string `''`. Use an adaptive expression `if(empty('{filters}')` to conditionnaly build your query acocrding to selected filters. Ex: `https://graph.microsoft.com/v1.0/groups?&${if(empty('{filters}'),'',concat("&$filter=", buildOdataFilterCondition(json('{filters}'))))}`.</br></br>**Note: this token is always parsed as an array of objects, ex `[{...}]`.** 
 |**{itemsCountPerPage}** | The number of items count per page configured in the 'Data Visualizer' Web Part. Useful for the OData source to specify a `$top={itemsCountPerPage}` parameter.
 |**{startRow}** | The next start row number according to current paging. Useful for the OData source to specify a `$skipToken={startRow}` or `$skip={startRow}` parameters.
 |**{verticals.&lt;value\|name&gt;}** | If connected, get the current selected vertical tab name or associated value.
@@ -110,6 +110,8 @@ To deal with mutli valued properties (like taxonomy multi or choices SharePoint 
 
 At any time, you can see the resolved query using the 'Debug' layout an inspecting the `data.queryModification` property.
 
+!!! note
+    Multi values have to be separated by a comma `,` to be correctly interpreted by the OR operator. Using a multi taxonomy column (ex `{Page.myTaxonomyMultiColumn.TermID}`) or a multi choice field `{Page.myChoiceMultiColumn}` will automatically output values with the comma delimiter.
 
 #### OData Data Source default URL syntax
 
@@ -121,26 +123,15 @@ Example:
 
 In this example, `{{/me/people}}` means only `/me/people` part of the URL will be executed during the first load,, retrieving the all list of users without any condition. However, on subsequent requests, the complete URL `/me/people?search={inputQueryText}}` will be executed with the correct token values.
 
-#### Gor further with adaptive expressions
-
-From 1.2.x version, you can benefit from Microsoft [adaptive expressions](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-adaptive-expressions?view=azure-bot-service-4.0&tabs=arithmetic) build and/or format strings dynamically based on existing environment tokens. An adaptive expression can contain one or more explicit values, prebuilt functions, or custom functions. Refer to the official Microsoft documentation to see the compelte list.
-
-In the solution, they can be used wherever tokens are supported.
-
-> A concrete example about their utility and usage is described in the [Build a people directory using alphabetical verticals, SharePoint Search data source and adaptive expressions
-](../../../getting_started/tutorials/build_people_directory_graph) tutorial.
-
-**How to use them?**
-
-An adaptive expression is always enclosed with `${...}`. Single tokens are only enclosed with `{...}` and can be included in a expression. For instance, the following expression will evaluate the `{inputQueryText}` token value and depending if it is empty or not, the output will be different.
-
-```
-${if(empty('{inputQueryText}'),'','&$search="displayName:{inputQueryText}"')}
-```
-
 ## Token resolution notes
 
 To help you to write your queries, here are some hints about the token resolution process:
 
-- If token doesn't exist in the environment, it will left untouched .Ex: `/me/people?search={tokenthatnotexists}` will be sent as is without modification.
+- If token doesn't exist in the environment, it will left untouched .Ex: `/me/people?search={tokenthatnotexists}` will be sent as is without modification. For instance if you use `{verticals.value}` or `{filters.<field>.valueAsText}` but there re no such Web Parts connect, tokens will be left untouched.
 - If the token exists but don't have any value or empty string (ex: `null` or `''`), it will be replaced by an empty string as we don't want the string 'null' litterally.
+- Tokens containinrefering to conmplex proeprties like arrays, objects, or array of objects **will always be resolved as an array.** Ex: an object `{'property':'value'}` will be stringified as `[{'property':'value'}]`.
+
+
+## Go further with Microsoft Adaptive expressions
+
+Along tokens, you can also use Microsoft adaptive expressions for complex scenarios. See [Adaptive expressions usage](../adaptive_expressions) for more information.

@@ -10,6 +10,7 @@ nav:
     - Data sources: usage/data-visualizer/data-sources/index.md
     - Slots: usage/data-visualizer/slots.md
     - Tokens: usage/data-visualizer/tokens.md
+    - Adaptive expressions: usage/data-visualizer/adaptive_exressions.md
     - Layouts: usage/data-visualizer/layouts/index.md
     - Connections: usage/data-visualizer/connections/index.md
     - Extensibility: extensibility/index.md
