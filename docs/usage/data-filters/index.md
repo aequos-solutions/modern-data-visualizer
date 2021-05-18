@@ -6,7 +6,6 @@ The 'Data Filters' Web Part allows to filter the current results displayed in a 
 
 !["aequos Search Box Web Part"](../../assets/webparts/data_filters/data_filters_wp_default.png){: .center}
 
-
 ## Configuration
 
 ### Connection
@@ -19,7 +18,7 @@ If you connect more than one Web Part, the filter values and counts will be merg
 
 **Example**
 
-Data sources #1 and #1 expose respectively a _'FileType'_ filter with values and counts `value1:1`, `value2:1` for #1 and `value2:1`, `value4:1` for #2 and both are connected to the filters Web Part. In this case, a single _'FileType'_ filter name will be displayed (because the filter name is the same) with values `value1:1`,`value2:2`,`value3:1`,`value4:1`. If you select a value that is not present in a data source (ex: `value1` for data source #2), you will simply get zero result.
+**DataSource1** and **DataSource2** expose respectively a _'FileType'_ filter with values and counts `value1:1`, `value2:1` for **DataSource1** and `value2:1`, `value4:1` for **DataSource2** and both are connected to the filters Web Part. In this case, a single _'FileType'_ filter name will be displayed (because the filter name is the same) with values `value1:1`,`value2:2`,`value3:1`,`value4:1`. If you select a value that is not present in a data source (ex: `value1` for data source #2), you will simply get zero result.
 
 ### Filter settings
 
@@ -33,7 +32,7 @@ The filter settings are as follow:
 |------------|-----------------|
 | **Display Name** | A friendly name for the filter |
 | **Filter field** | The internal data source field to use as filter. Here you can select a field from the current data source (if data have been already retrieved) of type your own custom value (press enter to validate).
-| **Template** | The template to use to display filter values. The builtin templates are: </br><ul><li>**Check box** <p align="center">!["Check box"](../../assets/webparts/data_filters/checkbox_template.png)</p></li><li>**Date range** <p align="center">!["Date range"](../../assets/webparts/data_filters/daterange_template.png)</p></li><li>**Date interval** <p align="center">!["Date interval"](../../assets/webparts/data_filters/dateinterval_template.png)</p></li><li>**Combo** <p align="center">!["Combo"](../../assets/webparts/data_filters/combo_template.png)</p></br> You can search a value directly in the list by typing keywords in the combo text field.</li><li>**Taxonomy picker** <p align="center">!["Combo"](../../assets/webparts/data_filters/taxonomy_template.png)</p></br> You must configure a term set(s) before using this template by clicking on the tag icon next to the template: <p align="center">!["Combo"](../../assets/webparts/data_filters/taxonomy_picker.png)</p></br></li></ul>
+| **Template** | The template to use to display filter values. See template details below.
 | **Filter type** | Specify if the filter is a 'static' filter or a 'refiner' filter. See below for more information.
 | **Expand by default** | If applicable for the selected template, display values as expanded.
 | **Show count** | If applicable for the selected template, display counts for values.
@@ -41,6 +40,16 @@ The filter settings are as follow:
 | **Operator between values** | If multi values is selected, the operator to use between values (OR/AND).
 | **Sort values by** | Sort values by name or by count.
 | **Sort direction** | Sort values in ascending/descending order.
+
+### Filter templates
+
+| **Template** | **Overview** |
+|------------|-----------------|
+| Checkbox | !["Check box"](../../assets/webparts/data_filters/checkbox_template.png)
+| Date interval | !["Date interval"](../../assets/webparts/data_filters/dateinterval_template.png)
+| Date range | !["Date range"](../../assets/webparts/data_filters/daterange_template.png)
+| Combo box | !["Combo"](../../assets/webparts/data_filters/combo_template.png)
+| [Taxonomy picker](./templates/taxonomy-picker) | !["Taxonomy picker overview"](../../assets/webparts/data_filters/templates/taxonomy_picker_overview.png).
 
 ### Operator between filters
 
