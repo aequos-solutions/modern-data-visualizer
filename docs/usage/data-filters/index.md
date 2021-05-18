@@ -22,9 +22,11 @@ If you connect more than one Web Part, the filter values and counts will be merg
 
 ### Filter settings
 
-!["Filter settings"](../../assets/webparts/data_filters/filter_settings.png){: .center} 
+From the filter settings, you can customize individual filters and the operator to use between filters (**OR** or **AND**).
 
-The filter settings are as follow:
+!["Filter settings"](../../assets/webparts/data_filters/filter_settings.png){: .center}
+
+For each filter, the available options are as follow:
 
 !["Filter settings panel"](../../assets/webparts/data_filters/filter_settings_panel.png){: .center} 
 
@@ -32,7 +34,7 @@ The filter settings are as follow:
 |------------|-----------------|
 | **Display Name** | A friendly name for the filter |
 | **Filter field** | The internal data source field to use as filter. Here you can select a field from the current data source (if data have been already retrieved) of type your own custom value (press enter to validate).
-| **Template** | The template to use to display filter values. See template details below.
+| **Template** | The template to use to display filter values. See [Filter templates](#filter-templates).
 | **Filter type** | Specify if the filter is a 'static' filter or a 'refiner' filter. See below for more information.
 | **Expand by default** | If applicable for the selected template, display values as expanded.
 | **Show count** | If applicable for the selected template, display counts for values.
@@ -41,7 +43,7 @@ The filter settings are as follow:
 | **Sort values by** | Sort values by name or by count.
 | **Sort direction** | Sort values in ascending/descending order.
 
-### Filter templates
+### <a name=filter-templates>Filter templates</a>
 
 | **Template** | **Overview** |
 |------------|-----------------|
@@ -49,13 +51,7 @@ The filter settings are as follow:
 | Date interval | !["Date interval"](../../assets/webparts/data_filters/dateinterval_template.png)
 | Date range | !["Date range"](../../assets/webparts/data_filters/daterange_template.png)
 | Combo box | !["Combo"](../../assets/webparts/data_filters/combo_template.png)
-| [Taxonomy picker](./templates/taxonomy-picker) | !["Taxonomy picker overview"](../../assets/webparts/data_filters/templates/taxonomy_picker_overview.png).
-
-### Operator between filters
-
-!["Operator filters"](../../assets/webparts/data_filters/operator_filters.png){: .center} 
-
-You can select the operator to use between filters (OR or AND).
+| Taxonomy picker <br> ([Configuration details](./templates/taxonomy-picker)) | !["Taxonomy picker overview"](../../assets/webparts/data_filters/templates/taxonomy_picker_overview.png) <br> For more information about taxonomy picker configuration, click [here](./templates/taxonomy-picker).
 
 ## Filter types: 'Static' filter versus 'Refiner' filter
 
@@ -63,6 +59,10 @@ The Web Part supports two types of filters (_'Static'_ and _'Refiner'_). However
 
 - **Refiner**: a 'Refiner' filter means the filter gets its values from the data source and sends back the selected ones the data source. If the data source has no result, there won't be any refiner values, simple as that.
 - **Static filter**: a 'Static' filter means the filter doesn't care about filter values sent by the data source and provides its own arbitrary values regardless of input values. A date range picker or a taxonomy picker (or any picker) are good examples of what an 'Static' filter is. Such a filter do not need necessarily need a Data Visualizer connection.
+
+!!! note
+    The filter type is indicated for each filter.<br>
+    !["Taxonomy picker overview"](../../assets/webparts/data_filters/filter_type.png)
 
 
 ## Use indexed property bag properties with taxonomny values
