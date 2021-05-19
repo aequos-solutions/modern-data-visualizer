@@ -14,11 +14,12 @@ To use the data filters, we must first connect it to one or multiple 'Data Visua
 
 !["Filters connection"](../../assets/webparts/data_filters/wp_connection.png){: .center} 
 
-If you connect more than one Web Part, the filter values and counts will be merged for similar filter names:
+!!! note
+    If you connect more than one Data Visualizer Web Part, the filter values and counts will be merged for similar filter names:
 
-**Example**
+    **Example**
 
-**DataSource1** and **DataSource2** expose respectively a _'FileType'_ filter with values and counts `value1:1`, `value2:1` for **DataSource1** and `value2:1`, `value4:1` for **DataSource2** and both are connected to the filters Web Part. In this case, a single _'FileType'_ filter name will be displayed (because the filter name is the same) with values `value1:1`,`value2:2`,`value3:1`,`value4:1`. If you select a value that is not present in a data source (ex: `value1` for data source #2), you will simply get zero result.
+    **DataSource1** and **DataSource2** expose respectively a _'FileType'_ filter with values and counts `value1 (1)`, `value2 (1)` for **DataSource1** and `value2 (1)`, `value4 (1)` for **DataSource2** and both are connected to the Data Filter Web Part. In this case, an unique _'FileType'_ filter name will be displayed (because the filter name is the same for both data sources) with values `value1 (1)`,`value2 (2)`,`value4 (1)`. If you select a value that is not present in a data source (ex: `value1` for **DataSource2**), you will simply get zero result in the Web Part.
 
 ### Filter settings
 
@@ -32,28 +33,30 @@ For each filter, the available options are as follow:
 
 | **Setting** | **Description** |
 |------------|-----------------|
-| **Display Name** | A friendly name for the filter |
+| **Display Name** | A friendly name for the filter. |
 | **Filter field** | The internal data source field to use as filter. Here you can select a field from the current data source (if data have been already retrieved) of type your own custom value (press enter to validate).
-| **Template** | The template to use to display filter values. See [Filter templates](#filter-templates).
-| **Filter type** | Specify if the filter is a 'static' filter or a 'refiner' filter. See below for more information.
-| **Expand by default** | If applicable for the selected template, display values as expanded.
+| **Template** | The template to use to display filter values. See [Filter templates](#filter-templates) for more details.
+| **Filter type** | Specify if the filter is a 'static' filter or a 'refiner' filter. See [Filter types](#filter-types) for more information.
+| **Expand by default** | If applicable for the selected template, expand the filters values.
 | **Show count** | If applicable for the selected template, display counts for values.
 | **Mutli values** | If applicable for the selected template, allow selection of multiple values.
 | **Operator between values** | If multi values is selected, the operator to use between values (OR/AND).
-| **Sort values by** | Sort values by name or by count.
-| **Sort direction** | Sort values in ascending/descending order.
+| **Sort values by** | If applicable, sort values by name or by count.
+| **Sort direction** | If applicable, sort values in ascending/descending order.
 
 ### <a name=filter-templates>Filter templates</a>
 
+The available filter templates are as follow:
+
 | **Template** | **Overview** |
 |------------|-----------------|
-| Checkbox | !["Check box"](../../assets/webparts/data_filters/checkbox_template.png)
-| Date interval | !["Date interval"](../../assets/webparts/data_filters/dateinterval_template.png)
-| Date range | !["Date range"](../../assets/webparts/data_filters/daterange_template.png)
-| Combo box | !["Combo"](../../assets/webparts/data_filters/combo_template.png)
-| Taxonomy picker <br> ([Configuration details](./templates/taxonomy-picker)) | !["Taxonomy picker overview"](../../assets/webparts/data_filters/templates/taxonomy_picker_overview.png) <br> For more information about taxonomy picker configuration, click [here](./templates/taxonomy-picker).
+| **Checkbox** | Filter results as flat list of values. <br> !["Check box"](../../assets/webparts/data_filters/checkbox_template.png)
+| **Date interval** | Filter results according to predefined date intervals (any time, last month, last 3 months, last year and older than a year. **These intevals can't be changed**. <br> !["Date interval"](../../assets/webparts/data_filters/dateinterval_template.png)
+| **Date range** | Filter values from/to a start/end date. <br> !["Date range"](../../assets/webparts/data_filters/daterange_template.png)
+| **Combo box** | Filter results as a dropdown list of values. <br> !["Combo"](../../assets/webparts/data_filters/combo_template.png)
+| **Taxonomy picker** <br> ([Configuration details](./templates/taxonomy-picker)) | Filter results using a SharePoint taxonomy hierarchy of terms. For more information about taxonomy picker configuration, click [here](./templates/taxonomy-picker). <br> !["Taxonomy picker overview"](../../assets/webparts/data_filters/templates/taxonomy_picker_overview.png)
 
-## Filter types: 'Static' filter versus 'Refiner' filter
+## <a name=filter-types>Filter types: 'Static' filter versus 'Refiner' filter</a>
 
 The Web Part supports two types of filters (_'Static'_ and _'Refiner'_). However, there are some differences that are important to understand between these two if you want to use them properly:
 
@@ -69,7 +72,7 @@ The Web Part supports two types of filters (_'Static'_ and _'Refiner'_). However
 
 > **This behavior only works with the SharePoint Search Data source and the _Enabled localization_ flag activated.**
 
-Using an indexed property bag value could be useful to store information about a SharePoint site or other element that can't be tagged with a taxonomy value directly. The 'Modern Data Visualizer' solution supports property bag properties values that use the following taxonomy value format to be able to filter on them (ex: a taxonomy multi values separated by a semicolon (;)):
+Using an indexed property bag value could be useful to store information about a SharePoint site or other element that can't be tagged with a taxonomy value directly. The _'Modern Data Visualizer'_ solution supports property bag properties values that use the following taxonomy value format to be able to filter on them (ex: a taxonomy multi values separated by a semicolon (;)):
 
 `L0|#a2cf1afb-44b6-4cf4-bf37-642bb2e9bff3|Category 1;L0|#02e3406c0-1048-4bce-90eb-e7a51dfa7f31|Category3;L0|#07e094327-23d7-48af-9699-781eb26dc40f|Category2`
 
