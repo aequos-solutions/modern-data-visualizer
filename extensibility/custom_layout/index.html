@@ -746,9 +746,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-the-html-template-file" class="md-nav__link">
-    Create the HTML template file
+  <a href="#create-the-template" class="md-nav__link">
+    Create the template
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-create-the-html-template-file-handlebars" class="md-nav__link">
+    Option #1: Create the HTML template file (Handlebars)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-create-the-json-template-file-adaptive-cards" class="md-nav__link">
+    Option #: Create the JSON template file (Adaptive Cards)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -944,9 +964,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-the-html-template-file" class="md-nav__link">
-    Create the HTML template file
+  <a href="#create-the-template" class="md-nav__link">
+    Create the template
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-create-the-html-template-file-handlebars" class="md-nav__link">
+    Option #1: Create the HTML template file (Handlebars)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-create-the-json-template-file-adaptive-cards" class="md-nav__link">
+    Option #: Create the JSON template file (Adaptive Cards)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1055,7 +1095,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="create-the-html-template-file">Create the HTML template file<a class="headerlink" href="#create-the-html-template-file" title="Permanent link">&para;</a></h3>
+<h3 id="create-the-template">Create the template<a class="headerlink" href="#create-the-template" title="Permanent link">&para;</a></h3>
+<p>You have the choice to use either Handlebars or Adaptive Cards as template engine:</p>
+<h4 id="option-1-create-the-html-template-file-handlebars">Option #1: Create the HTML template file (Handlebars)<a class="headerlink" href="#option-1-create-the-html-template-file-handlebars" title="Permanent link">&para;</a></h4>
 <p>In your extensibility library project, create a new <code>custom-layout.html</code> HTML file. A layout template is split into two distinct parts:</p>
 <p>A <code>template</code> part, containing the HTML markup to display your data <strong>once fetched</strong>. This part is mandatory to display your data.</p>
 <div class="codehilite"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">content</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;template&quot;</span><span class="p">&gt;</span>
@@ -1078,6 +1120,21 @@
 <div class="codehilite"><pre><span></span><code><span class="cp">{{</span><span class="m m-Attribute">#each</span> <span class="nv">data.items</span> <span class="nv">as</span> <span class="err">|</span><span class="nv">item</span><span class="err">|</span><span class="cp">}}</span><span class="x"></span>
 <span class="x">    &lt;!-- Access &#39;item&#39; data source fields from here (ex: item.Title)--&gt;</span>
 <span class="cp">{{</span><span class="m m-Attribute">/each</span><span class="cp">}}</span><span class="x"></span>
+</code></pre></div>
+
+
+<h4 id="option-create-the-json-template-file-adaptive-cards">Option #: Create the JSON template file (Adaptive Cards)<a class="headerlink" href="#option-create-the-json-template-file-adaptive-cards" title="Permanent link">&para;</a></h4>
+<p>In your extensibility library project, create a new <code>custom-layout.json</code> JSON file. Refer to the official schema or use the <a href="https://www.adaptivecards.io/designer/">Adaptive Cards interactive builder</a> to get started.</p>
+<p><strong>Example: iterating through all items</strong></p>
+<div class="codehilite"><pre><span></span><code> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Container&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;$data&quot;</span><span class="p">:</span> <span class="s2">&quot;${data.items}&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ColumnSet&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;columns&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+                <span class="err">...</span>
 </code></pre></div>
 
 
@@ -1109,11 +1166,15 @@
 </tr>
 <tr>
 <td><code>templateContent</code></td>
-<td>The template HTML content as string. Use a <code>require</code> statement to get the string content from your HTML file.</td>
+<td>The template HTML content as string. Use a <code>require</code> statement to get the string content from your HTML file. If you reference a JSON file, you must use the stringified value (ex: <code>JSON.stringify(require('../custom-layout.json'), null, "\t")</code>)</td>
 </tr>
 <tr>
 <td><code>serviceKey</code></td>
 <td>A service key used to instanciate your layout class. Builtin or custom data layouts are instanciated dynamically using <a href="https://docs.microsoft.com/en-us/javascript/api/sp-core-library/servicescope?view=sp-typescript-latest">SPFx service scopes</a>.</td>
+</tr>
+<tr>
+<td><code>templateType</code></td>
+<td>The template type of the layout., Can be either <code>Handlebars</code> or <code>AdaptiveCards</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -1125,7 +1186,8 @@
             <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;CustomLayout&#39;</span><span class="p">,</span>
             <span class="nx">type</span>: <span class="kt">LayoutType.Results</span><span class="p">,</span>
             <span class="nx">templateContent</span>: <span class="kt">require</span><span class="p">(</span><span class="s1">&#39;../custom-layout.html&#39;</span><span class="p">),</span>
-            <span class="nx">serviceKey</span>: <span class="kt">ServiceKey.create</span><span class="o">&lt;</span><span class="nx">ILayout</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;MyCompany:CustomLayout&#39;</span><span class="p">,</span> <span class="nx">Customlayout</span><span class="p">)</span>
+            <span class="nx">serviceKey</span>: <span class="kt">ServiceKey.create</span><span class="o">&lt;</span><span class="nx">ILayout</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;MyCompany:CustomLayout&#39;</span><span class="p">,</span> <span class="nx">Customlayout</span><span class="p">),</span>
+            <span class="nx">templateType</span>: <span class="kt">LayoutTemplateType.Handlebars</span>
         <span class="p">}</span>
     <span class="p">];</span>
 <span class="p">}</span>

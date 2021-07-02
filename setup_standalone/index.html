@@ -843,26 +843,33 @@
                 
                 
                 <h1 id="setup-your-standalone-license">Setup your standalone license<a class="headerlink" href="#setup-your-standalone-license" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>You must be a <a href="https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-properties?tabs=sprest#setwrite-tenant-properties">tenant administrator</a> to perform this operation or use an account member of the Owners group of the tenant app catalog site.</li>
+<li>Tenant properties are stored in the app catalog site associated with that tenant. To set or remove a property, you have to specify the absolute URL of the app catalog site. If you specify the URL of a site different than the app catalog, you will get an access denied error.</li>
+</ul>
+</div>
 <p>To setup a standalone license, follow this procedure:</p>
 <ol>
 <li>
-<p>On a remote machine that have acces to your Office 365 environment, install <a href="https://pnp.github.io/office365-cli/">Office 365 CLI</a> as an administrator:</p>
-<div class="codehilite"><pre><span></span><code>npm i -g @pnp/office365-cli
+<p>On a remote machine that have acces to your Microsoft 365 environment, install <a href="https://pnp.github.io/cli-microsoft365/">Microsoft 365 CLI</a> as an administrator:</p>
+<div class="codehilite"><pre><span></span><code>npm i -g @pnp/cli-microsoft365
 </code></pre></div>
 
 
 </li>
 <li>
-<p>Connect to Office 365 using the following command and and SharePoint administrator account.</p>
-<div class="codehilite"><pre><span></span><code>o365$ login
+<p>Connect to Microsoft 365 using the following command and and SharePoint administrator account.</p>
+<div class="codehilite"><pre><span></span><code>m365$ login
 </code></pre></div>
 
 
 </li>
 <li>
-<p>Create a <a href="https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-set/">new tenant property</a> named <code>AEQUOS_DATAVISUALIZER_LICENSE_KEY</code> with, as value, the key you received by email after your purchase:
+<p>Create a <a href="https://pnp.github.io/cli-microsoft365/cmd/spo/storageentity/storageentity-set/">new tenant property</a> named <code>AEQUOS_DATAVISUALIZER_LICENSE_KEY</code> with, as value, the key you received by email after your purchase:
         <img alt="&quot;License mail&quot;" class="center" src="../assets/license_mail.png" /></p>
-<div class="codehilite"><pre><span></span><code>spo storageentity set -k AEQUOS_DATAVISUALIZER_LICENSE_KEY -v &lt;your_key&gt; -d &#39;aequos Data Visualizer solution license key&#39; -u https://contoso.sharepoint.com/sites/appcatalog
+<div class="codehilite"><pre><span></span><code>m365 spo storageentity set -k AEQUOS_DATAVISUALIZER_LICENSE_KEY -v &lt;your_key&gt; -d &#39;aequos Data Visualizer solution license key&#39; -u https://contoso.sharepoint.com/sites/appcatalog
 </code></pre></div>
 
 
@@ -872,7 +879,7 @@
 </li>
 <li>
 <p>To remove an existing key, use the following command:</p>
-<div class="codehilite"><pre><span></span><code>spo storageentity remove -k AEQUOS_DATAVISUALIZER_LICENSE_KEY -u https://contoso.sharepoint.com/sites/appcatalog
+<div class="codehilite"><pre><span></span><code>m365 spo storageentity remove -k AEQUOS_DATAVISUALIZER_LICENSE_KEY -u https://contoso.sharepoint.com/sites/appcatalog
 </code></pre></div>
 
 
