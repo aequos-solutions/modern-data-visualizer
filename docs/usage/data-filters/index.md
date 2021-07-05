@@ -39,13 +39,13 @@ The filter settings are as follow:
 | **Expand by default** | If applicable for the selected template, display values as expanded.
 | **Show count** | If applicable for the selected template, display counts for values.
 | **Mutli values** | If applicable for the selected template, allow selection of multiple values.
-| **Operator between values** | If multi values is selected, the operator to use between values (OR/AND).
+| **Operator between values** | If multi values is selected, the operator to use between values (**OR**/**AND**). This value can be overriden manually by the user when using the following filter templates: <br><ul><li>Checkbox</li><li>Combo box</li><li>Taxonomy picker</li></ul> <br> !["Operator between filter values"](../../assets/webparts/data_filters/data_filters_filter_values_operator.png){: .center} 
 | **Sort values by** | Sort values by name or by count.
 | **Sort direction** | Sort values in ascending/descending order.
 
 ### Operator between filters
 
-!["Operator filters"](../../assets/webparts/data_filters/operator_filters.png){: .center} 
+!["Operator between filters"](../../assets/webparts/data_filters/operator_filters.png){: .center} 
 
 You can select the operator to use between filters (OR or AND).
 
