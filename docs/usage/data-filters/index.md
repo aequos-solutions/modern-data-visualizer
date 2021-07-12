@@ -35,14 +35,15 @@ For each filter, the available options are as follow:
 |------------|-----------------|
 | **Display Name** | A friendly name for the filter. |
 | **Filter field** | The internal data source field to use as filter. Here you can select a field from the current data source (if data have been already retrieved) of type your own custom value (press enter to validate).
+| **Values count** | The maximum number of values to be retrieved for a given filter. If left empty, the values count will be **defaulted to 10**
 | **Template** | The template to use to display filter values. See [Filter templates](#filter-templates) for more details.
 | **Filter type** | Specify if the filter is a 'static' filter or a 'refiner' filter. See [Filter types](#filter-types) for more information.
-| **Expand by default** | If applicable for the selected template, expand the filters values.
+| **Expand by default** | If applicable for the selected template, display values as expanded.
 | **Show count** | If applicable for the selected template, display counts for values.
 | **Mutli values** | If applicable for the selected template, allow selection of multiple values.
-| **Operator between values** | If multi values is selected, the operator to use between values (OR/AND).
-| **Sort values by** | If applicable, sort values by name or by count.
-| **Sort direction** | If applicable, sort values in ascending/descending order.
+| **Operator between values** | If multi values is selected, the operator to use between values (**OR**/**AND**). This value can be overriden manually by the user when using the following filter templates: <br><ul><li>Checkbox</li><li>Combo box</li><li>Taxonomy picker</li></ul> <br> !["Operator between filter values"](../../assets/webparts/data_filters/data_filters_filter_values_operator.png){: .center} 
+| **Sort values by** | Sort values by name or by count.
+| **Sort direction** | Sort values in ascending/descending order.
 
 ### <a name=filter-templates>Filter templates</a>
 
@@ -54,7 +55,47 @@ The available filter templates are as follow:
 | **Date interval** | Filter results according to predefined date intervals (any time, last month, last 3 months, last year and older than a year. **These intevals can't be changed**. <br> !["Date interval"](../../assets/webparts/data_filters/dateinterval_template.png)
 | **Date range** | Filter values from/to a start/end date. <br> !["Date range"](../../assets/webparts/data_filters/daterange_template.png)
 | **Combo box** | Filter results as a dropdown list of values. <br> !["Combo"](../../assets/webparts/data_filters/combo_template.png)
-| **Taxonomy picker** <br> ([Configuration details](./templates/taxonomy-picker)) | Filter results using a SharePoint taxonomy hierarchy of terms. For more information about taxonomy picker configuration, click [here](./templates/taxonomy-picker). <br> !["Taxonomy picker overview"](../../assets/webparts/data_filters/templates/taxonomy_picker_overview.png)
+| **Taxonomy picker** <br> ([Configuration details](#taxonomy-picker-configuration)) | Filter results using a SharePoint taxonomy hierarchy of terms. For more information about taxonomy picker configuration, click [here](#taxonomy-picker-configuration). <br> !["Taxonomy picker overview"](../../assets/webparts/data_filters/templates/taxonomy_picker_overview.png)
+
+#### <a name=taxonomy-picker-configuration>Taxonomy Picker template configuration</a>
+
+The taxonomy picker template allows you to filter data using the SharePoint Term Store using your own information architecture.
+
+!["Taxonomy picker overview"](../../../assets/webparts/data_filters/templates/taxonomy_picker_overview.png){: .center} 
+
+## Configure the taxonomy picker
+
+To configure the taxonomyp picker, follow these steps:
+
+1. From the Data Filter Web Part **'Edit'** button in the Web Part property pane, select the _Taxonomy picker_ template from the dropdown list and click on the tag icon next to it to view setings:
+
+    !["Taxonomy picker configuration"](../../../assets/webparts/data_filters/templates/taxonomy_picker_configuration1.png){: .center} 
+
+1. Select anchor terms or term sets you want to display as filters for users. They will be displayed as root elements for the filter name in the Web Part. You have here the flexibility to mix term sets from different term groups or anchor terms from same or different term sets:
+
+    **Example with term sets:**
+
+    !["Taxonomy picker - Term sets configuration"](../../../assets/webparts/data_filters/templates/taxonomy_picker_configuration2.png){: .center}
+
+    **Example with anchor terms**
+
+    !["Taxonomy picker - Anchor terms configuration"](../../../assets/webparts/data_filters/templates/taxonomy_picker_configuration21.png){: .center} 
+
+    !!! note
+
+        - Even though there is no technical limitation regarding the number of anchor terms or term sets you can display as root filters, we strongly recommend to limit this number to only few items to avoid performance issues or split into multiple filters.
+
+        - Only items with the same type can be used as root filters (i.e. only term sets or terms, not both at the the time).
+
+3. Configure behavior settings with the provided options:
+
+    !["Taxonomy picker - Anchor terms configuration"](../../../assets/webparts/data_filters/templates/taxonomy_picker_configuration4.png){: .center} 
+
+    | **Setting** | **Description** |
+    |------------|-----------------|
+    | **Item selection behavior** | Determine the default selection behavior when a user select the value. This settings can also be overriden per value for more flexibility: <br><br> !["Taxonomy picker - Selection behavior"](../../../assets/webparts/data_filters/templates/taxonomy_picker_selection_behavior.png){: .center} |
+    | **Number of items per page** | Determine the number of items to show per taxonomy levels. An high value will have impact on performances. <br><br> !["Taxonomy picker - Selection behavior"](../../../assets/webparts/data_filters/templates/taxonomy_picker_paging.png){: .center} |
+    | **Display search box** | Determine if a search box should appear in the picker letting users search for values. When an user search for values, the scope is restricted to term sets or anchor terms configured as root and does not apply to the whole term store. Also, the search is performed **using the current UI language**. <br><br> !["Taxonomy picker - Selection behavior"](../../../assets/webparts/data_filters/templates/taxonomy_picker_search.png){: .center} |
 
 ## <a name=filter-types>Filter types: 'Static' filter versus 'Refiner' filter</a>
 
@@ -66,7 +107,6 @@ The Web Part supports two types of filters (_'Static'_ and _'Refiner'_). However
 !!! note
     The filter type is indicated for each filter.<br>
     !["Taxonomy picker overview"](../../assets/webparts/data_filters/filter_type.png)
-
 
 ## Use indexed property bag properties with taxonomny values
 

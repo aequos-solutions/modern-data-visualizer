@@ -40,6 +40,8 @@ Here are all the builtin slots the solution provides.
 | **PersonQuery** | Used for the people layout to get information about the current user dynamically. More info [here](https://docs.microsoft.com/en-us/graph/toolkit/components/person).
 | **UserDisplayName** | Used by the people layout to display the user name.
 | **UserEmail** | Used by the people layout to display the user email.
+| **TeamId** | The Microsoft Teams team ID or the Microsoft 365 group ID. Intended to be used with the [Teams layout](./layouts/teams.md)
+| **TeamVisibility** | The Microsoft Teams team visiblity (public/private). Intended to be used with the [Teams layout](./layouts/teams.md)
 
 > A slot can be empty.
 
