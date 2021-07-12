@@ -1,4 +1,6 @@
 site_name: aequos Modern Data Visualizer solution for SharePoint Online
+site_url: ''
+use_directory_urls: false
 nav:
   - Getting Started:
     - Introduction: index.md
@@ -38,14 +40,19 @@ theme:
   name: 'material'
   palette:
     primary: 'black'
-  feature:
-    tabs: true
-  logo: 'assets/aequos_logo.png'
+  features:
+    - navigation.tabs
+    - instant
   font:
     code: 'Ubuntu Mono'
+  logo: 'assets/aequos_logo.png'
+  icon:
+    logo: material/cloud
 extra_css:
   - 'assets/extra.css'
 markdown_extensions:
+  - pymdownx.tabbed          
+  - pymdownx.superfences
   - attr_list
   - admonition
   - codehilite:
@@ -56,9 +63,9 @@ markdown_extensions:
           base_path: docs
 extra:
   social:
-    - type: 'twitter'
+    - icon: fontawesome/brands/twitter
       link: 'https://twitter.com/aequos_ca'
-    - type: 'link'
+    - icon: fontawesome/brands/twitter
       link: 'www.aequos.ca'
 repo_url: https://github.com/aequos-solutions/aequos.github.io
 edit_uri: blob/master/docs
