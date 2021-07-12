@@ -1,6 +1,6 @@
 site_name: aequos Modern Data Visualizer solution for SharePoint Online
-site_url: ''
-use_directory_urls: false
+site_url: 'http://127.0.0.1:8000/'
+use_directory_urls: true
 nav:
   - Getting Started:
     - Introduction: index.md
