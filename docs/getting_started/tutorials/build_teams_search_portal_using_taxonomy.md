@@ -88,7 +88,7 @@ To be able to set custom metadata for your Teams, you will need first to create 
         {
             "name": "groupDepartmentAsText",
             "type": "String"
-        },
+        }
     ]
 }
 ```
