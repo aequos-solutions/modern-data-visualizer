@@ -17,6 +17,11 @@
     | _People.Read_ | Same as above.
     | _Contacts.Read_ | Same as above.
     | _User.ReadBAsic.All_ | Same as above.
+    | _Files.Read.All_ | Microsoft Search API
+    | _Sites.Read.All_ | Microsoft Search API
+    | _Mail.Read_ | Microsoft Search API
+    | _Calendars.Read_ | Microsoft Search API
+    | _ExternalItem.Read.All_ | Microsoft Search API    
 
 3. Get a valid license from our [website](https://www.aequos.ca). 
 
