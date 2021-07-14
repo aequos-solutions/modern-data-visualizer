@@ -110,9 +110,20 @@ As you probably want to tag not just one Team in your organization, this step ca
 
 !["Teams custom metadata - Graph Explorer get Teams"](../../assets/scenarios/teams/graph_explorer_get_teams.png){: .center}
 
-- In Graph Explorer, using this ID, update the group with the SharePoint taxonomy term values. As a convention, we will use the SharePoint taxonomy term IDs as the main extension properties value and the term labels for the `'AsText'` properties:
+- In Graph Explorer, using this ID to update the group with the SharePoint taxonomy term values by using the `https://graph.microsoft.com/beta/groups/<YOUR-GUID>`. As a convention, we will use the SharePoint taxonomy term IDs as the main extension properties value and the term labels for the `'AsText'` properties:
 
 !["Teams custom metadata - Graph Explorer tag Teams"](../../assets/scenarios/teams/graph_explorer_tag_team.png){: .center}
+
+```json
+{
+    "extef3z6iep_aequosGroupMetadata": {
+        "groupType": "<YOUR-PROJECT-TERM-ID>",
+        "groupTypeAsText": "Project",
+        "groupDepartment": "<YOUR-MARKETING-TERM-ID>",
+        "groupDepartmentAsText": "Marketing"
+    }
+}
+```
 
 !!! info
     The `'AsText'` are mainly here for performances purpose as it avoids fetching the label again for the taxonomy ID in the Web Part layout.  
