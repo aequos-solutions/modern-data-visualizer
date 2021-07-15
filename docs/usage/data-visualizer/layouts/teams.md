@@ -37,7 +37,7 @@ Despite you can use this layout with any data, the 'teams' layout is firstly des
 		{
 			"Content-Type": "application/json;odata=verbose",
 			"Accept": "application/json",
-			"ConsistencyLevel": "eventual"
+			{"ConsistencyLevel": "eventual"}
 		}
 		```
 

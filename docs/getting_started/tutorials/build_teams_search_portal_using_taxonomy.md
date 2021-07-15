@@ -1,50 +1,51 @@
 # Build a teams search app using aequos MDV, Microsoft Graph extensions and SharePoint taxonomy
 
-Recently, we had a customer. Because, the Modern Data Visualizer was a perfect fit for its requirement.
+In this step-by-step tutorial, we demonstrate how to build a search center allowing to browse teams from Microsoft Teams using a dedicated application, SharePoint taxonomy terms and aequos MDV.
 
-- Crateion a search interface only for Teams
-- Packing to a Teams applications so uers can access their Teams diretly thorugh the Teams client.
+!["Teams custom metadata - Search page overview"](../../assets/scenarios/teams/teams-search_overview.png){: .center}
 
-In this tutorial, we will cover how to build a search center for levering the aequos Modern Data Visualizer solution, Microsoft Graph schema extensions and SharPoint taxonomy.
+!!! note "Questions, issues with this tutorial?"
+    If you encouter issues or have questions about this tutorial don't hesitate to reach us using our official [GitHub repository](https://github.com/aequos-solutions/modern-data-visualizer/issues/new/choose).
 
-Why classify tmeas?
+!!! info "Why classify teams?"
+    
+    In Microsoft Teams, there is no tagging mechanism to add custom metadata directly to a team, for instance the type of team, related department or even the topic. The only metadata you get is the display name and the description. It results to a poor out-of-the-box search and filtering experience in the Microsoft Teams application (web or desktop) and doesn't really help users to quickly find a relevant team when needed. This statement is even more true when an organization has a huge amount of teams and/or users are members of several teams.
 
-The common approach would be to maintain a SharePoint list maping existing Teams and use taxonmy columns to it, then use traditionnal SharePoiunt search to filte. The downside of this approach is you have to maintain this synchronization and don't have a live results. 
+    !["Default Teams search experience"](../../assets/scenarios/teams/teams_default_search.png){: .center}
+    
+    In real world scenarios, companies often have a well defined information architecture in place and leverage SharePoint taxonomy to handle this kind of classification. The solution to bypass the Microsoft Teams limitation is generally to maintain a SharePoint list containing all created teams and use SharePoint taxonmy columns as metadata for those teams (i.e. list items). This approach works well but has a major pitfall: you need to synchronize this list every time a team is updated/created/removed. This constraint can be cumbersome at some point giving the fact Microsoft Teams doesn't offer hooks for this type of events meaning you will have to pull this information on a regular basis. Not very optimal and requires a dedicated infrastructure.
 
-Inconvenient of the Teams application (web or desktop)
+    What if you could just tag your teams and filter them directly, live, from a SharePoint page or Teams application and without the need to synchronize anything?. This is precisly what you can achieve with the Modern Data Visualizer solution combined with few configurations.
 
-- Can't add custom metadata in the deskt. The only filter is by name or description.
-- Display and filter experience poor performances can be very slow when the user is a member of several Teams.
+The technologies used for this tutorial are:
 
-Technologies used
+- [Microsoft Graph schema extensions](https://docs.microsoft.com/en-us/graph/extensibility-schema-groups) (to add custom properties to teams)
+- [SharePoint taxonomy](https://docs.microsoft.com/en-us/sharepoint/managed-metadata) (to define classification values)
+- aequos Modern Data Visualizer solution (for the search experience)
 
-- Microsoft Graph schema extensions
-- SharePoint taxonomy
-- aequos Modern Data Visualizer solution
+## Step 1: Create taxonomy term sets
 
-1. Create taxonomy term sets
-
-For this example, we create two SharePoint taxonomy term sets for our Teams classificaiton:
+For this example, we will create two SharePoint taxonomy term sets for our teams classification. Go to the SharePoint term store and create the following term sets and terms:
 
 - _"Group type"_: the type of Team created (Project, Community, Oganizaional)
-- _"Department"_: the organization departement associated with the group.
+- _"Department"_: the organization departement associated with the team.
 
     !["Teams custom metadata - SharePoint taxonomy"](../../assets/scenarios/teams/teams_term_store.png){: .center}
 
-## 1. Create Microsoft Graph schema extension
+## Step 2: Create Microsoft Graph schema extensions
 
 To be able to set custom metadata for your Teams, you will need first to create a Microsoft Graph schema extension on the underlying `group` resource. Microsoft Graph extensions are a way provided by Microsoft to add custom data on Microsoft 365 resources (ex: `group`,`user`, etc.)
 
-**_Why using a schema extension instead of an open extension?_**
+**_Why use a schema extension instead of an open extension?_**
 
-> Simply because only schema extension can be filtered using the OData `$filter` expression. To build a a search center, this could be useful ;).
+> Simply because only schema extension can be filtered using the OData `$filter` expression. To build a a search center, this could be pretty useful ;).
 
 !!! warning
-    As of today, Microsoft Schema extensions [don't not support complex property types like arrays](https://docs.microsoft.com/en-us/graph/api/resources/extensionschemaproperty?view=graph-rest-1.0) and string values are limited to 256 characters. It means it with only work with single value fields. 
+    As of today, Microsoft Schema extensions [don't not support complex property types like arrays](https://docs.microsoft.com/en-us/graph/api/resources/extensionschemaproperty?view=graph-rest-1.0) and string values are limited to 256 characters. **It means teams can only be tagged with a single value per metadata**. 
 
 ### Create a schema extension using Microsoft Graph explorer
 
-- In the same Azure tenant where the Teams you want to tag belong, create a blank Azure AD application and save its ID for later. 
+- In the same Azure tenant where the teams you want to tag belong, create a blank Azure AD application and save its ID for later. 
 
     !!! info
         There is no need to configure any permissions for this application.
@@ -102,11 +103,11 @@ To be able to set custom metadata for your Teams, you will need first to create 
     !!! important
         When you create your extension for the first time, you need to save its generated id **as you won't be able to retrieve it afterwards**. Microsoft Graph extensions are shared across all tenants worldwide (only the definition, not values) so it will be very hard to get this value again.
 
-## 2. Tag your Teams with your new extension and taxonomy values
+## Step 3: Tag your teams with your new extension and taxonomy values
 
 As you probably want to tag not just one Team in your organization, this step can be automated using multiple ways ex: (process a CSV files with PowerShell or use a custom business application). In this sample, we will just show how to tag a single team using Graph Explorer. The concept remains the same for multiple teams. 
 
-- In the Microsoft Graph Explorer, get the list of your Teams using the `https://graph.microsoft.com/beta/groups?$filter=resourceProvisioningOptions/Any(x:x eq 'Team')` URL (GET) and choose one in the list you wnat to tag saving its `id`:
+- In the Microsoft Graph Explorer, get the list of your Teams using the `https://graph.microsoft.com/beta/groups?$filter=resourceProvisioningOptions/Any(x:x eq 'Team')` URL (GET) and choose one in the list you want to tag saving its `id`:
 
 !["Teams custom metadata - Graph Explorer get Teams"](../../assets/scenarios/teams/graph_explorer_get_teams.png){: .center}
 
@@ -117,7 +118,7 @@ As you probably want to tag not just one Team in your organization, this step ca
 !!! info
     The `'AsText'` are mainly here for performances purpose as it avoids to fetch the label again for the taxonomy ID in the Web Part layout.  
 
-## 3. Build a SharePoint search page using the Modern Data Visualizer Web Part
+## Step 4: Build a SharePoint search page using the Modern Data Visualizer Web Parts
 
 In a SharePoint modern site (communication or team site), create a new page using the _'Home'_ layout. This can be achieved using [PnP PowerShell](https://pnp.github.io/powershell/cmdlets/Add-PnPClientSidePage.html) an the following commands:
 
@@ -169,24 +170,14 @@ m365 spo serviceprincipal grant add --resource 'Microsoft Graph' --scope 'User.R
 
         !["Teams custom metadata - Data Visualizer Web Part configuration"](../../assets/scenarios/teams/data_visualizer_source_config.png){: .center}
     
-        - Configure the source with the following values:
+        Configure the source with the following values:
 
-        - **Url**: 
+        - **Url**:
             ```
             https://graph.microsoft.com/beta/me/memberOf/$/microsoft.graph.group?$top={itemsCountPerPage}&$count=true&$select=exttumpwrak_aequosGroupMetadata,id,displayName,description,visibility${if(empty("{inputQueryText}"),'','&$search="displayName:{inputQueryText}" OR "description:{inputQueryText}"')}${if(empty('{filters}'),"&$filter=resourceProvisioningOptions/Any(x:x eq 'Team')",concat("&$filter=resourceProvisioningOptions/Any(x:x eq 'Team') and ", buildOdataFilterCondition(json('{filters}'))))}
             ```
 
             > You must replace the `exttumpwrak_aequosGroupMetadata` value with your own extension name created earlier. Also, don't forget to click "Apply". 
-
-        - HTTP Method: `GET`
-        - HTTP headers:
-            ```json
-            {
-                "Content-Type": "application/json;odata=verbose",
-                "Accept": "application/json",
-                "ConsistencyLevel": "eventual"
-            }
-            ```
 
             This URL could seem intimidating but leverages both Microsoft adaptive expressions and builtin Web Part [tokens](../../../usage/data-visualizer/tokens/) to create a dynamic query depending of the connected search box and filter values. Decorticated, the query does the following:
             ***
@@ -202,7 +193,7 @@ m365 spo serviceprincipal grant add --resource 'Microsoft Graph' --scope 'User.R
             - Return useful properties for a team used by the 'Teams' layout, including the custom schema extension you created earlier (to be replaced by your own value)<br>
                 `&$select=exttumpwrak_aequosGroupMetadata,id,displayName,description,visibility` 
             ***
-            - Add a $search condition only if a keyword is entered, leave blank otherwise <br>
+            - Add a $search condition on display name and description only if a keyword is entered in the search box. Leave blank otherwise <br>
                 ```
                 ${
                     if(empty("{inputQueryText}"),
@@ -212,7 +203,7 @@ m365 spo serviceprincipal grant add --resource 'Microsoft Graph' --scope 'User.R
                 }
                 ```
             ***
-            - Add a $filter condition only if filter values are selected, leave blank otherwise. The `buildOdataFilterCondition()` function converts the current filter values to an OData valid `$filter` condition <br>
+            - Add a $filter condition only if filter values are present and selected. Leave blank otherwise. The `buildOdataFilterCondition()` function converts the current filter values to an OData valid `$filter` condition using 'eq' operator. <br>
                 ```
                 ${
                     if(empty('{filters}'),
@@ -221,24 +212,96 @@ m365 spo serviceprincipal grant add --resource 'Microsoft Graph' --scope 'User.R
                     )
                 }
                 ```
+
+        - HTTP Method: `GET`
+        - HTTP headers:
+            ```json
+            {
+                "Content-Type": "application/json;odata=verbose",
+                "Accept": "application/json",
+                "ConsistencyLevel": "eventual"
+            }
+            ```
+    
     === "2. Connections"
 
-        - Connect to the Data Filters Web Part and the Search box on the same page:
+        Connect to the Data Filters Web Part and the Search box on the same page:
 
         !["Teams custom metadata - Data Visualizer Web Part configuration"](../../assets/scenarios/teams/data_visualizer_connections_config.png){: .center}
 
 	=== "3. Layout"
-        - Select the "Teams" layout from the layout configuration page.
-        - In the options, select the `AsText` properties from your schema extension:
+        Select the "Teams" layout from the layout configuration page.
+        In the options, select the `AsText` properties from your schema extension:
 
         !["Teams custom metadata - Data Visualizer Web Part layout options "](../../assets/scenarios/teams/team_layout_options.png){: .center}
 
         !["Teams custom metadata - Data Visualizer Web Part layout options "](../../assets/scenarios/teams/team_layout_options_select_fields.png){: .center}
 
-        
 
 - Connect the Data Filters Web Part to the Data Visualizer Web Part:
 
     !["Teams custom metadata - Data Filters WP connection"](../../assets/scenarios/teams/filters_connection.png){: .center}
 
-## 4. Create a Teams application an expose it ot users
+Congratulations, you have now a functional search center for your teams!
+
+## Step 5: Create a Teams application an deploy it to your users
+
+To fully integrate the search experience directly in Microsoft Teams, you can create a new application and deploy it globally for your users inside your organization.
+
+1. Open Microsoft Teams in web or desktop mode. In the app bar, click on **(...)** and search for the application named **"App Studio"**:
+
+    !["Teams custom metadata - App Studio application"](../../assets/scenarios/teams/app_studio_app.png){: .center}
+
+2. Create a new application (ex: _"Teams search"_):
+
+    !["Teams custom metadata - App Studio new application"](../../assets/scenarios/teams/app_studio_create_app.png){: .center}
+
+3. Fill the required information and leave the other settings by default:
+
+    !["Teams custom metadata - App details"](../../assets/scenarios/teams/app_studio_app_details.png){: .center}
+
+    | Settings          | Example value  
+    | ----------------- | ---------------------|
+    | **Package Name**  | _aequos-mdv-teams-search_
+    | **Version**       | _1.0.0_
+    | **Short description** | _Search center for Microsoft Teams_
+    | **Full description**  | _Allow users to search and filter teams in Microsoft Teams_
+    | **Developer/Company Name**    |  _SWORD Group_
+    | **Website**   | _https://www.sword-group.com_
+    | **Privacy statement** | _https://www.sword-group.com_
+    | **Terms of use**  | _https://www.sword-group.com_
+
+4. In the **'Tabs'** section, add a personal tab with the following information:
+
+    | Settings          | Example value  
+    | ----------------- | ---------------------|
+    | **Name**  | _Team search application_
+    | **Entity ID**  | _teamsSearch_
+    | **Content URL**| `https://<your_tenant>.sharepoint.com/_layouts/15/teamslogon.aspx?spfx=true&dest=https://<your_tenant>.sharepoint.com/sites/<your_sharepoint_site>/SitePages/teams-search-mdv.aspx`
+
+    > You must replace &lt;your_tenant&gt; and &lt;your_sharepoint_site&gt; by the values corresponding to your environment. 
+
+    !["Teams custom metadata - Personal tab"](../../assets/scenarios/teams/app_studio_personal_tab.png){: .center}
+
+    !["Teams custom metadata - Personal tab details"](../../assets/scenarios/teams/app_studio_personal_tab_details.png){: .center}
+
+5. In the **'Domains and premissions'** section, configure the SSO setting with the following information:
+
+    | Settings          | Example value  
+    | ----------------- | ---------------------|
+    | **AAD App ID**  | `00000003-0000-0ff1-ce00-000000000000` (ID of the SharePoint Azure AD application)
+    | **Single-Sign-On** | _https://&lt;your_tenant&gt;.sharepoint.com_ (replace by your own value)
+
+
+6. Click **'Test and distribute'** and then **Install** to validate the application is working. You can now [package this app and deploy it for your users globally](https://docs.microsoft.com/en-us/MicrosoftTeams/manage-apps):
+
+    !["Teams custom metadata - App Studio distribute"](../../assets/scenarios/teams/app_studio_app_distribute.png){: .center}
+
+    !["Teams custom metadata - Teams search app"](../../assets/scenarios/teams/teams_search_app.png){: .center}
+    
+## What's next?
+
+This tutorial gave you a straightforward approach to add custom metadata to your teams in Microsoft Teams. The next step is to classify all your teams accordingly using the Microsoft Graph schema extension so you can filter them using this interface. This can be achieved using multiple ways (CSV + PowerShell, SPFx extension, etc) but this is outside of the purpose of this article.
+
+!!! note "Questions, issues with this tutorial?"
+    If you encouter issues or have questions about this tutorial don't hesitate to reach us using our official [GitHub repository](https://github.com/aequos-solutions/modern-data-visualizer/issues/new/choose).

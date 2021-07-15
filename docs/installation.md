@@ -17,6 +17,8 @@
     | _People.Read_ | Same as above.
     | _Contacts.Read_ | Same as above.
     | _User.ReadBAsic.All_ | Same as above.
+    | _GroupMember.Read.All_ | To list owners and members in the Teams layout panel.
+    | _Channel.ReadBasic.All_ | To list channels in the Teams layout panel.
 
 3. Get a valid license from our [website](https://www.aequos.ca). 
 
