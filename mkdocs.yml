@@ -7,6 +7,7 @@ nav:
     - Installation: installation.md
     - Activate a standalone license: setup_standalone.md
     - Connections overview: getting_started/connections_chart.md
+    - Features comparison with PnP Modern Search: features.md
   - Data Visualizer:
     - Usage: usage/data-visualizer/index.md
     - Data sources: usage/data-visualizer/data-sources/index.md
@@ -53,6 +54,12 @@ extra_css:
 markdown_extensions:
   - pymdownx.tabbed          
   - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde 
   - attr_list
   - admonition
   - codehilite:
