@@ -38,6 +38,7 @@ nav:
     - Build a people directory using the Microsoft Graph data source: getting_started/tutorials/build_people_directory_graph.md
     - Build a people directory using alphabetical verticals and SharePoint Search data source: getting_started/tutorials/build_people_directory_sharepoint_search.md
     - Use static taxonomy filters with the SharePoint search data source: getting_started/tutorials/static_taxonomy_filters_sharepoint_search.md
+    - Build a teams search app using aequos MDV, Microsoft Graph extensions and SharePoint taxonomy: getting_started/tutorials/build_teams_search_portal_using_taxonomy.md
 theme:
   name: 'material'
   palette:

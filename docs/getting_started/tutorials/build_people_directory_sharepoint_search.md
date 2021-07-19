@@ -2,6 +2,9 @@
 
 This tutorial gives you basic steps to achieve a people directoy using alphabetical letters and the SharePoint search data source:
 
+!!! note "Questions, issues with this tutorial?"
+    If you encouter issues or have questions about this tutorial don't hesitate to reach us using our official [GitHub repository](https://github.com/aequos-solutions/modern-data-visualizer/issues/new/choose).
+
 ## Video tutorial
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SLbXneP3b6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

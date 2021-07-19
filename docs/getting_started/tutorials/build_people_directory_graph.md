@@ -2,6 +2,9 @@
 
 A classic use case in a SharePoint portal. This time, instead of using the SharePoint search data source, we use the Microsoft Graph and the [People API](https://docs.microsoft.com/en-us/graph/people-example#search-people) to lookup relevant people based on search box Web Part input keywords. We also add alphabetical filters as verticals and take advantage of the adaptive expressions feature to write a dynamic query.  
 
+!!! note "Questions, issues with this tutorial?"
+    If you encouter issues or have questions about this tutorial don't hesitate to reach us using our official [GitHub repository](https://github.com/aequos-solutions/modern-data-visualizer/issues/new/choose).
+
 ## Video tutorial
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mz76r7gcsQU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
