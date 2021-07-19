@@ -25,6 +25,10 @@ By default, the following data sources are provided:
 
 {!usage/data-visualizer/data-sources/static-data.md!}
 
+### Microsoft Search
+
+{!usage/data-visualizer/data-sources/microsoft-search.md!}
+
 ## Common settings
 
 {!usage/data-visualizer/common/common.md!}

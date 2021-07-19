@@ -41,8 +41,6 @@ nav:
     - Build a teams search app using aequos MDV, Microsoft Graph extensions and SharePoint taxonomy: getting_started/tutorials/build_teams_search_portal_using_taxonomy.md
 theme:
   name: 'material'
-  palette:
-    primary: 'black'
   features:
     - navigation.tabs
     - instant
