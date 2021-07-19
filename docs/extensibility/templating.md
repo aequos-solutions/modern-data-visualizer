@@ -49,8 +49,8 @@ The following custom helpers are available in addition to the [handlebars-helper
 `{{getUniqueCount items "<property>"}}` or  `{{getUniqueCount array}}`| Get the unique count of a property over the result set (or another array) or get the unique count of objects in an array. Example: [1,1,1,2,2,4] would return `3`. | `{{getUniqueCount [1,1,1,2,2,4]}}`
 `{{getUnique items "<property>"}}` | Return the unique values as a new array based on an array or property of an object in the array. | `{{getUnique items "NewsCategory"}}`
 `{{#group items by="<property>"}}` | Group items by a specific results property. See [https://github.com/shannonmoeller/handlebars-group-by](https://github.com/shannonmoeller/handlebars-group-by) for usage.
-| `{{slot item <property_name>}}` | Return the `<property_name>` value for the `item` object. Supports deep property paths. | `{{slot item "property.subproperty"}}`
-| `{{getUserEmail <value>}}` | Extract the user email in a string based on a email regex  (ex: a claim). Returns the first match.| `{{getUserEmail "franck.cornu@aequosdev.onmicrosoft.com | Franck Cornu | 693A30232E667C6D656D626572736869707C6672616E636B2E636F726E7540616571756F736465762E6F6E6D6963726F736F66742E636F6D i:0#.f|membership|franck.cornu@aequosdev.onmicrosoft.com"}}`
+| `{{slot item <property_names>}}` | Return the `<property_name>` value for the `item` object. Supports deep property paths. Supports single and multiple item properties | ex with single value: `{{slot item "property.subproperty"}}`<br>ex with multiple properties `{{slot item (JSONparse '["property1","property2"]')}}`
+| `{{getUserEmail <value>}}` | Extract the user email in a string based on a email regex  (ex: a claim). Returns the first match.| `{{getUserEmail "franck.cornu@aequosdev.onmicrosoft.com \| Franck Cornu \| 693A30232E667C6D656D626572736869707C6672616E636B2E636F726E7540616571756F736465762E6F6E6D6963726F736F66742E636F6D i:0#.f\|membership\|franck.cornu@aequosdev.onmicrosoft.com"}}`
 
 > Need any other helper? Let us know [here](https://github.com/aequos-solutions/modern-data-visualizer/issues)!
 
