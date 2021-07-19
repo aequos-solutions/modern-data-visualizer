@@ -134,4 +134,4 @@ To help you to write your queries, here are some hints about the token resolutio
 
 ## Go further with Microsoft Adaptive expressions
 
-Along tokens, you can also use Microsoft adaptive expressions for complex scenarios. See [Adaptive expressions usage](../adaptive_expressions) for more information.
+Along tokens, you can also use Microsoft adaptive expressions for complex scenarios. See [Adaptive expressions usage](./adaptive_expressions/) for more information.

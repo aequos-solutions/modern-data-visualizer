@@ -32,6 +32,7 @@ nav:
     - Custom web component: extensibility/custom_web_component.md
     - Custom suggestions provider: extensibility/custom_suggestions_provider.md
     - Custom Handlebars customizations: extensibility/handlebars_customizations.md
+    - Web component list: extensibility/web_components_list.md
   - Tutorials:
     - Build a complete search center: getting_started/tutorials/build_complete_search_center.md
     - Build a people directory using the Microsoft Graph data source: getting_started/tutorials/build_people_directory_graph.md
