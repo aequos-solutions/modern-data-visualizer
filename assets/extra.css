@@ -7,3 +7,16 @@
 .logo {
     width: 200px;
 }
+
+.md-header {
+    background-color: #225688;
+}
+
+.md-tabs {
+    background-color: #FBB901;
+}
+
+.md-tabs__link {
+    opacity: 1;
+    color: #225688;
+}
