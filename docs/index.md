@@ -9,9 +9,9 @@ The 'Modern Data Visualizer' solution is a set of SharePoint Online modern Web P
 It is the enhanced product version of the well known ["Pattern & Practices Modern Search"](https://github.com/microsoft-search/pnp-modern-search) open-source solution **that we also created**.
 
 !!! info
-    Want to know what are the differences between the two to help you decide which one is the right for you? Take a look at our detailled [features comparison table](./features/).
+    Want to know what are the differences between the commercial and open source solutions to help you decide which one is the right for you? Take a look at our detailled [features comparison table](./features/).
 
-    Don't be wrong: **we still continue to invest time and support for the open-source solution**. If it suits your current requirement, feel free to go with it. We will never push someone to purchase the licensed solution. It is completely up to you.
+    Don't be wrong: **we still continue to invest time and support for the open-source solution**. If it suits your current requirements, feel free to go with it. We will never push someone to purchase the licensed solution.
 
 ## What's included?
 
@@ -29,20 +29,6 @@ The solution includes the following Web Parts:
 Here is a overview video on how to build a complete search center in minutes using all available Web Parts whithin a SharePoint page including multiple data sources.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EECqOBWq3wo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## Get a trial version
-
-Want to try the solution capabilities first? Sure! We offer a **14 days** trial for the solution, __no personal information nor credit card required__. Just:
-
-1. Download the latest solution package from our [GitHub repository](https://github.com/aequos-solutions/modern-data-visualizer/releases).
-1. Upload and deploy it to a SharePoint site collection or tenant app catalog.
-1. Add any of aequos Modern Data Visualizer Web Parts on a SharePoint page to automatically activate the trial license for your tenant ID.
-
-!["Trial license"](./assets/trial_license.png){: .center}
-
-
-> The trial license is tied to a unique tenant ID. Once expired, you can't use the solution anymore in this tenant until you purchase a valid license.
-> If you need more time to review the solution, just let us know: [contact@aequos.ca](mailto:contact@aequos.ca).
 
 ## Supported browsers
 

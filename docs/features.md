@@ -1,4 +1,4 @@
-The [PnP Modern Search v4](https://microsoft-search.github.io/pnp-modern-search/) and aequos Modern Data Visualizer solutions share the same code foundation. However, some features are only available in the commercial solution.
+The [PnP Modern Search v4](https://microsoft-search.github.io/pnp-modern-search/) shares the same code foundation as the aequos Modern Data Visualizer solutions. However, some features are only available in the commercial solution.
 
 !!! important
     Although these two solutions share the same code foundation, **{==we do not "own" the PnP Modern Search as it is a Microsoft community-driven open source project. It means we do not 'control' or voluntarily 'block' new features and the two solutions evolve independently==}**. However we try as much as possible to ensure the same base concepts remain the same and common issues are adressed on both sides. It is a win-win situation.

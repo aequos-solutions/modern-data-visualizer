@@ -4,6 +4,7 @@ use_directory_urls: true
 nav:
   - Getting Started:
     - Introduction: index.md
+    - Get a license: get_license.md
     - Installation: installation.md
     - Activate a standalone license: setup_standalone.md
     - Connections overview: getting_started/connections_chart.md
