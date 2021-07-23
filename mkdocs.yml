@@ -35,12 +35,7 @@ nav:
     - Custom suggestions provider: extensibility/custom_suggestions_provider.md
     - Custom Handlebars customizations: extensibility/handlebars_customizations.md
     - Web component list: extensibility/web_components_list.md
-  - Tutorials:
-    - Build a complete search center: getting_started/tutorials/build_complete_search_center.md
-    - Build a people directory using the Microsoft Graph data source: getting_started/tutorials/build_people_directory_graph.md
-    - Build a people directory using alphabetical verticals and SharePoint Search data source: getting_started/tutorials/build_people_directory_sharepoint_search.md
-    - Use static taxonomy filters with the SharePoint search data source: getting_started/tutorials/static_taxonomy_filters_sharepoint_search.md
-    - Build a teams search app using aequos MDV, Microsoft Graph extensions and SharePoint taxonomy: getting_started/tutorials/build_teams_search_portal_using_taxonomy.md
+  - Tutorials & How-Tos: getting_started/tutorials/index.md
 theme:
   name: 'material'
   features:
@@ -57,6 +52,7 @@ markdown_extensions:
   - pymdownx.tabbed          
   - pymdownx.superfences
   - pymdownx.critic
+  - pymdownx.details
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
@@ -64,6 +60,9 @@ markdown_extensions:
   - pymdownx.tilde 
   - attr_list
   - admonition
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - codehilite:
       guess_lang: false
   - toc:
