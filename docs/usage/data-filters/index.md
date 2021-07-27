@@ -2,13 +2,13 @@
 
 The 'Data Filters' Web Part allows to filter the current results displayed in a 'Data Visualizer' Web Part. This component is higly configurable to meet you requirements and it works for all data sources.
 
-!["aequos Search Box Web Part"](../../assets/webparts/data_filters/data_filters_wp_picker.png){: .center}
+!["aequos Data Filters Web Part"](../../assets/webparts/data_filters/data_filters_wp_picker.png){: .center}
 
-!["aequos Search Box Web Part"](../../assets/webparts/data_filters/data_filters_wp_default.png){: .center}
+!["aequos Data Filters Web Part"](../../assets/webparts/data_filters/data_filters_wp_default.png){: .center}
 
 ## Configuration
 
-### Connection
+### Connection to Data Visualizer(s)
 
 To use the data filters, we must first connect it to one or multiple 'Data Visualizer' Web Parts. In the other hand, you must conenct back those Web Parts to the 'Data Filters' one. It is a **two-ways connection**.
 
@@ -20,6 +20,12 @@ To use the data filters, we must first connect it to one or multiple 'Data Visua
     **Example**
 
     **DataSource1** and **DataSource2** expose respectively a _'FileType'_ filter with values and counts `value1 (1)`, `value2 (1)` for **DataSource1** and `value2 (1)`, `value4 (1)` for **DataSource2** and both are connected to the Data Filter Web Part. In this case, an unique _'FileType'_ filter name will be displayed (because the filter name is the same for both data sources) with values `value1 (1)`,`value2 (2)`,`value4 (1)`. If you select a value that is not present in a data source (ex: `value1` for **DataSource2**), you will simply get zero result in the Web Part.
+
+### Connection to Data Verticals
+
+To create a dynamic filter experience, you can also connect the Data Filter Web Part to a Data Vertical Web Part. This way filters will only be displayed if specific verticals are selected.
+
+!["aequos Data Filters Web Part"](../../assets/webparts/data_filters/data_filters_wp_vertical.png){: .center}
 
 ### Filter settings
 
