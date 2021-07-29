@@ -897,11 +897,28 @@
 <li>
 <p>You can choose to make the solution available in <a href="https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-scoped-deployment">all sites</a> or force to install an app to the site every time.</p>
 </li>
-<li>
-<p>The solution asks the following API permissions by defailt to enhance the experience. These permissions are <strong>not mandatory</strong>. If you don't accept them, you will simpy have less available features.</p>
-</li>
 </ul>
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Asked API permissions</p>
+<p>The solution asks the following API permissions by default to enhance the experience. </p>
+<p><strong>Mandatory permissions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Requested API permission</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>TermStore.Read.All</em></td>
+<td>The taxonomy picker filter template. Without it, users won't be able to browse for terms and term sets in the taxonomy tree.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Not mandatory permissions</strong></p>
+<p>The following permissions are <strong>not mandatory</strong>. If you don't accept them, you will simpy have less available features.</p>
 <table>
 <thead>
 <tr>
@@ -956,6 +973,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 </li>
 <li>
 <p>Add the Web Parts to a SharePoint and start building. Easy no?</p>

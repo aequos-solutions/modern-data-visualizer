@@ -624,8 +624,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connection" class="md-nav__link">
-    Connection
+  <a href="#connection-to-data-visualizers" class="md-nav__link">
+    Connection to Data Visualizer(s)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-to-data-verticals" class="md-nav__link">
+    Connection to Data Verticals
   </a>
   
 </li>
@@ -968,8 +975,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connection" class="md-nav__link">
-    Connection
+  <a href="#connection-to-data-visualizers" class="md-nav__link">
+    Connection to Data Visualizer(s)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-to-data-verticals" class="md-nav__link">
+    Connection to Data Verticals
   </a>
   
 </li>
@@ -1046,10 +1060,10 @@
                 
                 <h1 id="data-filters-web-part">Data Filters Web Part<a class="headerlink" href="#data-filters-web-part" title="Permanent link">&para;</a></h1>
 <p>The 'Data Filters' Web Part allows to filter the current results displayed in a 'Data Visualizer' Web Part. This component is higly configurable to meet you requirements and it works for all data sources.</p>
-<p><img alt="&quot;aequos Search Box Web Part&quot;" class="center" src="../../assets/webparts/data_filters/data_filters_wp_picker.png" /></p>
-<p><img alt="&quot;aequos Search Box Web Part&quot;" class="center" src="../../assets/webparts/data_filters/data_filters_wp_default.png" /></p>
+<p><img alt="&quot;aequos Data Filters Web Part&quot;" class="center" src="../../assets/webparts/data_filters/data_filters_wp_picker.png" /></p>
+<p><img alt="&quot;aequos Data Filters Web Part&quot;" class="center" src="../../assets/webparts/data_filters/data_filters_wp_default.png" /></p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
-<h3 id="connection">Connection<a class="headerlink" href="#connection" title="Permanent link">&para;</a></h3>
+<h3 id="connection-to-data-visualizers">Connection to Data Visualizer(s)<a class="headerlink" href="#connection-to-data-visualizers" title="Permanent link">&para;</a></h3>
 <p>To use the data filters, we must first connect it to one or multiple 'Data Visualizer' Web Parts. In the other hand, you must conenct back those Web Parts to the 'Data Filters' one. It is a <strong>two-ways connection</strong>.</p>
 <p><img alt="&quot;Filters connection&quot;" class="center" src="../../assets/webparts/data_filters/wp_connection.png" /> </p>
 <div class="admonition note">
@@ -1058,6 +1072,9 @@
 <p><strong>Example</strong></p>
 <p><strong>DataSource1</strong> and <strong>DataSource2</strong> expose respectively a <em>'FileType'</em> filter with values and counts <code>value1 (1)</code>, <code>value2 (1)</code> for <strong>DataSource1</strong> and <code>value2 (1)</code>, <code>value4 (1)</code> for <strong>DataSource2</strong> and both are connected to the Data Filter Web Part. In this case, an unique <em>'FileType'</em> filter name will be displayed (because the filter name is the same for both data sources) with values <code>value1 (1)</code>,<code>value2 (2)</code>,<code>value4 (1)</code>. If you select a value that is not present in a data source (ex: <code>value1</code> for <strong>DataSource2</strong>), you will simply get zero result in the Web Part.</p>
 </div>
+<h3 id="connection-to-data-verticals">Connection to Data Verticals<a class="headerlink" href="#connection-to-data-verticals" title="Permanent link">&para;</a></h3>
+<p>To create a dynamic filter experience, you can also connect the Data Filter Web Part to a Data Vertical Web Part. This way filters will only be displayed if specific verticals are selected.</p>
+<p><img alt="&quot;aequos Data Filters Web Part&quot;" class="center" src="../../assets/webparts/data_filters/data_filters_wp_vertical.png" /></p>
 <h3 id="filter-settings">Filter settings<a class="headerlink" href="#filter-settings" title="Permanent link">&para;</a></h3>
 <p>From the filter settings, you can customize individual filters and the operator to use between filters (<strong>OR</strong> or <strong>AND</strong>).</p>
 <p><img alt="&quot;Filter settings&quot;" class="center" src="../../assets/webparts/data_filters/filter_settings.png" /></p>
