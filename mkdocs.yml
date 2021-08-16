@@ -40,7 +40,8 @@ theme:
   name: 'material'
   features:
     - navigation.tabs
-    - instant
+    - navigation.tabs.sticky
+    - navigation.instant
   font:
     code: 'Ubuntu Mono'
   logo: 'assets/aequos_logo.png'
