@@ -26,6 +26,10 @@ By default, the following layouts are provided:
 
 {!usage/data-visualizer/layouts/people.md!}
 
+### Teams
+
+{!usage/data-visualizer/layouts/teams.md!}
+
 ### Debug
 
 {!usage/data-visualizer/layouts/debug.md!}

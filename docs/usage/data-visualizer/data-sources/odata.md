@@ -10,11 +10,11 @@ The OData data source allows you to get data from the following APIs
 #### Microsoft Graph
 
 The URL supports the following formats. Tokens can also be used to construct your URL:
-* me
-* /me
-* https://graph.microsoft.com/v1.0/me
-* https://graph.microsoft.com/beta/me
-* me/events?$filter=startswith(subject, 'ship')
+* `me`
+* `/me`
+* `https://graph.microsoft.com/v1.0/me`
+* `https://graph.microsoft.com/beta/me`
+* `me/events?$filter=startswith(subject, 'ship')`
 
 > Before using a Microsoft Graph resource, you need to ensure [you allowed the correct API permissions at tenant level](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient). Because you can't define API permissions through the Web Part package declaratively (i.e `webApiPermissions`), we recommend you to use the [PnP Office 365 CLI](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-grant-add/) to add correct permissions for your API:
 
@@ -24,9 +24,9 @@ The URL supports the following formats. Tokens can also be used to construct you
 
 The URL supports the following formats. Tokens can also be used to construct your URL
 
-* /_api/ (will target the current root site if you don't specify anything)
-* <your_site>/_api/ (ex: http://mycompany.sharepoint.com/sites/intranet/_api/lists)
-* /_api/v2.0/sites/{site.id}/drive/list/items?expand=fields(select=FileLeafRef,BaseName,FileRef,FSObjType)&$top={itemsCountPerPage}
+* `/_api/` (will target the current root site if you don't specify anything)
+* `<your_site>/_api/` (ex: http://mycompany.sharepoint.com/sites/intranet/_api/lists)
+* `/_api/v2.0/sites/{site.id}/drive/list/items?expand=fields(select=FileLeafRef,BaseName,FileRef,FSObjType)&$top={itemsCountPerPage}`
 * etc.
 
 > You can also use [query parameters supported by the API](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests)
@@ -38,7 +38,7 @@ The URL supports the following formats. Tokens can also be used to construct you
 
 > Before using an AAD secured resource, you need to ensure [you allowed the correct API permissions at tenant level](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient). Because you can't define API permissions through the Web Part package declaratively (i.e `webApiPermissions`), we recommend you to use the [PnP Office 365 CLI](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-grant-add/) to add correct permissions for your API:
 
-    o365$ spo serviceprincipal grant add --resource '<aad_app_display_name>' --scope 'user_impersonation'
+    `o365$ spo serviceprincipal grant add --resource '<aad_app_display_name>' --scope 'user_impersonation'`
 
 2. Allow your SharePoint domain (ex: https://mycompany.sharepoint.com) as allowed origin in the service or application CORS (Cross-origin resource sharing) settings. Here a procedure for an [Azure function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings).
 
