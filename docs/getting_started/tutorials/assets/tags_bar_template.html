@@ -1,0 +1,90 @@
+<content id="data-content">
+
+    <style>
+	
+		.tags {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.tag {
+		
+			box-sizing: border-box;
+			padding: 4px 8px 5px 8px;
+			display: flex;
+			border-radius: 16px;
+			height: 24px;
+			align-items: center;
+			white-space: nowrap;
+			overflow: hidden;
+			margin: 4px 4px 4px 4px;
+			color: #fff;
+			background-color: {{@root.theme.palette.themePrimary}};
+            cursor: pointer;
+		}
+		
+		.selected {
+			background-color: {{@root.theme.palette.themeLighter}};
+            border: 1px solid {{@root.theme.palette.themePrimary}};
+            color: {{@root.theme.palette.themePrimary}};
+		}
+		
+		.icon {
+            width: 20px;
+            height: 16px;
+        }
+        
+    </style>
+
+    <div class="template">
+        <div class="tags">
+            {{#each data.items as |item|}}
+				<div class="tag {{#if (isItemSelected @root.selectedKeys @index)}}selected{{/if}}" data-is-focusable data-selection-index="{{@index}}" data-selection-toggle>
+					<aequos-icon class="icon" data-name="Tag" aria-hidden="true"></aequos-icon>
+					<div data-is-focusable>{{slot item @root.slots.Title}}</div> <!-- Filter value to use in the 'Title' slot based on taxonomy Graph API: labels[0:]{.languageTag === "fr-FR"}.name -->
+				</div>
+            {{/each}}
+        </div>
+    </div>
+</content>
+
+<content id="placeholder-content">
+
+    <style>
+	
+		.placeholder--tags {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.placeholder--tag {
+		
+			width: 20%;
+			box-sizing: border-box;
+			padding: 4px 8px 5px 8px;
+			display: flex;
+			border-radius: 16px;
+			height: 24px;
+			align-items: center;
+			white-space: nowrap;
+			overflow: hidden;
+			margin: 4px 4px 4px 4px;
+			color: #fff;
+		}
+		
+    </style>
+
+    <div class="template">
+	
+		<div class="placeholder--tags">
+			{{#times @root.properties.paging.itemsCountPerPage}}   
+
+					<div class="placeholder--tag placeholder--shimmer">
+						<span style="width: 60%"></span>
+					</div>
+				  
+			{{/times}}
+		</div>
+	</div>
+	
+</content>
