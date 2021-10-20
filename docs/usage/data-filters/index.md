@@ -41,7 +41,7 @@ For each filter, the available options are as follow:
 |------------|-----------------|
 | **Display Name** | A friendly name for the filter. |
 | **Filter field** | The internal data source field to use as filter. Here you can select a field from the current data source (if data have been already retrieved) of type your own custom value (press enter to validate).
-| **Values count** | The maximum number of values to be retrieved for a given filter. If left empty, the values count will be **defaulted to 10**
+| **Values count** | The maximum number of values to be retrieved for a given filter. If left empty, the values count will be **defaulted to 10**. This value is useful if you use SharePoint refiners with a lot of refiner values. By default SharePoint will only retreve the first **100** values. To get all refiner values, you must specify an higher number manually (maximum value is **1000**).
 | **Template** | The template to use to display filter values. See [Filter templates](#filter-templates) for more details.
 | **Filter type** | Specify if the filter is a 'static' filter or a 'refiner' filter. See [Filter types](#filter-types) for more information.
 | **Expand by default** | If applicable for the selected template, display values as expanded.
