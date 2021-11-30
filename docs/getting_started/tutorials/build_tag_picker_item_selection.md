@@ -2,7 +2,7 @@
 
 This tutorial shows you how to build a tag filters bar based on SharePoint taxonomy to quickly filter your content dynamically without the need of the Data Filters Web Part. As an example and to showcase the item selection feature, we will build a news carousel filterable by managed metadata tags on an intranet home page.
 
-!["Taxonomy filter tags"](../assets/tag_filter_bar.gif){: .center}
+!["Taxonomy filter tags"](../../assets/scenarios/tags/tag_filter_bar.gif){: .center}
 
 !!! note
     The connection between Data Visualizer Web Parts is only available from the **1.4.0** version.
