@@ -105,7 +105,17 @@ To be able to set custom metadata for your Teams, you will need first to create 
 
 ## Step 3: Tag your teams with your new extension and taxonomy values
 
-As you probably want to tag not just one Team in your organization, this step can be automated using multiple ways ex: (process a CSV file with PowerShell or use a custom business application). In this sample, we will just show how to tag a single team using Graph Explorer. The concept remains the same for multiple teams.
+### Using the "aequos - Group/Team metadata" Web Part  
+
+Since the **`1.4.0`**, we've added the **aequos - Group/Team metadata editor** to help you in this task. The Web Part can be used in a SharePoint page or as a tab in a team to calssify "on-demand". This way, team owners can directly update the team classification using taxonomy values (or not). Refer to the [Web Part usage](../../usage/group-tag-manager/index.md) for more information.
+
+!["aequos Group/Team metadata editor Web Part"](../../assets/webparts/group_metadata/group_metadata_editor_wp.png){: .center}
+
+!["aequos Group/Team metadata editor Teams app"](../../assets/webparts/group_metadata/group_metadata_editor_teams.png){: .center}
+
+### Using Microsoft Graph Explorer
+
+If you prefer do the classification manually, you can still use the Microsoft Graph explorer tool [https://aka.ms/ge](https://aka.ms/ge) or use a custom application/script to process teams as bulk. In this example, we will just show how to tag a single team using Graph Explorer. The calls remains the same for multiple teams.
 
 - In the Microsoft Graph Explorer, get the list of your Teams using the `https://graph.microsoft.com/beta/groups?$filter=resourceProvisioningOptions/Any(x:x eq 'Team')` URL (GET) and choose one in the list you want to tag saving its `id`:
 
@@ -176,7 +186,6 @@ m365 spo serviceprincipal grant add --resource 'Microsoft Graph' --scope 'User.R
     | ------------ | ------------ | -------- |
     | **Group type** | &lt;your_schema_extension_name&gt;/groupType (ex: `exttumpwrak_aequosGroupMetadata/groupType`) | "Taxonomy picker" wired to the _"Group type"_ term set:<br /> !["Teams custom metadata - Data Filter Web Part configuration"](../../assets/scenarios/teams/filters_wp_taxonomy.png){: .center}
     | **Department** | &lt;your_schema_extension_name&gt;/groupDepartment (ex: `exttumpwrak_aequosGroupMetadata/groupDepartment`) | "Taxonomy picker" wired to the _"Group type"_ term set:<br /> !["Teams custom metadata - Data Filter Web Part configuration"](../../assets/scenarios/teams/filters_wp_taxonomy2.png){: .center}
-
 
 - On the main zone, below the search box, add a new _Data Visualizer Web Part_ with the following configurations (in this order):
 
@@ -262,7 +271,7 @@ m365 spo serviceprincipal grant add --resource 'Microsoft Graph' --scope 'User.R
 
 Congratulations, you have now a functional search center for your teams!
 
-## Step 5: Create a Teams application an deploy it to your users
+## Step 5: Create a Teams application and deploy it to your users
 
 To fully integrate the search experience directly in Microsoft Teams, you can create a new application and deploy it globally for your users inside your organization.
 
@@ -319,7 +328,7 @@ To fully integrate the search experience directly in Microsoft Teams, you can cr
 
 ## What's next?
 
-This tutorial gave you a straightforward approach to add custom metadata to your teams in Microsoft Teams. The next step is to classify all your teams accordingly using the Microsoft Graph schema extension so you can filter them using this interface. This can be achieved using multiple ways (CSV + PowerShell, SPFx extension, etc) but this is outside of the purpose of this article.
+This tutorial gave you a straightforward approach to add custom metadata to your teams in Microsoft Teams. The next step is to classify all your teams accordingly using the Microsoft Graph schema extension so you can filter them using this interface. This can be achieved using multiple ways (CSV + PowerShell, SPFx extension, [aequos Group/Team metadata editor](../../usage/group-tag-manager/index.md) but this is outside of the purpose of this article.
 
 !!! note "Questions, issues with this tutorial?"
     If you encounter issues or have questions about this tutorial don't hesitate to reach us using our official [GitHub repository](https://github.com/aequos-solutions/modern-data-visualizer/issues/new/choose).
