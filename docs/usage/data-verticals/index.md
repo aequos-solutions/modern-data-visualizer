@@ -12,7 +12,6 @@ The configuration of the 'Data Verticals' Web Part is fairly simple.
 
 !["Verticals configuration"](../../assets/webparts/data_verticals/configure_verticals.png){: .center} 
 
-
 ### Configure verticals
 
 The options for a vertical are as follow:

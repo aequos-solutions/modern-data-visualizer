@@ -98,7 +98,7 @@ The SharePoint Search engine already supports tokens by default (i.e query varia
 
 ##### Use the 'OR' operator
 
-To deal with mutli valued properties (like taxonomy multi or choices SharePoint fields), you can use the 'OR' operator syntax `{|<property><operator><multi_values_property>}`. The search query will be expanded to the following KQL query:
+To deal with mutli valued properties (like taxonomy multi or choices SharePoint fields), you can use the 'OR' operator syntax `{|<property><operator><multi_values_property>}`. The search query will be expanded to the following KQL or OData query:
 
     ((<property><operator><value_1>) OR (<property><operator><value_2>) OR (<property><operator><value_3>) ...)
 
@@ -107,11 +107,13 @@ To deal with mutli valued properties (like taxonomy multi or choices SharePoint 
 - Using an user profile multi values taxonomy property: `{|owstaxidmetadataalltagsinfo:{User.SPS-Hashtags}}`
 - Using a page multi values taxonomy property: `{|owstaxidmetadataalltagsinfo:{Page.myTaxonomyMultiColumn.TermID}}` or `{|owstaxidmetadataalltagsinfo:{Page.myTaxonomyMultiColumn.TermLabel}}`
 - Using a page multi values choice property: `{|RefinableStringXX:{Page.myChoiceMultiColumn}}`
+- Filter on a field with SharePoint REST API using OData: `{&fields/FileLeafRef eq title1,title2}`
 
 At any time, you can see the resolved query using the 'Debug' layout an inspecting the `data.queryModification` property.
 
 !!! note
     Multi values have to be separated by a comma `,` to be correctly interpreted by the OR operator. Using a multi taxonomy column (ex `{Page.myTaxonomyMultiColumn.TermID}`) or a multi choice field `{Page.myChoiceMultiColumn}` will automatically output values with the comma delimiter.
+    The expression will be considered as an OData query if the operator is either 'eq','ne','ge','gt','lt' or 'le'. In this case, the logical operator will be automatically format to lower case and values enclosed with single quotes to comply with OData format.
 
 #### OData Data Source default URL syntax
 
