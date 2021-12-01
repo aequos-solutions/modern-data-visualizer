@@ -37,6 +37,7 @@
         | _User.ReadBAsic.All_ | Same as above.
         | _GroupMember.Read.All_ | To list owners and members in the Teams layout panel.
         | _Channel.ReadBasic.All_ | To list channels in the Teams layout panel.
+        | _Group.ReadWrite.All_ | To be able to update Microsoft Graph schems extensions with the Group/Team metadata editor Web Part.
         | _Files.Read.All_ | Microsoft Search API
         | _Sites.Read.All_ | Microsoft Search API
         | _Mail.Read_ | Microsoft Search API
