@@ -252,6 +252,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../../usage/group-tag-manager/" class="md-tabs__link">
+        Group metadata editor
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../../extensibility/" class="md-tabs__link">
         Extensibility
       </a>
@@ -706,11 +722,53 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       <label class="md-nav__link" for="__nav_6">
+        Group metadata editor
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Group metadata editor" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Group metadata editor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usage/group-tag-manager/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
         Extensibility
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Extensibility" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Extensibility
         </label>
@@ -890,6 +948,26 @@
     Step 3: Tag your teams with your new extension and taxonomy values
   </a>
   
+    <nav class="md-nav" aria-label="Step 3: Tag your teams with your new extension and taxonomy values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-aequos-groupteam-metadata-web-part" class="md-nav__link">
+    Using the "aequos - Group/Team metadata" Web Part
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-microsoft-graph-explorer" class="md-nav__link">
+    Using Microsoft Graph Explorer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -900,8 +978,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-create-a-teams-application-an-deploy-it-to-your-users" class="md-nav__link">
-    Step 5: Create a Teams application an deploy it to your users
+  <a href="#step-5-create-a-teams-application-and-deploy-it-to-your-users" class="md-nav__link">
+    Step 5: Create a Teams application and deploy it to your users
   </a>
   
 </li>
@@ -1036,7 +1114,12 @@
 </li>
 </ul>
 <h2 id="step-3-tag-your-teams-with-your-new-extension-and-taxonomy-values">Step 3: Tag your teams with your new extension and taxonomy values<a class="headerlink" href="#step-3-tag-your-teams-with-your-new-extension-and-taxonomy-values" title="Permanent link">&para;</a></h2>
-<p>As you probably want to tag not just one Team in your organization, this step can be automated using multiple ways ex: (process a CSV file with PowerShell or use a custom business application). In this sample, we will just show how to tag a single team using Graph Explorer. The concept remains the same for multiple teams.</p>
+<h3 id="using-the-aequos-groupteam-metadata-web-part">Using the "aequos - Group/Team metadata" Web Part<a class="headerlink" href="#using-the-aequos-groupteam-metadata-web-part" title="Permanent link">&para;</a></h3>
+<p>Since the <strong><code>1.4.0</code></strong>, we've added the <strong>aequos - Group/Team metadata editor</strong> to help you in this task. The Web Part can be used in a SharePoint page or as a tab in a team to calssify "on-demand". This way, team owners can directly update the team classification using taxonomy values (or not). Refer to the <a href="../../../usage/group-tag-manager/">Web Part usage</a> for more information.</p>
+<p><img alt="&quot;aequos Group/Team metadata editor Web Part&quot;" class="center" src="../../../assets/webparts/group_metadata/group_metadata_editor_wp.png" /></p>
+<p><img alt="&quot;aequos Group/Team metadata editor Teams app&quot;" class="center" src="../../../assets/webparts/group_metadata/group_metadata_editor_teams.png" /></p>
+<h3 id="using-microsoft-graph-explorer">Using Microsoft Graph Explorer<a class="headerlink" href="#using-microsoft-graph-explorer" title="Permanent link">&para;</a></h3>
+<p>If you prefer do the classification manually, you can still use the Microsoft Graph explorer tool <a href="https://aka.ms/ge">https://aka.ms/ge</a> or use a custom application/script to process teams as bulk. In this example, we will just show how to tag a single team using Graph Explorer. The calls remains the same for multiple teams.</p>
 <ul>
 <li>In the Microsoft Graph Explorer, get the list of your Teams using the <code>https://graph.microsoft.com/beta/groups?$filter=resourceProvisioningOptions/Any(x:x eq 'Team')</code> URL (GET) and choose one in the list you want to tag saving its <code>id</code>:</li>
 </ul>
@@ -1211,7 +1294,7 @@ In the options, select the <code>AsText</code> properties from your schema exten
 </li>
 </ul>
 <p>Congratulations, you have now a functional search center for your teams!</p>
-<h2 id="step-5-create-a-teams-application-an-deploy-it-to-your-users">Step 5: Create a Teams application an deploy it to your users<a class="headerlink" href="#step-5-create-a-teams-application-an-deploy-it-to-your-users" title="Permanent link">&para;</a></h2>
+<h2 id="step-5-create-a-teams-application-and-deploy-it-to-your-users">Step 5: Create a Teams application and deploy it to your users<a class="headerlink" href="#step-5-create-a-teams-application-and-deploy-it-to-your-users" title="Permanent link">&para;</a></h2>
 <p>To fully integrate the search experience directly in Microsoft Teams, you can create a new application and deploy it globally for your users inside your organization.</p>
 <ol>
 <li>
@@ -1326,7 +1409,7 @@ In the options, select the <code>AsText</code> properties from your schema exten
 </li>
 </ol>
 <h2 id="whats-next">What's next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
-<p>This tutorial gave you a straightforward approach to add custom metadata to your teams in Microsoft Teams. The next step is to classify all your teams accordingly using the Microsoft Graph schema extension so you can filter them using this interface. This can be achieved using multiple ways (CSV + PowerShell, SPFx extension, etc) but this is outside of the purpose of this article.</p>
+<p>This tutorial gave you a straightforward approach to add custom metadata to your teams in Microsoft Teams. The next step is to classify all your teams accordingly using the Microsoft Graph schema extension so you can filter them using this interface. This can be achieved using multiple ways (CSV + PowerShell, SPFx extension, <a href="../../../usage/group-tag-manager/">aequos Group/Team metadata editor</a> but this is outside of the purpose of this article.</p>
 <div class="admonition note">
 <p class="admonition-title">Questions, issues with this tutorial?</p>
 <p>If you encounter issues or have questions about this tutorial don't hesitate to reach us using our official <a href="https://github.com/aequos-solutions/modern-data-visualizer/issues/new/choose">GitHub repository</a>.</p>

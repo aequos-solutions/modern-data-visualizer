@@ -2,277 +2,292 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://127.0.0.1:8000/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/features/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/get_license/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/installation/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/setup_standalone/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/upgrade_from_pnp/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/extensibility/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/extensibility/custom_data_source/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/extensibility/custom_layout/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/extensibility/custom_suggestions_provider/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/extensibility/custom_web_component/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/extensibility/handlebars_customizations/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/extensibility/templating/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/extensibility/web_components_list/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/getting_started/connections_chart/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/getting_started/sample_scenarios/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/getting_started/tutorials/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/getting_started/tutorials/build_complete_search_center/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/getting_started/tutorials/build_people_directory_graph/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/getting_started/tutorials/build_people_directory_sharepoint_search/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:8000/getting_started/tutorials/build_tag_picker_item_selection/</loc>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/getting_started/tutorials/build_teams_search_portal_using_taxonomy/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/getting_started/tutorials/static_taxonomy_filters_sharepoint_search/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-filters/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-filters/layouts/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-filters/layouts/custom/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-filters/layouts/debug/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-filters/layouts/horizontal/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-filters/layouts/panel/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-filters/layouts/vertical/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-verticals/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/adaptive_exressions/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/slots/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/tokens/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/common/caching/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/common/common/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/common/paging/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/connections/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:8000/usage/data-visualizer/connections/item-selection/</loc>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/data-sources/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/data-sources/microsoft-search/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/data-sources/odata/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/data-sources/sharepoint-caml/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/data-sources/sharepoint-search/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/data-sources/static-data/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/layouts/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/layouts/cards/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/layouts/custom/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/layouts/debug/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/layouts/details-list/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/layouts/people/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/layouts/simple-list/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/layouts/slider/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/layouts/teams/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/data-visualizer/layouts/templating/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:8000/usage/group-tag-manager/</loc>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/usage/search-box/</loc>
-         <lastmod>2021-10-20</lastmod>
+         <lastmod>2021-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

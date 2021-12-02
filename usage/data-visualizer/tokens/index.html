@@ -254,6 +254,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../group-tag-manager/" class="md-tabs__link">
+        Group metadata editor
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../../extensibility/" class="md-tabs__link">
         Extensibility
       </a>
@@ -849,11 +865,53 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       <label class="md-nav__link" for="__nav_6">
+        Group metadata editor
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Group metadata editor" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Group metadata editor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../group-tag-manager/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
         Extensibility
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Extensibility" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Extensibility
         </label>
@@ -1351,7 +1409,7 @@
 <h5 id="supported-variables">Supported variables<a class="headerlink" href="#supported-variables" title="Permanent link">&para;</a></h5>
 <p>The SharePoint Search engine already supports tokens by default (i.e query variables, ex: <code>{Site.ID}</code>). You can use them in the <strong>Query template</strong> field only. To see the all the supported tokens natively, refer to the <a href="https://docs.microsoft.com/en-us/sharepoint/technical-reference/query-variables">Microsoft documentation</a>.</p>
 <h5 id="use-the-or-operator">Use the 'OR' operator<a class="headerlink" href="#use-the-or-operator" title="Permanent link">&para;</a></h5>
-<p>To deal with mutli valued properties (like taxonomy multi or choices SharePoint fields), you can use the 'OR' operator syntax <code>{|&lt;property&gt;&lt;operator&gt;&lt;multi_values_property&gt;}</code>. The search query will be expanded to the following KQL query:</p>
+<p>To deal with mutli valued properties (like taxonomy multi or choices SharePoint fields), you can use the 'OR' operator syntax <code>{|&lt;property&gt;&lt;operator&gt;&lt;multi_values_property&gt;}</code>. The search query will be expanded to the following KQL or OData query:</p>
 <div class="codehilite"><pre><span></span><code>((&lt;property&gt;&lt;operator&gt;&lt;value_1&gt;) OR (&lt;property&gt;&lt;operator&gt;&lt;value_2&gt;) OR (&lt;property&gt;&lt;operator&gt;&lt;value_3&gt;) ...)
 </code></pre></div>
 
@@ -1361,11 +1419,13 @@
 <li>Using an user profile multi values taxonomy property: <code>{|owstaxidmetadataalltagsinfo:{User.SPS-Hashtags}}</code></li>
 <li>Using a page multi values taxonomy property: <code>{|owstaxidmetadataalltagsinfo:{Page.myTaxonomyMultiColumn.TermID}}</code> or <code>{|owstaxidmetadataalltagsinfo:{Page.myTaxonomyMultiColumn.TermLabel}}</code></li>
 <li>Using a page multi values choice property: <code>{|RefinableStringXX:{Page.myChoiceMultiColumn}}</code></li>
+<li>Filter on a field with SharePoint REST API using OData: <code>{&amp;fields/FileLeafRef eq title1,title2}</code></li>
 </ul>
 <p>At any time, you can see the resolved query using the 'Debug' layout an inspecting the <code>data.queryModification</code> property.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Multi values have to be separated by a comma <code>,</code> to be correctly interpreted by the OR operator. Using a multi taxonomy column (ex <code>{Page.myTaxonomyMultiColumn.TermID}</code>) or a multi choice field <code>{Page.myChoiceMultiColumn}</code> will automatically output values with the comma delimiter.</p>
+<p>Multi values have to be separated by a comma <code>,</code> to be correctly interpreted by the OR operator. Using a multi taxonomy column (ex <code>{Page.myTaxonomyMultiColumn.TermID}</code>) or a multi choice field <code>{Page.myChoiceMultiColumn}</code> will automatically output values with the comma delimiter.
+The expression will be considered as an OData query if the operator is either 'eq','ne','ge','gt','lt' or 'le'. In this case, the logical operator will be automatically format to lower case and values enclosed with single quotes to comply with OData format.</p>
 </div>
 <h4 id="odata-data-source-default-url-syntax">OData Data Source default URL syntax<a class="headerlink" href="#odata-data-source-default-url-syntax" title="Permanent link">&para;</a></h4>
 <p>The OData Data source supports a special URL syntax allowing to execute a specifc part of that URL only during the first execution by using <code>{{</code> and <code>}}</code> enclosing characters sequence. This could be convenient for an URL containing dynamic OData filter conditions like <code>$filter=startswith(MyField,'{inputQueryText'}</code> that may be invalid due to incorrect or unavailable values during first load resulting of API error.</p>
