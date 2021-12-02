@@ -37,11 +37,21 @@
         | _User.ReadBAsic.All_ | Same as above.
         | _GroupMember.Read.All_ | To list owners and members in the Teams layout panel.
         | _Channel.ReadBasic.All_ | To list channels in the Teams layout panel.
+        | _Group.ReadWrite.All_ | To be able to update Microsoft Graph schems extensions with the Group/Team metadata editor Web Part.
         | _Files.Read.All_ | Microsoft Search API
         | _Sites.Read.All_ | Microsoft Search API
         | _Mail.Read_ | Microsoft Search API
         | _Calendars.Read_ | Microsoft Search API
-        | _ExternalItem.Read.All_ | Microsoft Search API    
+        | _ExternalItem.Read.All_ | Microsoft Search API
+
+    !!! important "Microsoft Teams deployment"
+        If you plan to use the **aequos - Team/Group metadata editor** solution in Microsoft Teams, you must deploy the `.sppkg` file in the **tenant** app catalog and use the **"Sync to Teams"** ribbon button:
+
+        !["Sync to Teams"](./assets/sync-to-teams.png){: .center}
+
+        Once deployed, you should see the application in the Teams application catalog:
+
+        !["Teams apps"](./assets/teams-apps.png){: .center}
    
 3. Add the Web Parts to a SharePoint and start building. Easy no?
 

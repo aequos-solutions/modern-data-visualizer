@@ -26,6 +26,8 @@ nav:
     - Usage: usage/data-verticals/index.md 
   - Search Box:
     - Usage: usage/search-box/index.md
+  - Group metadata editor:
+    - Usage: usage/group-tag-manager/index.md
   - Extensibility:
     - Introduction: extensibility/index.md
     - Templating: extensibility/templating.md
