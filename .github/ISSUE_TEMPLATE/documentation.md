@@ -3,7 +3,7 @@ name: Documentation
 about: Improvements or additions to documentation.
 title: "[DOC] Documentation "
 labels: documentation
-assignees: FranckyC
+assignees: Laul0
 
 ---
 

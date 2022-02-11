@@ -3,7 +3,7 @@ name: Bug or issue report
 about: Something isn't working.
 title: "[BUG] Your explicit issue title here"
 labels: bug
-assignees: FranckyC
+assignees: Laul0
 
 ---
 

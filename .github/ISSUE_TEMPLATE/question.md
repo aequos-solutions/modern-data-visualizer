@@ -3,7 +3,7 @@ name: Question
 about: Question about Web Parts usage or configuration.
 title: "[QUESTION] Your question here"
 labels: question
-assignees: FranckyC
+assignees: Laul0
 
 ---
 
