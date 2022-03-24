@@ -8,7 +8,7 @@ The [PnP Modern Search v4](https://microsoft-search.github.io/pnp-modern-search/
 | Feature               | Description               | aequos Modern Data Visualizer     | PnP Modern Search     |
 | :-----------------:   | :---------------------:   | :-----------------------------:   | :-------------------: |
 | Available data sources | The data sources you can use to retrieve data. | <ul style="list-style: none"><li>[SharePoint Search](../usage/data-visualizer/data-sources/sharepoint-search/)</li><li>[Microsoft Search](../usage/data-visualizer/data-sources/microsoft-search/)</li><li>**<span style="color:#5dc418">[Microsoft Graph](../usage/data-visualizer/data-sources/odata/#microsoft-graph)</span>**</li><li>**<span style="color:#5dc418">[SharePoint REST API v1/v2](../usage/data-visualizer/data-sources/odata/#sharepoint-rest-api)**</span></li><li>**<span style="color:#5dc418">[Azure AD API (ex Azure Function)](../usage/data-visualizer/data-sources/odata/#azure-active-directory-secured-api)**</span></li><li>**<span style="color:#5dc418">­[Anonymous REST API](../usage/data-visualizer/data-sources/odata/#anonymous)**</span></li></ul> | <ul style="list-style: none"><li>SharePoint Search</li><li>Microsoft Search</li></ul> |
-| [Data source slots](../usage/data-visualizer/slots/) | Templates can use placeholder variables mapped to data source fields to make them reusable. | Yes | Yes
+| [Data source slots](../usage/data-visualizer/slots/) | Templates can use placeholder variables mapped to data source fields to make them reusable. | Yes | Yes |
 | [Data caching](../usage/data-visualizer/data-sources/#caching) | Data can be put in cache for performances. | **<span style="color:#5dc418">Yes</span>** | No |
 | [Data paging](../usage/data-visualizer/data-sources/#paping) | Data can be browsed using paging controls. | Yes | Yes |
 
@@ -23,7 +23,7 @@ The [PnP Modern Search v4](https://microsoft-search.github.io/pnp-modern-search/
 | [Customize results using Adaptive Cards](../extensibility/templating/#adaptive-cards-customizations) | Use Microsoft Adaptive cards to build custom results templates. | **<span style="color:#5dc418">Yes</span>** | No |
 | [Customize filters using Handlebars, HTML and CSS](../extensibility/templating/#handlebars-html-and-css-customizations/) | Use Handlebars, HTML and CSS to build custom filters templates | Yes | Yes |
 | [Use basic tokens](../usage/data-visualizer/tokens/) | Ability to transform queries dynamically using basic tokens (current page, hub, user, etc.) | Yes | Yes |
-| [Use advanced tokens](../usage/data-visualizer/tokens/#supported-tokens-all-data-sources) | Ability to transform queries dynamically using advanced tokens (verticals, filters) | **<span style="color:#5dc418">Yes</span>** | Yes |
+| [Use advanced tokens](../usage/data-visualizer/tokens/#supported-tokens-all-data-sources) | Ability to transform queries dynamically using advanced tokens (verticals, filters) | Yes | Yes |
 | [Use Microsoft Adaptive expressions top build dynamic queries](../usage/data-visualizer/tokens/#go-further-with-microsoft-adaptive-expressions) | Ability to use Adaptive Expressions to build dynamic and conditional queries based on tokens. | **<span style="color:#5dc418">Yes</span>** | No |
 
 ## Filters
@@ -45,6 +45,12 @@ The [PnP Modern Search v4](https://microsoft-search.github.io/pnp-modern-search/
 | Feature               | Description               | aequos Modern Data Visualizer     | PnP Modern Search     |
 | :-----------------:   | :---------------------:   | :-----------------------------:   | :-------------------: |
 | [Enter free text keywords](../usage/search-box/) | Users can enter free text queries in a search box Web Part.  | Yes | Yes |
+
+## Group Metadata Editor
+
+| Feature               | Description               | aequos Modern Data Visualizer     | PnP Modern Search     |
+| :-----------------:   | :---------------------:   | :-----------------------------:   | :-------------------: |
+| [Enter free text keywords](../usage/group-metadata-editor/) | Tag a specific Microsoft 365 group or team using a custom Microsoft Graph schema extension  | **<span style="color:#5dc418">Yes</span>** | No |
 
 ## Extensibility
 

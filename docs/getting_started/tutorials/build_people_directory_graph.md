@@ -65,7 +65,7 @@ A classic use case in a SharePoint portal. This time, instead of using the Share
 
     !["Data Visualizer - Select Layout"](../../assets/scenarios/graph-people-directory7.png){: .center}
 
-    > Optionally, in the layout options, you can check _'Show persona card on hover'_ option. To get it work, [an administrator needs to approve required API permissions](../../installation).
+    > Optionally, in the layout options, you can check _'Show persona card on hover'_ option. To get it work, [an administrator needs to approve required API permissions](../../installation.md).
 
 
 1. Save your page. You can now filter people based on alphabetical letters using their first name or view all users.

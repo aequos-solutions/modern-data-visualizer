@@ -7,7 +7,7 @@ The paging options are available for all data sources.
 |**Number of pages to display in range** | Determines the number of pages to display in range.
 |**Hide navigation buttons (prev page, next page)** | Self explicit.
 |**Hide first/last navigation buttons** | Self explicit.
-|**Hide navigation buttons (prev, next, first, last) if they are disabled.** | Self explicit.
+|**Hide navigation buttons (prev, next, first, last) if they are disabled** | Self explicit.
 
 **Data source paging behaviors**
 

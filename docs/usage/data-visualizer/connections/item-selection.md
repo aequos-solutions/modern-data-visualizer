@@ -50,12 +50,12 @@
         
         `Title:{filters.Title.valueAsText}`  will be translated to `Title:docx`
 
-        _SharePoint Search KQL (Multi Values)_ <br>
-        **OR condition**: `{|Title:{filters.Title.valueAsText}}` will be translated to `(Title:docx) OR (Title:pdf)...` <br>
-        **AND condition**: `{&Title:{filters.Title.valueAsText}}` will be translated to `(Title:docx) AND (Title:pdf)...` <br><br>
+        _SharePoint Search KQL (Multi Values)_ <br />
+        **OR condition**: `{|Title:{filters.Title.valueAsText}}` will be translated to `(Title:docx) OR (Title:pdf)...` <br />
+        **AND condition**: `{&Title:{filters.Title.valueAsText}}` will be translated to `(Title:docx) AND (Title:pdf)...` <br /><br />
 
-        _OData URL (Multi Values)_ <br>
-        **OR condition**: ``{|Title eq {filters.Title.valueAsText}}` will be translated to `(Title eq 'docx') or (Title eq 'pdf')`` <br>
+        _OData URL (Multi Values)_ <br />
+        **OR condition**: ``{|Title eq {filters.Title.valueAsText}}` will be translated to `(Title eq 'docx') or (Title eq 'pdf')`` <br />
         **AND condition**: ``{&Title eq {filters.Title.valueAsText}}` will be translated to `(Title eq 'docx') or (Title eq 'pdf')``
 
 6. Select the logical operator to use between selected filter values if applicable (default mode only).

@@ -10,15 +10,18 @@ The OData data source allows you to get data from the following APIs
 #### Microsoft Graph
 
 The URL supports the following formats. Tokens can also be used to construct your URL:
+
 * `me`
 * `/me`
 * `https://graph.microsoft.com/v1.0/me`
 * `https://graph.microsoft.com/beta/me`
 * `me/events?$filter=startswith(subject, 'ship')`
 
-> Before using a Microsoft Graph resource, you need to ensure [you allowed the correct API permissions at tenant level](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient). Because you can't define API permissions through the Web Part package declaratively (i.e `webApiPermissions`), we recommend you to use the [PnP Office 365 CLI](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-grant-add/) to add correct permissions for your API:
+> Before using a Microsoft Graph resource, you need to ensure [you allowed the correct API permissions at tenant level](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient). Because you can't define API permissions through the Web Part package declaratively (i.e `webApiPermissions`), we recommend you to use the [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/cmd/spo/serviceprincipal/serviceprincipal-grant-add/) to add correct permissions for your API:
 
-    o365$ spo serviceprincipal grant add --resource 'Microsoft Graph' --scope 'Mail.Read'
+```bash
+m365 spo serviceprincipal grant add --resource 'Microsoft Graph' --scope 'Mail.Read'
+```
 
 #### SharePoint REST API
 
@@ -34,11 +37,13 @@ The URL supports the following formats. Tokens can also be used to construct you
 
 #### Azure Active Directory secured API
 
-1. Follow this [procedure](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient#connect-to-azure-ad-applications-using-the-aadhttpclient) to set up your Azure Active Directory application. Don't forget to add at least the '_user impersonation_' permission to be able to call the API endpoint. 
+1. Follow this [procedure](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient#connect-to-azure-ad-applications-using-the-aadhttpclient) to set up your Azure Active Directory application. Don't forget to add at least the '_user impersonation_' permission to be able to call the API endpoint.
 
-> Before using an AAD secured resource, you need to ensure [you allowed the correct API permissions at tenant level](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient). Because you can't define API permissions through the Web Part package declaratively (i.e `webApiPermissions`), we recommend you to use the [PnP Office 365 CLI](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-grant-add/) to add correct permissions for your API:
+    > Before using an AAD secured resource, you need to ensure [you allowed the correct API permissions at tenant level](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient). Because you can't define API permissions through the Web Part package declaratively (i.e `webApiPermissions`), we recommend you to use the [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/cmd/spo/serviceprincipal/serviceprincipal-grant-add/) to add correct permissions for your API:
 
-    `o365$ spo serviceprincipal grant add --resource '<aad_app_display_name>' --scope 'user_impersonation'`
+    ```bash
+    m365 spo serviceprincipal grant add --resource '<aad_app_display_name>' --scope 'user_impersonation'
+    ```
 
 2. Allow your SharePoint domain (ex: https://mycompany.sharepoint.com) as allowed origin in the service or application CORS (Cross-origin resource sharing) settings. Here a procedure for an [Azure function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings).
 

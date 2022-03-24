@@ -4,7 +4,7 @@ The **Teams** layout can be used to display information about Microsoft Teams te
 
 | Setting | Description | Default value 
 | ------- |---------------- | ---------- |
-| Data source fields | The data source to display as tags. The order you select fields will determine the display order.<br>!["Teams Layout - Tags"](../../../assets/webparts/data_visualizer/layouts/teams/teams_layout_tags.png){: .center} <br> This option can be usefull if, for instance, you set custom [Microsoft schema extensions on your Microsoft 365 groups](https://docs.microsoft.com/en-us/graph/extensibility-schema-groups)  | None
+| Data source fields | The data source to display as tags. The order you select fields will determine the display order.<br />!["Teams Layout - Tags"](../../../assets/webparts/data_visualizer/layouts/teams/teams_layout_tags.png){: .center} <br /> This option can be usefull if, for instance, you set custom [Microsoft schema extensions on your Microsoft 365 groups](https://docs.microsoft.com/en-us/graph/extensibility-schema-groups)  | None
 
 Despite you can use this layout with any data, the 'teams' layout is firstly designed to be paired with a data source retrieving these relevant informations. That's why we suggest to use this layout and the [**OData & Microsoft Graph**](../data-sources/odata.md) data source with the following Microsoft Graph URLs and configurations:
 
@@ -37,7 +37,9 @@ Despite you can use this layout with any data, the 'teams' layout is firstly des
 		{
 			"Content-Type": "application/json;odata=verbose",
 			"Accept": "application/json",
-			{"ConsistencyLevel": "eventual"}
+			{
+				"ConsistencyLevel": "eventual"
+			}
 		}
 		```
 

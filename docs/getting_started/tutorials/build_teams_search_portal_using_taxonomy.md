@@ -107,7 +107,7 @@ To be able to set custom metadata for your Teams, you will need first to create 
 
 ### Using the "aequos - Group/Team metadata" Web Part  
 
-Since the **`1.4.0`**, we've added the **aequos - Group/Team metadata editor** to help you in this task. The Web Part can be used in a SharePoint page or as a tab in a team to calssify "on-demand". This way, team owners can directly update the team classification using taxonomy values (or not). Refer to the [Web Part usage](../../usage/group-tag-manager/index.md) for more information.
+Since the **`1.4.0`**, we've added the **aequos - Group/Team metadata editor** to help you in this task. The Web Part can be used in a SharePoint page or as a tab in a team to calssify "on-demand". This way, team owners can directly update the team classification using taxonomy values (or not). Refer to the [Web Part usage](../../usage/group-metadata-editor/index.md) for more information.
 
 !["aequos Group/Team metadata editor Web Part"](../../assets/webparts/group_metadata/group_metadata_editor_wp.png){: .center}
 
@@ -328,7 +328,7 @@ To fully integrate the search experience directly in Microsoft Teams, you can cr
 
 ## What's next?
 
-This tutorial gave you a straightforward approach to add custom metadata to your teams in Microsoft Teams. The next step is to classify all your teams accordingly using the Microsoft Graph schema extension so you can filter them using this interface. This can be achieved using multiple ways (CSV + PowerShell, SPFx extension, [aequos Group/Team metadata editor](../../usage/group-tag-manager/index.md) but this is outside of the purpose of this article.
+This tutorial gave you a straightforward approach to add custom metadata to your teams in Microsoft Teams. The next step is to classify all your teams accordingly using the Microsoft Graph schema extension so you can filter them using this interface. This can be achieved using multiple ways (CSV + PowerShell, SPFx extension, [aequos Group/Team Metadata Editor](../../usage/group-metadata-editor/index.md) but this is outside of the purpose of this article.
 
 !!! note "Questions, issues with this tutorial?"
     If you encounter issues or have questions about this tutorial don't hesitate to reach us using our official [GitHub repository](https://github.com/aequos-solutions/modern-data-visualizer/issues/new/choose).

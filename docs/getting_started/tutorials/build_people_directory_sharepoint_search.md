@@ -35,7 +35,7 @@ This tutorial gives you basic steps to achieve a people directoy using alphabeti
 
     !["Data Visualizer - Select Layout"](../../assets/scenarios/people_directory6.png){: .center}
 
-    > Optionally, in the layout options, you can check _'Show persona card on hover'_ option. To get it work, [an administrator needs to approve required API permissions](../../installation).
+    > Optionally, in the layout options, you can check _'Show persona card on hover'_ option. To get it work, [an administrator needs to approve required API permissions](../../installation.md).
 
     !["Data Visualizer - Show persona card"](../../assets/scenarios/people_directory8.png){: .center}
 

@@ -45,7 +45,7 @@ This tutorial shows you how to build a tag filters bar based on SharePoint taxon
 
 2. On the same page, add a second Data Visualizer Web Part above the first one with the following configuration:
 
-    - **Data source**: OData (Microsoft Graph) with the following URL `https://graph.microsoft.com/beta/termStore/sets/<your_term_set_id>5e/children?$top=5`. 
+    - **Data source**: OData (Microsoft Graph) with the following URL `https://graph.microsoft.com/beta/termStore/sets/<your_term_set_id>/children?$top=5`. 
 
     !["OData source configuration"](../../assets/scenarios/tags/graph_url.png){: .center} 
     

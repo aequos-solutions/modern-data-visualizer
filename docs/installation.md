@@ -5,7 +5,7 @@
 
     !["Trial license expired"](./assets/trial_error.png){: .center}
     
-    Trial periods are not cumulative. However, if you need more time to complete you evaluation simply contact us directly at [contact@aequos.ca](mailto:mdv@sword-group.com).
+    Trial periods are not cumulative. However, if you need more time to complete your evaluation simply contact us directly at [mdv@sword-group.com](mailto:mdv@sword-group.com).
 
 1. Download the latest SharePoint Framework package (**aequos-modern-data-visualizer.sppkg**) from our public [GitHub repository](https://github.com/aequos-solutions/modern-data-visualizer/releases).
 2. Add the package to your global app catalog or site collection app catalog. If you don't have an app catalog, follow this [procedure](https://docs.microsoft.com/en-us/sharepoint/use-app-catalog) to create one.
