@@ -6,17 +6,15 @@ By default, builtin helpers and open-source [Handlebars helpers](https://github.
 
 To register a new Handlebars customization for the targeted Web Part (i.e. the Web Part instances where the extensibility library is registered and enabled):
 
-1.  In the library main entry point (i.e. the class implementing the `IExtensibilityLibrary` in interface), register your customization using the `registerHandlebarsCustomizations()` method. The `namespace` parameter corresponds to the targeted Web Part Handlebars isolated namespace:
-
+1.  In the library main entry point (i.e. the class implementing the `IExtensibilityLibrary` in interface), register your customization using the `registerHandlebarsCustomizations()` method. The `namespace` parameter corresponds to the targeted Web Part Handlebars isolated namespace
 2. From here, use the Handlebars API to add your customizations to this specific namespace. They will be availabe in templates for registered Web Part instances:
+    ```typescript
+    public registerHandlebarsCustomizations(namespace: typeof Handlebars) {
 
-```typescript
-public registerHandlebarsCustomizations(namespace: typeof Handlebars) {
-
-    // Register custom Handlebars helpers
-    // Usage {{myHelper 'value'}}
-    namespace.registerHelper('myHelper', (value: string) => {
-        return new namespace.SafeString(value.toUpperCase());
-    });
-}
-```
+        // Register custom Handlebars helpers
+        // Usage {{myHelper 'value'}}
+        namespace.registerHelper('myHelper', (value: string) => {
+            return new namespace.SafeString(value.toUpperCase());
+        });
+    }
+    ```

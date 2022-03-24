@@ -28,66 +28,66 @@ To create new component:
 * In your extensibility library project, create a new `MyComponent.ts` JSX file.
 * Create a new class extending the abstract class `BaseWebComponent`. This class must have at least the `connectedCallback()` method from base interface `HTMLElement`.
 
-```typescript
-export class MyCustomComponentWebComponent extends BaseWebComponent {
-   
-    public constructor() {
-        super(); 
+    ```typescript
+    export class MyCustomComponentWebComponent extends BaseWebComponent {
+    
+        public constructor() {
+            super(); 
+        }
+    
+        public async connectedCallback() {
+            ...
+        }    
     }
- 
-    public async connectedCallback() {
-        ...
-    }    
-}
-```
+    ```
 
 * Create a new regular React component (in the same file or a separate file and as class or hook):
 
-```typescript
-export interface IObjectParam {
-    myProperty: string;
-}
-
-export interface ICustomComponentProps {
-
-    /**
-     * A sample string param
-     */
-    myStringParam?: IObjectParam;
-
-    /***
-     * A sample object param
-     */
-    myObjectParam?: string;
-}
-
-export interface ICustomComponenState {
-}
-
-export class CustomComponent extends React.Component<ICustomComponentProps, ICustomComponenState> {
-    
-    public render() {
-
-        // Parse custom object
-        const myObject: IObjectParam = this.props.myObjectParam;
-
-        return <div>{this.props.myStringParam} {myObject.myProperty}</div>;
+    ```typescript
+    export interface IObjectParam {
+        myProperty: string;
     }
-}
-```
+
+    export interface ICustomComponentProps {
+
+        /**
+         * A sample string param
+         */
+        myStringParam?: IObjectParam;
+
+        /***
+         * A sample object param
+         */
+        myObjectParam?: string;
+    }
+
+    export interface ICustomComponenState {
+    }
+
+    export class CustomComponent extends React.Component<ICustomComponentProps, ICustomComponenState> {
+        
+        public render() {
+
+            // Parse custom object
+            const myObject: IObjectParam = this.props.myObjectParam;
+
+            return <div>{this.props.myStringParam} {myObject.myProperty}</div>;
+        }
+    }
+    ```
 
 In this solution, web components are considered **stateless**, meaning they will be entirely recreated when an attribute is changed (coming from the property pane). It means you can still use an internal state in your React components but not rely on the parent context (props) since it will be recreated every time by the Handlebars template if a property pane value is updated. The `componentDidMount()` method will be called every time in this case (not `componentDidUpdate()`).
 
 * In your web component class, render your React component:
 
-```typescript
-public async connectedCallback() {
+    ```typescript
+    public async connectedCallback() {
 
-    let props = this.resolveAttributes();
-    const customComponent = <CustomComponent {...props}/>;
-    ReactDOM.render(customComponent, this);
-} 
-```
+        let props = this.resolveAttributes();
+        const customComponent = <CustomComponent {...props}/>;
+        ReactDOM.render(customComponent, this);
+    } 
+    ```
 
 The `resolveAttributes()` method will look at all `data-*` HTML attributes in your web component custom element node and return a corresponding key/value pair object with values **in their guessed type** that you can pass directly to your React component as props. By convention, web component attributes have to be passed using **camel case** to be tranformed into React component props. For instance: a `data-my-string-param` HTML attribute becomes `myStringParam` prop.
 
@@ -96,6 +96,7 @@ Supported guessed types for attributes are **boolean**, **string**, **date** and
 To pass JSON objects, you can use the `JSONstringify` Handlebars helper. If valid JSON, they will be returned as **objects** by the `resolveAttributes()` method.
 
 **Example**
+
 ```html
 <my-custom-component 
     data-my-string-param="Default value" 

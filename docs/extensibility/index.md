@@ -34,7 +34,7 @@ Each Web Part type in the solution supports several extensions or no extension a
 | **Data Visualizer** | <ul><li>Custom data sources.</li><li>Custom layouts.</li><li>Custom web components.</li><li>Custom Handlebars [customizations](https://handlebarsjs.com/api-reference/runtime.html) (ex: helpers, partials ,etc.).</li></ul>
 | **Data Filters** |  <ul><li>Custom web components (_not directly but via the 'Data Visualizer' Web Part extensibility library registration_).</li></ul>
 | **Search box** | <ul><li>Custom suggestions providers.</li></ul>
-| **Data Verticals** | None.
+| **Data Verticals** | None
 
 ### Register your extensibility library with a Web Part
 

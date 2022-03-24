@@ -56,7 +56,7 @@ export class CustomSuggestionProvider extends BaseSuggestionProvider<ICustomSugg
             hoverText: `Sample Suggestion for ${queryText}`
           },
           {
-            displayText: `PnP Office 365 CLI`,
+            displayText: `CLI for Microsoft 365`,
             groupName: 'PnP',
             iconSrc: PARKER_ICON_URL,
             onSuggestionSelected: this._onSuggestionSelected,

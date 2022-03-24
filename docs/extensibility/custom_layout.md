@@ -16,20 +16,20 @@ Same as data source, the layout creation process comes in three distinct steps:
 
 * In your extensibility library project, create a new `MyLayout.ts` TypeScript file.
 * Create an interface for your layout properties, typically the ones you want to persist in the Web Part property bag. Layout properties are isolated from the other general Web Part properties under the property `layoutProperties` in the property bag object.
-```typescript
+    ```typescript
     export interface ICustomLayoutProperties {
         myTextProperty: string;
     }
-```
+    ```
 
-!["Custom layout properties"](../assets/extensibility/layout/layout_properties.png){: .center}
+    !["Custom layout properties"](../assets/extensibility/layout/layout_properties.png){: .center}
 
 * Implement the `BaseLayout` abstract class using your properties interface:
-```typescript
+    ```typescript
     export class Customlayout extends BaseLayout<ICustomLayoutProperties> {
         ...
     }
-```
+    ```
 
 * Implement your layout logic according to the available methods and properties.
 
@@ -58,17 +58,17 @@ In your extensibility library project, create a new `custom-layout.html` HTML fi
 A `template` part, containing the HTML markup to display your data **once fetched**. This part is mandatory to display your data.
 
 ```html
-    <content id="template">
-        <!-- Your template content here -->
-    </content>
+<content id="template">
+    <!-- Your template content here -->
+</content>
 ```
 
 A `placeholder` part, containing the HTML markup to display as placeholder **while the data are getting fetched**. This part is optional.
 
 ```html
-    <content id="placeholder">
-        <!-- Your placeholder content here -->
-    </content>
+<content id="placeholder">
+    <!-- Your placeholder content here -->
+</content>
 ```
 
 > In a template, you must use Handlebars expressions to access and display your data.
@@ -88,15 +88,15 @@ In your extensibility library project, create a new `custom-layout.json` JSON fi
 **Example: iterating through all items**
 
 ```json
- {
-        "type": "Container",
-        "$data": "${data.items}", 
-        "items": [
-          {
+{
+    "type": "Container",
+    "$data": "${data.items}", 
+    "items": [
+        {
             "type": "ColumnSet",
             "columns": [
-              {
-                ...
+                {
+                    ...
 ```
 
 ### Register layout information

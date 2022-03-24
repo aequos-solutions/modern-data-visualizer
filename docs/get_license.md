@@ -36,4 +36,4 @@ Want to try the solution capabilities first? Sure! We offer a **14 days** trial 
 
 !!! warning
     - The trial license is tied to a unique tenant ID. Once expired, you can't use the solution anymore in this tenant until you purchase a valid license.
-    - Trial periods are not cumulative. However, if you need more time to evaluate our solution, simply contact us directly at [contact@aequos.ca](mailto:mdv@sword-group.com).
+    - Trial periods are not cumulative. However, if you need more time to evaluate our solution, simply contact us directly at [mdv@sword-group.com](mailto:mdv@sword-group.com).

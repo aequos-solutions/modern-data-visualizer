@@ -26,8 +26,8 @@ nav:
     - Usage: usage/data-verticals/index.md 
   - Search Box:
     - Usage: usage/search-box/index.md
-  - Group metadata editor:
-    - Usage: usage/group-tag-manager/index.md
+  - Group Metadata Editor:
+    - Usage: usage/group-metadata-editor/index.md
   - Extensibility:
     - Introduction: extensibility/index.md
     - Templating: extensibility/templating.md
@@ -76,7 +76,11 @@ extra:
   social:
     - icon: fontawesome/brands/twitter
       link: 'https://twitter.com/aequos_ca'
-    - icon: fontawesome/brands/twitter
-      link: 'www.aequos.ca'
+    - icon: octicons/globe-24
+      link: 'https://www.aequos.ca'
+    - icon: fontawesome/brands/linkedin-in
+      link: 'https://www.linkedin.com/company/aequos-ca'
+    - icon: fontawesome/brands/youtube
+      link: 'https://www.youtube.com/channel/UCzwqxmUUKF6dv-f0YhdiIsg'
 repo_url: https://github.com/aequos-solutions/aequos.github.io
 edit_uri: blob/master/docs

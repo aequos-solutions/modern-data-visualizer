@@ -43,7 +43,7 @@ Tokens related to connected Web Parts in the Data Visualizer.
 |**Token**|**Definition**|
 |:-----|:-----|
 |**{inputQueryText}**<br/> | The query value entered into a search box on a page. The value depends on the configuration of input text connection of the Data Visualizer Web Part. <br/> |
-|**{filters.&lt;FilterName&gt;.&lt;valueAsObject\|valueAsText\|fromDate\|toDate\|operator&gt;}** | The current selected filters. _'FilterName'_ corresponds to the filter name specified in the Data Filters Web Part (not the display name). The availablue values for a filter are as follow: <ul><li>`valueAsObject`: the filter value as JSON object. This value is intended to be used by custom adaptive expressions as parameter.</li><li>`valueAsText`: the filter value as text. For multi values filter, values will be separated by a comma `','`.</li><li>`fromDate`: if the filter is a **date range** template, the 'from' date selected by the user in UTC format.</li><li>`toDate`: if the filter is a **date range** template, the 'to' date selected by the user in UTC format.</li><li>`operator`: the operator configured to be used between filter values (ex: `'or'` or `'and'`.</ul></br>If no filter are selected (i.e. no values), the `{filters}` expression will be resolved as an empty string `''`. Use an adaptive expression `if(empty('{filters}')` to conditionnaly build your query acocrding to selected filters. Ex: `https://graph.microsoft.com/v1.0/groups?&${if(empty('{filters}'),'',concat("&$filter=", buildOdataFilterCondition(json('{filters}'))))}`.</br></br>**Note: this token is always parsed as an array of objects, ex `[{...}]`.** 
+|**{filters.&lt;FilterName&gt;.&lt;valueAsObject\|valueAsText\|fromDate\|toDate\|operator&gt;}** | The current selected filters. _'FilterName'_ corresponds to the filter name specified in the Data Filters Web Part (not the display name). The availablue values for a filter are as follow: <ul><li>`valueAsObject`: the filter value as JSON object. This value is intended to be used by custom adaptive expressions as parameter.</li><li>`valueAsText`: the filter value as text. For multi values filter, values will be separated by a comma `','`.</li><li>`fromDate`: if the filter is a **date range** template, the 'from' date selected by the user in UTC format.</li><li>`toDate`: if the filter is a **date range** template, the 'to' date selected by the user in UTC format.</li><li>`operator`: the operator configured to be used between filter values (ex: `'or'` or `'and'`.</ul><br />If no filter are selected (i.e. no values), the `{filters}` expression will be resolved as an empty string `''`. Use an adaptive expression `if(empty('{filters}')` to conditionnaly build your query acocrding to selected filters. Ex: `https://graph.microsoft.com/v1.0/groups?&${if(empty('{filters}'),'',concat("&$filter=", buildOdataFilterCondition(json('{filters}'))))}`.<br /><br />**Note: this token is always parsed as an array of objects, ex `[{...}]`.** 
 |**{itemsCountPerPage}** | The number of items count per page configured in the 'Data Visualizer' Web Part. Useful for the OData source to specify a `$top={itemsCountPerPage}` parameter.
 |**{startRow}** | The next start row number according to current paging. Useful for the OData source to specify a `$skipToken={startRow}` or `$skip={startRow}` parameters.
 |**{verticals.&lt;value\|name&gt;}** | If connected, get the current selected vertical tab name or associated value.
@@ -79,7 +79,7 @@ Except for `{Hub}`, these a shortands to the `{PageContext}` tokens. They return
 |**{User.Email}**  |Email address of the user who issued the query. For example, this value can be used to query content of the managed property WorkEmail.  <br/> |
 |**{User.PreferredContentLanguage}**  |Language as specified as Preferred Content Language in the profile of the user who issued the query.  <br/> |
 |**{User.PreferredDisplayLanguage}**  |Language as specified as Preferred Display Language in the profile of the user who issued the query.  <br/> |
-|**{User.\<property\>}** |Any property from the user profile of the user who issued the query — for example, `SPS-Interests`, `userprofile_guid`, `accountname`, etc. including custom properties.  <br/> |
+|**{User.&lt;property&gt;}** |Any property from the user profile of the user who issued the query — for example, `SPS-Interests`, `userprofile_guid`, `accountname`, etc. including custom properties.  <br/> |
 
 ##### Date tokens
 
@@ -88,7 +88,7 @@ Except for `{Hub}`, these a shortands to the `{PageContext}` tokens. They return
 | **{CurrentYear}** |Todays's date four digits, 2018 <br/> 
 | **{CurrentMonth}** |Today's month, 1-12 <br/> 
 | **{CurrentDate}** |Today's date, 1-31 <br/> 
-| **{Today+/- \&lt;integer value for number of days&gt;}**  <br/> |A date calculated by adding/subtracting the specified number of days to/from the date when the query is issued. Date format is YYYY-MM-DD (Ex: `{Today+5}`) <br/> 
+| **{Today}+/- &lt;integer value for number of days&gt;**  <br/> |A date calculated by adding/subtracting the specified number of days to/from the date when the query is issued. Date format is YYYY-MM-DD (Ex: `{Today}+5`) <br/> 
 
 #### SharePoint search query variables
 

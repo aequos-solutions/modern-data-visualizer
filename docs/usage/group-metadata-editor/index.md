@@ -1,4 +1,4 @@
-# Group metadata editor
+# Group Metadata Editor
 
 > This Web Part is available since the **`1.4.0`** version.
 
