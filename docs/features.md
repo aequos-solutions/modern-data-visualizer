@@ -50,7 +50,7 @@ The [PnP Modern Search v4](https://microsoft-search.github.io/pnp-modern-search/
 
 | Feature               | Description               | aequos Modern Data Visualizer     | PnP Modern Search     |
 | :-----------------:   | :---------------------:   | :-----------------------------:   | :-------------------: |
-| [Enter free text keywords](../usage/group-metadata-editor/) | Tag a specific Microsoft 365 group or team using a custom Microsoft Graph schema extension  | **<span style="color:#5dc418">Yes</span>** | No |
+| [Tag Microsoft Group / Team](../usage/group-metadata-editor/) | Tag a specific Microsoft 365 group or team using a custom Microsoft Graph schema extension  | **<span style="color:#5dc418">Yes</span>** | No |
 
 ## Extensibility
 
