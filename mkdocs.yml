@@ -6,7 +6,6 @@ nav:
     - Introduction: index.md
     - Get a license: get_license.md
     - Installation: installation.md
-    - Activate a standalone license: setup_standalone.md
     - Connections overview: getting_started/connections_chart.md
     - Features comparison with PnP Modern Search v4: features.md
     - Upgrade from PnP Modern Search v4: upgrade_from_pnp.md

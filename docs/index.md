@@ -23,7 +23,7 @@ The solution includes the following Web Parts:
 | **[Data Filters](./usage/data-filters/index.md)** | Filter and refine data displayed in 'Data Visualizer' Web Parts.
 | **[Data Verticals](./usage/data-verticals/index.md)** | Browse data as silos (i.e. tabs) from multiple data sources.
 | **[Search box](./usage/search-box/index.md)** | Let users enter free text queries sent to 'Data Visualizer' Web Parts.
-| **[Group/Team Metadata Editor](./usage/group-metadata-editor/index.md)** | Allows owners to classify their team/ Microsoft 365 group based on Microsoft Graph schema extensions.
+| **[Group Metadata Editor](./usage/group-metadata-editor/index.md)** | Allows owners to classify their team/ Microsoft 365 group based on Microsoft Graph schema extensions.
 
 **Overview video: let's build a complete search center**
 

@@ -1,6 +1,6 @@
 # Setup your standalone license
 
-!!! note
+<!-- !!! note
     * You must be a [tenant administrator](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-properties?tabs=sprest#setwrite-tenant-properties) to perform this operation or use an account member of the Owners group of the tenant app catalog site.
     * Tenant properties are stored in the app catalog site associated with that tenant. To set or remove a property, you have to specify the absolute URL of the app catalog site. If you specify the URL of a site different than the app catalog, you will get an access denied error.
 
@@ -26,4 +26,4 @@ To setup a standalone license, follow this procedure:
   m365 spo storageentity remove -k AEQUOS_DATAVISUALIZER_LICENSE_KEY -u https://contoso.sharepoint.com/sites/appcatalog
   ```
 
-> With a standalone license, **our license validation check endpoint won't be hit**. The validation is done in-place.
+> With a standalone license, **our license validation check endpoint won't be hit**. The validation is done in-place. -->

@@ -12,7 +12,7 @@
 
     !["App Catalog "](./assets/app_catalog.png){: .center}
 
-    > * The solution is deployed in the general Micraosoft 365 CDN meaning **we don't host any code on our side**.
+    > * The solution is deployed in the general Microsoft 365 CDN meaning **we don't host any code on our side**.
 
     > * You can choose to make the solution available in [all sites](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-scoped-deployment) or force to install an app to the site every time.
 
@@ -45,7 +45,7 @@
         | _ExternalItem.Read.All_ | Microsoft Search API
 
     !!! important "Microsoft Teams deployment"
-        If you plan to use the **aequos - Team/Group metadata editor** solution in Microsoft Teams, you must deploy the `.sppkg` file in the **tenant** app catalog and use the **"Sync to Teams"** ribbon button:
+        If you plan to use the **aequos - Group metadata editor** solution in Microsoft Teams, you must deploy the `.sppkg` file in the **Tenant** app catalog and use the **"Sync to Teams"** ribbon button:
 
         !["Sync to Teams"](./assets/sync-to-teams.png){: .center}
 
