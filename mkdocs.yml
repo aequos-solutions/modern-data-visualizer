@@ -6,7 +6,6 @@ nav:
     - Introduction: index.md
     - Get a license: get_license.md
     - Installation: installation.md
-    - Activate a standalone license: setup_standalone.md
     - Connections overview: getting_started/connections_chart.md
     - Features comparison with PnP Modern Search v4: features.md
     - Upgrade from PnP Modern Search v4: upgrade_from_pnp.md
@@ -26,6 +25,8 @@ nav:
     - Usage: usage/data-verticals/index.md 
   - Search Box:
     - Usage: usage/search-box/index.md
+  - Group Metadata Editor:
+    - Usage: usage/group-metadata-editor/index.md
   - Extensibility:
     - Introduction: extensibility/index.md
     - Templating: extensibility/templating.md
@@ -74,7 +75,11 @@ extra:
   social:
     - icon: fontawesome/brands/twitter
       link: 'https://twitter.com/aequos_ca'
-    - icon: fontawesome/brands/twitter
-      link: 'www.aequos.ca'
+    - icon: octicons/globe-24
+      link: 'https://www.aequos.ca'
+    - icon: fontawesome/brands/linkedin-in
+      link: 'https://www.linkedin.com/company/aequos-ca'
+    - icon: fontawesome/brands/youtube
+      link: 'https://www.youtube.com/channel/UCzwqxmUUKF6dv-f0YhdiIsg'
 repo_url: https://github.com/aequos-solutions/aequos.github.io
 edit_uri: blob/master/docs

@@ -5,14 +5,14 @@
 
     !["Trial license expired"](./assets/trial_error.png){: .center}
     
-    Trial periods are not cumulative. However, if you need more time to complete you evaluation simply contact us directly at [contact@aequos.ca](mailto:mdv@sword-group.com).
+    Trial periods are not cumulative. However, if you need more time to complete your evaluation simply contact us directly at [mdv@sword-group.com](mailto:mdv@sword-group.com).
 
 1. Download the latest SharePoint Framework package (**aequos-modern-data-visualizer.sppkg**) from our public [GitHub repository](https://github.com/aequos-solutions/modern-data-visualizer/releases).
 2. Add the package to your global app catalog or site collection app catalog. If you don't have an app catalog, follow this [procedure](https://docs.microsoft.com/en-us/sharepoint/use-app-catalog) to create one.
 
     !["App Catalog "](./assets/app_catalog.png){: .center}
 
-    > * The solution is deployed in the general Micraosoft 365 CDN meaning **we don't host any code on our side**.
+    > * The solution is deployed in the general Microsoft 365 CDN meaning **we don't host any code on our side**.
 
     > * You can choose to make the solution available in [all sites](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-scoped-deployment) or force to install an app to the site every time.
 
@@ -37,11 +37,21 @@
         | _User.ReadBAsic.All_ | Same as above.
         | _GroupMember.Read.All_ | To list owners and members in the Teams layout panel.
         | _Channel.ReadBasic.All_ | To list channels in the Teams layout panel.
+        | _Group.ReadWrite.All_ | To be able to update Microsoft Graph schems extensions with the Group/Team metadata editor Web Part.
         | _Files.Read.All_ | Microsoft Search API
         | _Sites.Read.All_ | Microsoft Search API
         | _Mail.Read_ | Microsoft Search API
         | _Calendars.Read_ | Microsoft Search API
-        | _ExternalItem.Read.All_ | Microsoft Search API    
+        | _ExternalItem.Read.All_ | Microsoft Search API
+
+    !!! important "Microsoft Teams deployment"
+        If you plan to use the **aequos - Group metadata editor** solution in Microsoft Teams, you must deploy the `.sppkg` file in the **Tenant** app catalog and use the **"Sync to Teams"** ribbon button:
+
+        !["Sync to Teams"](./assets/sync-to-teams.png){: .center}
+
+        Once deployed, you should see the application in the Teams application catalog:
+
+        !["Teams apps"](./assets/teams-apps.png){: .center}
    
 3. Add the Web Parts to a SharePoint and start building. Easy no?
 

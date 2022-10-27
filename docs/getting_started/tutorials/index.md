@@ -7,14 +7,15 @@ Tutorials provide complete step-by-step confgurations for common enteprise secen
 | Tutorial | Description |
 | ---------------- | ------------------|
 | [Build a complete search center](./build_complete_search_center.md) | Learn how to build a complete custom search center leveraging all components from MDV 
-| [Build a people directory using alphabetical verticals, SharePoint Search data source and adaptive expressions](./build_people_directory_graph.md) | Learn how to build a people directory for your organization usin Microsoft Graph.
+| [Build a people directory using alphabetical verticals, Microsoft Graph data source and adaptive expressions](./build_people_directory_graph.md) | Learn how to build a people directory for your organization usin Microsoft Graph.
 | [Build a people directory using alphabetical verticals and SharePoint Search data source](./build_people_directory_sharepoint_search.md) | Same as above but using SharePoint search data source.
 | [Build a teams search app using aequos MDV, Microsoft Graph extensions, and SharePoint taxonomy](./build_teams_search_portal_using_taxonomy.md) | Learn how to build a specific search interface for your Teams using custom metadata.
 | [Use taxonomy filters with SharePoint search data source](./static_taxonomy_filters_sharepoint_search.md) | Learn how to use taxonomy based filters with SharePoint search data source.
+| [Build taxonomy tag filters bar using Data Visualizer Web Part item selection capability](./build_tag_picker_item_selection.md) | Build a filter bar using taxonomy terms and item selection feature.
 
 :arrow_right: **From the PnP community**
 
-You can also refer to [scenarios](https://microsoft-search.github.io/pnp-modern-search/scenarios/) made by the community for the PnP Modern Search v4 solution.   
+You can also refer to [scenarios](https://microsoft-search.github.io/pnp-modern-search/scenarios/) made by the community for the PnP Modern Search v4 solution.
 
 ## How-Tos
 

@@ -15,7 +15,7 @@ The 'Search box' Web Part allows users to enter free text search queries connect
 | Setting | Description | Default value |
 | ------- |---------------- | ---------- |
 | **Placeholde text** | The placeholder text to display in the search box. | _"Enter your search terms..."_
-| **Send the query to a new page** | Sends the search query text to a new page. From here you can select the page URL, the open behavior and send method (URL fragment '#' or a query string parameter). | False.
+| **Send the query to a new page** | Sends the search query text to a new page. From here you can select the page URL, the open behavior and send method (URL fragment '#' or a query string parameter). The input value can be transformed before sending it to another page. {inputQueryText} is replaced with the value from the search box and [other tokens](../data-visualizer/tokens.md) are also supported. | False
 
 ### Query suggestions
 
@@ -27,9 +27,9 @@ The query suggestions allows users to easily find relevant query keywords based 
 
 | Setting | Description | Default value |
 | ------- |---------------- | ---------- |
-|**Enable query suggestions**| Enable or disable query suggestions. | False.
+|**Enable query suggestions**| Enable or disable query suggestions. | False
 |**Configure available providers** | Enable or disable the suggestions providers available for this Web Part. By default, only the _"SharePoint Static search suggestions"_ is available (disabled by default). <p align="center">[!["Search Box suggestions"](../../assets/webparts/search_box/suggestions_providers_panel.png)](../../assets/webparts/search_box/suggestions_providers_panel.png)</p> To add values for this provider, refer to the following [documentation](https://docs.microsoft.com/en-us/sharepoint/search/manage-query-suggestions) (caution: it can take up to 24h for changes to take effect). Multiple providers can be enabled at once.
-|**Number of suggestions to show per group**| The number of suggestions to show per group. | 10.
+|**Number of suggestions to show per group**| The number of suggestions to show per group. | 10
 
 ### Connections
 

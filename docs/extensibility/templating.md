@@ -14,24 +14,24 @@ In a basic customization scenario, super users and webmasters can customize exis
 
 ## Handlebars, HTML and CSS customizations
 
-> The templates and fields HTML markup is sanitized automatically preventing XSS attacks. We used [`DOMPurify`](https://github.com/cure53/DOMPurify) to do so. It means for instance, you cannot add your own `<script>` tags or inline JavaScript.
+> The templates and fields HTML markup are sanitized automatically preventing XSS attacks. We are using [`DOMPurify`](https://github.com/cure53/DOMPurify) to do so. It means, for instance, you cannot add your own `<script>` tags or inline JavaScript.
 
 ### Template structure
 
 A layout template is always split into two distinct parts:
 
 ```html
-    <content id="template">
-        <!-- Your template content here -->
-    </content>
+<content id="template">
+    <!-- Your template content here -->
+</content>
 
-    <content id="placeholder">
-        <!-- Your placeholder content here -->
-    </content>
+<content id="placeholder">
+    <!-- Your placeholder content here -->
+</content>
 ```
-- A `template` part, containing the HTML markup to display your data **once fetched**. This part is mandatory to display your data.
 
-- A `placeholder` part, containing the HTML markup to display as placeholder **while the data are getting fetched**. This part is optional.
+- A `template` part, containing the HTML markup to display your data **once fetched**. This part is mandatory to display your data
+- A `placeholder` part, containing the HTML markup to display as placeholder **while the data are getting fetched**. This part is optional
 
 Both can use Handlebars and web components (Microsoft Graph Toolkit included). 
 
@@ -49,7 +49,7 @@ The following custom helpers are available in addition to the [handlebars-helper
 `{{getUniqueCount items "<property>"}}` or  `{{getUniqueCount array}}`| Get the unique count of a property over the result set (or another array) or get the unique count of objects in an array. Example: [1,1,1,2,2,4] would return `3`. | `{{getUniqueCount [1,1,1,2,2,4]}}`
 `{{getUnique items "<property>"}}` | Return the unique values as a new array based on an array or property of an object in the array. | `{{getUnique items "NewsCategory"}}`
 `{{#group items by="<property>"}}` | Group items by a specific results property. See [https://github.com/shannonmoeller/handlebars-group-by](https://github.com/shannonmoeller/handlebars-group-by) for usage.
-| `{{slot item <property_names>}}` | Return the `<property_name>` value for the `item` object. Supports deep property paths. Supports single and multiple item properties | ex with single value: `{{slot item "property.subproperty"}}`<br>ex with multiple properties `{{slot item (JSONparse '["property1","property2"]')}}`
+| `{{slot item <property_names>}}` | Return the `<property_name>` value for the `item` object. Supports deep property paths. Supports single and multiple item properties | ex with single value: `{{slot item "property.subproperty"}}`<br />ex with multiple properties `{{slot item (JSONparse '["property1","property2"]')}}`
 | `{{getUserEmail <value>}}` | Extract the user email in a string based on a email regex  (ex: a claim). Returns the first match.| `{{getUserEmail "franck.cornu@aequosdev.onmicrosoft.com \| Franck Cornu \| 693A30232E667C6D656D626572736869707C6672616E636B2E636F726E7540616571756F736465762E6F6E6D6963726F736F66742E636F6D i:0#.f\|membership\|franck.cornu@aequosdev.onmicrosoft.com"}}`
 | `{{JSONparse <value>}}` | Parse a string value into a JSON object. Meant to be used to format helper parameters as objects instead of strings. | `{{JSONparse '["property1","property2"]')}}`
 
@@ -95,7 +95,7 @@ If you need to use current site theme colors, fonts and so on you can use the `t
                 color: {{@root.theme.palette.themePrimary}};
             }
             ...
-        </styles>
+        </style>
 
         ...
 
@@ -167,6 +167,53 @@ In the solution, you can use Graph Tookit components whitout the need to re-auth
 
 Refer to the official documentation to see [all available components](https://docs.microsoft.com/en-us/graph/toolkit/components/login). For instance, we use the Microsoft Graph Toolkit for the [people layout](../usage/data-visualizer/layouts/people.md) via `<mgt-person>`.
 
+### Build templates with item selection
+
+If your template requires items selection for dynamic filtering, you can follow these guidelines to design your template structure. The item selection feature is based on the Office Fluent UI [**Selection**](https://developer.microsoft.com/en-us/fluentui#/controls/web/selection) component and custom `data` attributes.
+
+The available data attributes you can use in your HTML template are:
+
+- `data-selection-index`: the index of the item being represented. This would go on the root of the tile/row. 
+
+- `data-selection-toggle`: this boolean flag would be set on the element which should handle toggles.This could be a checkbox or a div.
+
+- `data-selection-toggle-all`: this boolean flag indicates that clicking it should toggle all selection.
+
+- `data-selection-disabled`: allows a branch of the DOM to be marked to ignore input events that alter selections.
+
+- `data-selection-select`: allows a branch of the DOM to ensure that the current item is selected upon interaction.
+
+As item key you must use the builtin Handlebars `{{@index}}` property in the `{{#each}}` loop. Also because state managed is internaly managed by the Web Part, we provide you an Handlebars helper `isItemSelected` to help to apply styles depending of the selection (ex: apply a CSS class or not). To use this helper correctly, you must pass the current selected keys and current index to get the selected state for an item:
+
+```
+(isItemSelected @root.selectedKeys @index)
+```
+
+**Template example with item selection**
+
+```
+<style>
+
+    .selected {
+        background-color: {{@root.theme.palette.themeLighter}};
+        border: 1px solid {{@root.theme.palette.themePrimary}};
+        color: {{@root.theme.palette.themePrimary}};
+    }
+    ...
+
+</style>
+...
+{{#each data.items as |item|}}
+    <div class="{{#if (isItemSelected @root.selectedKeys @index)}}selected{{/if}}" data-is-focusable data-selection-index="{{@index}}" data-selection-toggle>
+        <span>{{slot item @root.slots.Title}}</span>
+    </div>
+{{/each}}
+```
+
+!!! note
+    - Item selection is only available with Handlebars templates (not with Adaptive Cards).
+    - If you allowed multi items selection, you must use `CTRL` + `Left click` to select multiple elements. You can also select a range of elements using `SHIFT` + `Left click`.
+
 ## Adaptive cards customizations
 
 As defined by Microsoft:
@@ -217,5 +264,3 @@ When selecting the adaptive cards mode, you can also setup styles through the [h
 From the official Microsoft documentation: 
 
 _"HostConfig is a cross-platform configuration object that specifies how an Adaptive Card Renderer generates UI."_.
-
-

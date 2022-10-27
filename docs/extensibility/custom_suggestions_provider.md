@@ -20,18 +20,18 @@ Suggestions provider creation process comes in two distinct steps:
 
 * In your extensibility library project, create a new `MyProvider.ts` TypeScript file.
 * Create an interface for your provider properties, typically the ones you want to persist in the Web Part property bag. Providers properties are isolated from the other general Web Part properties under the property `providerProperties` in the property bag object.
-```typescript
-    export interface ICustomSuggestionProviderProperties {
-        myProperty: string;
-    }
-```
+  ```typescript
+  export interface ICustomSuggestionProviderProperties {
+      myProperty: string;
+  }
+  ```
 
 * Implement the `BaseSuggestionProvider` abstract class using your properties interface:
-```typescript
-    export class CustomSuggestionProvider extends BaseSuggestionProvider<ICustomSuggestionProviderProperties> {
-        ...
-    }
-```
+  ```typescript
+  export class CustomSuggestionProvider extends BaseSuggestionProvider<ICustomSuggestionProviderProperties> {
+      ...
+  }
+  ```
 
 * Implement your provider logic according to the available methods and properties.
 
@@ -64,14 +64,14 @@ The next step is to fill information about your new suggestions provider. In the
 | `serviceKey` | A service key used to instanciate your provider class. Builtin or custom providers are instanciated dynamically using [SPFx service scopes](https://docs.microsoft.com/en-us/javascript/api/sp-core-library/servicescope?view=sp-typescript-latest).
 
 ```typescript
-  public getCustomSuggestionProviders(): ISuggestionProviderDefinition[] {
-    return [
-        {
-          name: 'Custom Suggestions Provider',
-          key: 'CustomSuggestionsProvider',
-          description: 'A demo custom suggestions provider from the extensibility library',
-          serviceKey: ServiceKey.create<ISuggestionProvider>('MyCompany:CustomSuggestionsProvider', CustomSuggestionProvider)
-      }
-    ];
-  }
+public getCustomSuggestionProviders(): ISuggestionProviderDefinition[] {
+  return [
+      {
+        name: 'Custom Suggestions Provider',
+        key: 'CustomSuggestionsProvider',
+        description: 'A demo custom suggestions provider from the extensibility library',
+        serviceKey: ServiceKey.create<ISuggestionProvider>('MyCompany:CustomSuggestionsProvider', CustomSuggestionProvider)
+    }
+  ];
+}
 ```

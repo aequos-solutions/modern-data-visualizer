@@ -41,13 +41,13 @@ For each filter, the available options are as follow:
 |------------|-----------------|
 | **Display Name** | A friendly name for the filter. |
 | **Filter field** | The internal data source field to use as filter. Here you can select a field from the current data source (if data have been already retrieved) of type your own custom value (press enter to validate).
-| **Values count** | The maximum number of values to be retrieved for a given filter. If left empty, the values count will be **defaulted to 10**
+| **Values count** | The maximum number of values to be retrieved for a given filter. If left empty, the values count will be **defaulted to 10**. This value is useful if you use SharePoint refiners with a lot of refiner values. By default SharePoint will only retreve the first **100** values. To get all refiner values, you must specify an higher number manually (maximum value is **1000**).
 | **Template** | The template to use to display filter values. See [Filter templates](#filter-templates) for more details.
 | **Filter type** | Specify if the filter is a 'static' filter or a 'refiner' filter. See [Filter types](#filter-types) for more information.
 | **Expand by default** | If applicable for the selected template, display values as expanded.
 | **Show count** | If applicable for the selected template, display counts for values.
 | **Mutli values** | If applicable for the selected template, allow selection of multiple values.
-| **Operator between values** | If multi values is selected, the operator to use between values (**OR**/**AND**). This value can be overriden manually by the user when using the following filter templates: <br><ul><li>Checkbox</li><li>Combo box</li><li>Taxonomy picker</li></ul> <br> !["Operator between filter values"](../../assets/webparts/data_filters/data_filters_filter_values_operator.png){: .center} 
+| **Operator between values** | If multi values is selected, the operator to use between values (**OR**/**AND**). This value can be overriden manually by the user when using the following filter templates: <br /><ul><li>Checkbox</li><li>Combo box</li><li>Taxonomy picker</li></ul> <br /> !["Operator between filter values"](../../assets/webparts/data_filters/data_filters_filter_values_operator.png){: .center} 
 | **Sort values by** | Sort values by name or by count.
 | **Sort direction** | Sort values in ascending/descending order.
 
@@ -57,11 +57,11 @@ The available filter templates are as follow:
 
 | **Template** | **Overview** |
 |------------|-----------------|
-| **Checkbox** | Filter results as flat list of values. <br> !["Check box"](../../assets/webparts/data_filters/checkbox_template.png)
-| **Date interval** | Filter results according to predefined date intervals (any time, last month, last 3 months, last year and older than a year. **These intevals can't be changed**. <br> !["Date interval"](../../assets/webparts/data_filters/dateinterval_template.png)
-| **Date range** | Filter values from/to a start/end date. <br> !["Date range"](../../assets/webparts/data_filters/daterange_template.png)
-| **Combo box** | Filter results as a dropdown list of values. <br> !["Combo"](../../assets/webparts/data_filters/combo_template.png)
-| **Taxonomy picker** <br> ([Configuration details](#taxonomy-picker-configuration)) | Filter results using a SharePoint taxonomy hierarchy of terms. For more information about taxonomy picker configuration, click [here](#taxonomy-picker-configuration). <br> !["Taxonomy picker overview"](../../assets/webparts/data_filters/templates/taxonomy_picker_overview.png)
+| **Checkbox** | Filter results as flat list of values. <br /> !["Check box"](../../assets/webparts/data_filters/checkbox_template.png)
+| **Date interval** | Filter results according to predefined date intervals (any time, last month, last 3 months, last year and older than a year. **These intevals can't be changed**. <br /> !["Date interval"](../../assets/webparts/data_filters/dateinterval_template.png)
+| **Date range** | Filter values from/to a start/end date. <br /> !["Date range"](../../assets/webparts/data_filters/daterange_template.png)
+| **Combo box** | Filter results as a dropdown list of values. <br /> !["Combo"](../../assets/webparts/data_filters/combo_template.png)
+| **Taxonomy picker** <br /> ([Configuration details](#taxonomy-picker-configuration)) | Filter results using a SharePoint taxonomy hierarchy of terms. For more information about taxonomy picker configuration, click [here](#taxonomy-picker-configuration). <br /> !["Taxonomy picker overview"](../../assets/webparts/data_filters/templates/taxonomy_picker_overview.png)
 
 #### <a name=taxonomy-picker-configuration>Taxonomy Picker template configuration</a>
 
@@ -99,9 +99,9 @@ To configure the taxonomyp picker, follow these steps:
 
     | **Setting** | **Description** |
     |------------|-----------------|
-    | **Item selection behavior** | Determine the default selection behavior when a user select the value. This settings can also be overriden per value for more flexibility: <br><br> !["Taxonomy picker - Selection behavior"](../../assets/webparts/data_filters/templates/taxonomy_picker_selection_behavior.png){: .center} |
-    | **Number of items per page** | Determine the number of items to show per taxonomy levels. An high value will have impact on performances. <br><br> !["Taxonomy picker - Selection behavior"](../../assets/webparts/data_filters/templates/taxonomy_picker_paging.png){: .center} |
-    | **Display search box** | Determine if a search box should appear in the picker letting users search for values. When an user search for values, the scope is restricted to term sets or anchor terms configured as root and does not apply to the whole term store. Also, the search is performed **using the current UI language**. <br><br> !["Taxonomy picker - Selection behavior"](../../assets/webparts/data_filters/templates/taxonomy_picker_search.png){: .center} |
+    | **Item selection behavior** | Determine the default selection behavior when a user select the value. This settings can also be overriden per value for more flexibility: <br /><br /> !["Taxonomy picker - Selection behavior"](../../assets/webparts/data_filters/templates/taxonomy_picker_selection_behavior.png){: .center} |
+    | **Number of items per page** | Determine the number of items to show per taxonomy levels. An high value will have impact on performances. <br /><br /> !["Taxonomy picker - Selection behavior"](../../assets/webparts/data_filters/templates/taxonomy_picker_paging.png){: .center} |
+    | **Display search box** | Determine if a search box should appear in the picker letting users search for values. When an user search for values, the scope is restricted to term sets or anchor terms configured as root and does not apply to the whole term store. Also, the search is performed **using the current UI language**. <br /><br /> !["Taxonomy picker - Selection behavior"](../../assets/webparts/data_filters/templates/taxonomy_picker_search.png){: .center} |
 
 ## <a name=filter-types>Filter types: 'Static' filter versus 'Refiner' filter</a>
 
@@ -111,7 +111,7 @@ The Web Part supports two types of filters (_'Static'_ and _'Refiner'_). However
 - **Static filter**: a 'Static' filter means the filter doesn't care about filter values sent by the data source and provides its own arbitrary values regardless of input values. A date range picker or a taxonomy picker (or any picker) are good examples of what an 'Static' filter is. Such a filter do not need necessarily need a Data Visualizer connection.
 
 !!! note
-    The filter type is indicated for each filter.<br>
+    The filter type is indicated for each filter.<br />
     !["Taxonomy picker overview"](../../assets/webparts/data_filters/filter_type.png)
 
 ## Use indexed property bag properties with taxonomny values
@@ -124,3 +124,11 @@ Using an indexed property bag value could be useful to store information about a
 
 These taxonomy values can then be used in the Data Filters Web Part using a `RefinableStringXX` search managed property to filter specific sites or elements. As an example, you can refer to the ["Create an end-to-end Office 365 groups provisioning solution"](https://github.com/pnp/tutorial-workspace-provisioning) tutorial GitHub project to leverage this format.
 
+## Filter deep linking
+
+The Data Filter Web Part supports deep linking, meaning you can preselect filters from the URL at page load. When filter values are selected, a query string parameter `f` is append to the current URL containing the current filter values data.
+
+!["Filter deep linking"](../../assets/webparts/data_filters/filter_deep_linking.png)
+
+!!! important
+    **We recommend to use the URL generated from filter values selection instead of crafting the URL manually.**

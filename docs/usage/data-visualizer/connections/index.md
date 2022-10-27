@@ -26,6 +26,8 @@ Optionaly, you can set a default query text **when there is no value for the con
 
 ## Filters Web Part
 
+Send available filters for the current data source to a Data Filters Web Part to be rendered. This is a two-ways connection and you need to connect the Data Visualizer Web Part from the Data Filter Web Part as well.
+
 For static filters (i.e. taxonomy picker and date range filter templates), this value can be used using the `{filters.<FilterName>}` token. See [tokens](../tokens.md) for more information.
 
 !["Filters"](../../../assets/webparts/data_visualizer/connections/filters.png){: .center}
@@ -39,3 +41,7 @@ When you connect the Web Part to a Data Verticals one, you must specify on which
 !["Select vertical"](../../../assets/webparts/data_visualizer/connections/select_vertical.png){: .center}
 
 This mechanism allows to build a complete search center using verticals tabs. 
+
+## Data Results
+
+{!usage/data-visualizer/connections/item-selection.md!}

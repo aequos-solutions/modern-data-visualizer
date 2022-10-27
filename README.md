@@ -9,7 +9,7 @@ It is the enhanced product version of the well known ["Pattern & Practices Moder
 
 Refer to out website to see [differences](https://www.aequos.ca/features) between the two solutions.
 
-To get a valid license, refer to the official [website](https://www.aequos.ca).
+To get a valid license, refer to the official [website](https://www.aequos.ca){:target="_blank"}.
 
 > Don't be wrong: **we still continue to invest time and support for the open-source**. If it suits your current requirement, feel free to go with it.We will never push someone to purchase the licensed solution. It is up to you.
 
