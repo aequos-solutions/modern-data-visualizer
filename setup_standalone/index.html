@@ -1006,29 +1006,43 @@
 
 
 <h1 id="setup-your-standalone-license">Setup your standalone license<a class="headerlink" href="#setup-your-standalone-license" title="Permanent link">&para;</a></h1>
-<!-- !!! note
-    * You must be a [tenant administrator](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-properties?tabs=sprest#setwrite-tenant-properties) to perform this operation or use an account member of the Owners group of the tenant app catalog site.
-    * Tenant properties are stored in the app catalog site associated with that tenant. To set or remove a property, you have to specify the absolute URL of the app catalog site. If you specify the URL of a site different than the app catalog, you will get an access denied error.
-
-To setup a standalone license, follow this procedure:
-
-1. On a remote machine that have acces to your Microsoft 365 environment, install [Microsoft 365 CLI](https://pnp.github.io/cli-microsoft365/) as an administrator:
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This license plan is not available anymore. The annual subscription is not compatible with this procedure.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>You must be a <a href="https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-properties?tabs=sprest#setwrite-tenant-properties">tenant administrator</a> to perform this operation or use an account member of the Owners group of the tenant app catalog site.</li>
+<li>Tenant properties are stored in the app catalog site associated with that tenant. To set or remove a property, you have to specify the absolute URL of the app catalog site. If you specify the URL of a site different than the app catalog, you will get an access denied error.</li>
+</ul>
+</div>
+<p>To setup a standalone license, follow this procedure:</p>
+<ol>
+<li>On a remote machine that have acces to your Microsoft 365 environment, install <a href="https://pnp.github.io/cli-microsoft365/">Microsoft 365 CLI</a> as an administrator:
   <div class="highlight"><pre><span></span><code>npm i -g @pnp/cli-microsoft365
-</code></pre></div>
-2. Connect to Microsoft 365 using the following command and and SharePoint administrator account.
+</code></pre></div></li>
+<li>Connect to Microsoft 365 using the following command and and SharePoint administrator account.
   <div class="highlight"><pre><span></span><code>m365 login
-</code></pre></div>
-2. Create a [new tenant property](https://pnp.github.io/cli-microsoft365/cmd/spo/storageentity/storageentity-set/) named `AEQUOS_DATAVISUALIZER_LICENSE_KEY` with, as value, the key you received by email after your purchase:
-        !["License mail"](./assets/license_mail.png){: .center}
+</code></pre></div></li>
+<li>
+<p>Create a <a href="https://pnp.github.io/cli-microsoft365/cmd/spo/storageentity/storageentity-set/">new tenant property</a> named <code>AEQUOS_DATAVISUALIZER_LICENSE_KEY</code> with, as value, the key you received by email after your purchase:
+        <img alt="&quot;License mail&quot;" class="center" src="../assets/license_mail.png" />
   <div class="highlight"><pre><span></span><code>m365 spo storageentity <span class="nb">set</span> -k AEQUOS_DATAVISUALIZER_LICENSE_KEY -v &lt;your_key&gt; -d <span class="s1">&#39;aequos Data Visualizer solution license key&#39;</span> -u https://contoso.sharepoint.com/sites/appcatalog
-</code></pre></div>
-  > In the URL, you must specify the address of the global app catalog in your tenant. If you don't have an app catalog, follow this [procedure](https://docs.microsoft.com/en-us/sharepoint/use-app-catalog) to create one.
-
-2. To remove an existing key, use the following command:
+</code></pre></div></p>
+<blockquote>
+<p>In the URL, you must specify the address of the global app catalog in your tenant. If you don't have an app catalog, follow this <a href="https://docs.microsoft.com/en-us/sharepoint/use-app-catalog">procedure</a> to create one.</p>
+</blockquote>
+</li>
+<li>
+<p>To remove an existing key, use the following command:
   <div class="highlight"><pre><span></span><code>m365 spo storageentity remove -k AEQUOS_DATAVISUALIZER_LICENSE_KEY -u https://contoso.sharepoint.com/sites/appcatalog
-</code></pre></div>
-
-> With a standalone license, **our license validation check endpoint won't be hit**. The validation is done in-place. -->
+</code></pre></div></p>
+</li>
+</ol>
+<blockquote>
+<p>With a standalone license, <strong>our license validation check endpoint won't be hit</strong>. The validation is done in-place.</p>
+</blockquote>
 
 
 
