@@ -73,6 +73,7 @@ The only method allowed are `GET` or `POST`. For each, you have the ability so s
 }
 ```
 
+| **Sort settings** | Configure the sort settings of the data source. The sort property should be entered manually in the Sort Field. For a particular field, you can define if it should be used for initial sort (i.e. when the results are loaded for the first time) or be only available for users in the sort control (i.e. after the results are loaded). **The sort control does not consider default sort fields (i.e. select them by default) and you can only sort on a single field at a time according the fields you defined**. If no user sort fields are defined in the configuration, the sort control won't be displayed. The Sort will only work with APIs that use "orderby" as the property for sorting. With SharePoint and Microsoft APIs, it will always work as they use "orderby" for sorting.| None.
 #### Pagination
 
 For each API type, you can control how the results will be paginated in order to improve performances.
