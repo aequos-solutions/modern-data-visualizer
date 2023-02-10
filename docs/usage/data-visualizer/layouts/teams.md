@@ -84,3 +84,7 @@ This layout uses the following data source slots by defaut:
 | ------- |---------------- | ---------- |
 | `TeamId` | The Microsoft 365 or Microsoft Teams team id. This information is used by the layout to get additional information about the team (ex: channels, member, owners)  | `id`
 | `TeamVisibility` | The team visiblity (public/private). Leave this field empty if you don't want to display visibility | `visiblity`
+
+This layout displays now the information about archive status of a Team. The information is visible with this icon !["Teams Layout - Archive icon"](../../../assets/webparts/data_visualizer/layouts/teams/archive.png){: .icon}
+
+!["Teams Layout - Archive status"](../../../assets/webparts/data_visualizer/layouts/teams/teams_layout_archived.png){: .center}
