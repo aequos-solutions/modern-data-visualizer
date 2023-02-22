@@ -9,6 +9,7 @@ Here are the list of all **reusable** web components you can use to customize yo
 - &lt;aequos-panel&gt;
 - &lt;aequos-collapsible&gt;
 - &lt;aequos-persona&gt;
+- &lt;aequos-sortfield&gt;
 
 !!! info
     All other web components you will see in builtin layout templates are considered **internal** and are not supported for custom use.
@@ -246,3 +247,28 @@ Here are the list of all **reusable** web components you can use to customize yo
         |**data-tertiary-text**|The tertiary text to display (ex: work phone).
         |**data-optional-text**|The optional text to display.
         |**data-persona-size**|The size of the persona **item** to display (no only the picture). Valid values are <ul><li>tiny = 0</li><li>extraExtraSmall = 1</li><li>extraSmall = 2</li><li>small = 3</li><li>regular = 4</li><li>large = 5</li><li>extraLarge = 6</li></ul>
+
+## Sort Field
+
+!!! example
+    === "Description"
+
+        Render a sort dropdown to sort the data results. 
+        !["File icon component"](../assets/extensibility/web_components/sortfield_component.png){: .center}
+
+    === "Usage"
+
+        ```html
+        <aequos-sortfield 
+            data-fields='["Author","Filename"]' 
+            data-default-selected-field="Author" 
+            data-default-direction="1">
+        </aequos-sortfield>
+        ```
+
+        | Parameter | Description |
+        | --------- | ----------- |
+        |**data-fields**|The array of Sort fields.
+        |**data-default-selected-field**| The default sort field.
+        |**data-default-direction**|If `1`, the default direction will be ascending, if `2`, it will be descending.
+        |**data-theme-variant**| The current Microsoft 365 theme. Itended to work with {{JSONstringify @root.theme}}.
