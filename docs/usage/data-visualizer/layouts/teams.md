@@ -1,6 +1,6 @@
 The **Teams** layout can be used to display information about Microsoft Teams teams and Microsoft 365 groups:
 
-!["Teams Layout - Overview"](../../../assets/webparts/data_visualizer/layouts/teams/teams_layout.png){: .center}
+!["Teams Layout - Overview"](../../../assets/webparts/data_visualizer/layouts/teams/teams_layout.png){: .center .img-width}
 
 | Setting | Description | Default value 
 | ------- |---------------- | ---------- |
@@ -87,4 +87,4 @@ This layout uses the following data source slots by defaut:
 
 This layout displays now the information about archive status of a Team. The information is visible with this icon !["Teams Layout - Archive icon"](../../../assets/webparts/data_visualizer/layouts/teams/archive.png){: .icon}
 
-!["Teams Layout - Archive status"](../../../assets/webparts/data_visualizer/layouts/teams/teams_layout_archived.png){: .center}
+!["Teams Layout - Archive status"](../../../assets/webparts/data_visualizer/layouts/teams/teams_layout_archived.png){: .center .img-width}
