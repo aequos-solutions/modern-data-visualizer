@@ -132,3 +132,7 @@ The Data Filter Web Part supports deep linking, meaning you can preselect filter
 
 !!! important
     **We recommend to use the URL generated from filter values selection instead of crafting the URL manually.**
+
+## Import/Export
+
+{!importExport.md!}
