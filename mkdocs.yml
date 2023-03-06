@@ -51,10 +51,12 @@ theme:
 extra_css:
   - 'assets/extra.css'
 markdown_extensions:
-  - pymdownx.tabbed          
+  - pymdownx.tabbed
   - pymdownx.superfences
   - pymdownx.critic
   - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
