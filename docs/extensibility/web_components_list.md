@@ -272,3 +272,62 @@ Here are the list of all **reusable** web components you can use to customize yo
         |**data-default-selected-field**| The default sort field.
         |**data-default-direction**|If `1`, the default direction will be ascending, if `2`, it will be descending.
         |**data-theme-variant**| The current Microsoft 365 theme. Itended to work with {{JSONstringify @root.theme}}.
+
+
+    === "Limits"
+
+        For SharePoint and Microsoft data sources, only below Sortable fields are allowed.
+
+        'AADObjectID',
+        'Author',
+        'ClassificationLastScan',
+        'ClickStreamClickedCount',
+        'ClickStreamLastClickCount',
+        'ClickStreamSkippedCount',
+        'ClickStreamSkippedCount',
+        'CommunityMembersCount',
+        'CommunityRepliesCount',
+        'CommunityTopicsCount',
+        'ComplianceTag',
+        'ComplianceTagWrittenTime',
+        'Created',
+        'DMSDocAccessRight',
+        'DMSDocAuthor',
+        'DMSDocTitle',
+        'DetectedLanguageRanking',
+        'DocumentAnalyticsLastActivityTimestamp',
+        'DocumentAnalyticsLastActivityTimestamp',
+        'EndDateOWSDATE',
+        'EventDateOWSDATE',
+        'EventRate',
+        'EventsRollUpEndDate',
+        'EventsRollUpStartDate',
+        'ExpirationTime',
+        'FileExtension',
+        'Filename',
+        'FirstName',
+        'FirstPublishedDate',
+        'IRMProtected',
+        'IRMTemplateName',
+        'InboundLinkCount',
+        'IsExternalContent',
+        'LastModifiedTime',
+        'LastModifiedTimeForRetention',
+        'LastName',
+        'LevelsToTop',
+        'ModifiedBy',
+        'ModifierAADIDs',
+        'NonWordBrokenComplianceTag',
+        'ProductCatalogGroupNumberOWSTEXT',
+        'PromotedState',
+        'QLogClicks',
+        'QLogLastClicks',
+        'QLogSiteClicks',
+        'QLogSiteLastClicks',
+        'QLogSiteSkips',
+        'QLogSkips',
+        'RecentViewCount',
+        'RecentViewCount',
+        'RecsClickedLifeTime',
+        'RecsClickedRecent'.        
+
