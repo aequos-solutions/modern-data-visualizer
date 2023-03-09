@@ -178,7 +178,7 @@ Here are the list of all **reusable** web components you can use to customize yo
 
     === "Description"
 
-        Expand/collapse the `collapsible-content` contetn when the text with `data-group-name` is clicked.
+        Expand/collapse the `collapsible-content` content when the text with `data-group-name` is clicked.
 
         !["Collapsible component"](../assets/extensibility/web_components/collapsible_component.png){: .center}
 
@@ -187,7 +187,7 @@ Here are the list of all **reusable** web components you can use to customize yo
         ```html
         <aequos-collapsible 
             data-group-name="Collapsible content" 
-            data-is-default-collapsed="true">
+            data-default-collapsed="true">
 
             <template id="collapsible-header">
                 <div>
@@ -212,7 +212,7 @@ Here are the list of all **reusable** web components you can use to customize yo
 
         | Parameter | Description |
         | --------- | ----------- |
-        |**data-is-default-collapsed**|If the content should be collapsed by default `true/false`.
+        |**data-default-collapsed**|If the content should be collapsed by default `true/false`.
         |**data-group-name** |The header group name for expand/collapse.
 
 ## Persona card
