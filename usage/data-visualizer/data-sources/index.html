@@ -17,7 +17,7 @@
         <link rel="next" href="../slots/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7bf56d0a.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -671,6 +671,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sort-settings" class="md-nav__link">
+    Sort settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pagination" class="md-nav__link">
     Pagination
   </a>
@@ -733,6 +740,13 @@
           <li class="md-nav__item">
   <a href="#how-to-use-this-data-source-a-practical-example" class="md-nav__link">
     How to use this data source: a practical example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-data-configuration" class="md-nav__link">
+    Static Data Configuration
   </a>
   
 </li>
@@ -1410,6 +1424,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sort-settings" class="md-nav__link">
+    Sort settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pagination" class="md-nav__link">
     Pagination
   </a>
@@ -1472,6 +1493,13 @@
           <li class="md-nav__item">
   <a href="#how-to-use-this-data-source-a-practical-example" class="md-nav__link">
     How to use this data source: a practical example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-data-configuration" class="md-nav__link">
+    Static Data Configuration
   </a>
   
 </li>
@@ -1588,9 +1616,9 @@
 <td><ul><li>Title</li><li>Path</li><li>DefaultEncodingURL</li><li>FileType</li><li>HitHighlightedSummary</li><li>AuthorOWSUSER</li><li>owstaxidmetadataalltagsinfo</li><li>Created</li><li>UniqueID</li><li>NormSiteID</li><li>NormListID</li><li>NormUniqueID</li><li>ContentTypeId</li><li>UserName</li><li>JobTitle</li><li>WorkPhone</ul></td>
 </tr>
 <tr>
-<td><strong>Sort order</strong></td>
-<td>The initial results sort order. You will be able to select only <em>'Sortable'</em> managed properties here. Make sure the selected  properties satisfy this criteria in the <a href="https://docs.microsoft.com/en-us/sharepoint/technical-reference/crawled-and-managed-properties-overview">SharePoint search schema</a>.</td>
-<td>None</td>
+<td><strong>Sort</strong></td>
+<td>Configure the sort settings of the data source. Properties listed in the dropdown are all static properties marked as <em>'Sortable'</em> in the <a href="https://docs.microsoft.com/sharepoint/technical-reference/">SharePoint search schema</a>. However, it does not list all possible <em>RefinableXXX</em> or aliases fields. To use them, you must enter the value manually and press 'Enter' to validate. For a particular field, you can define if it should be used for initial sort (i.e. when the results are loaded for the first time) or be only available for users in the sort control (i.e. after the results are loaded). <strong>The sort control does not consider default sort fields (i.e. select them by default) and you can only sort on a single field at a time according the fields you defined</strong>. If no user sort fields are defined in the configuration, the sort control won't be displayed.</td>
+<td>None.</td>
 </tr>
 <tr>
 <td><strong>Refinement filters</strong></td>
@@ -1678,11 +1706,6 @@
 <td><ul><li>UniqueId</li><li>EncodedAbsUrl</li><li>FileRef</li><li>File_x0020_Type</li><li>FileLeafRef</li><li>Name</li><li>Author</li><li>Created</li></ul></td>
 </tr>
 <tr>
-<td><strong>Order by field</strong></td>
-<td>An optional field to sort results. If a field is selected, you have the option to select ascending or descending order.</td>
-<td>None</td>
-</tr>
-<tr>
 <td><strong>Search within folders</strong></td>
 <td>Enable this option if you want to search in folders recursively in your list or document library.</td>
 <td>False</td>
@@ -1691,6 +1714,11 @@
 <td><strong>Filters</strong></td>
 <td>The filter condition builder. From here you can select: <br /><p align="center"><img alt="&quot;Filter builder&quot;" src="../../../assets/webparts/data_visualizer/caml/filter_builder.png" /></p><br /><ul><li><b>Field</b>: the list to apply the condition</li><li><b>Operator</b>: the operator to use. Supported operators are <em>"Equals,Does not equal, Is greater than, Is less than, Is grater or equal to, Is less or equal to, Is null, Is not null, Begins with and Contains"</em>.<strong>Operator choices are automatically adjusted regarding the selected field type.</strong></li><li><b>Value</b>: the value to use for the condition. You can use a plain text/date/taxonomy value here (depending of the selected field type) or use a dynamic token. For the second option, enable the corresponding checkbox to have access to the dynamic tokens menu. Notice that not all available tokens are listed here. If the token you want to use is not is the list, you can add it using the <em>'Custom value'</em> option and press enter. All supported tokens can be found <a href="../tokens/">here</a></li></ul></td>
 <td></td>
+</tr>
+<tr>
+<td><strong>Sort</strong></td>
+<td>Configure the sort settings of the data source. The sort property can be selected from the dropdown. For a particular field, you can define if it should be used for initial sort (i.e. when the results are loaded for the first time) or be only available for users in the sort control (i.e. after the results are loaded). <strong>The sort control does not consider default sort fields (i.e. select them by default) and you can only sort on a single field at a time according the fields you defined</strong>. If no user sort fields are defined in the configuration, the sort control won't be displayed.</td>
+<td>None.</td>
 </tr>
 </tbody>
 </table>
@@ -1769,6 +1797,8 @@
 <span class="w">    </span><span class="err">...</span>
 <span class="p">}</span>
 </code></pre></div>
+<h4 id="sort-settings">Sort settings<a class="headerlink" href="#sort-settings" title="Permanent link">&para;</a></h4>
+<p>Configure the sort settings of the data source. The sort property should be entered manually in the Sort Field. For a particular field, you can define if it should be used for initial sort (i.e. when the results are loaded for the first time) or be only available for users in the sort control (i.e. after the results are loaded). <strong>The sort control does not consider default sort fields (i.e. select them by default) and you can only sort on a single field at a time according the fields you defined</strong>. If no user sort fields are defined in the configuration, the sort control won't be displayed. The Sort will only work with APIs that use "orderby" as the property for sorting. With SharePoint and Microsoft APIs, it will always work as they use "orderby" for sorting.</p>
 <h4 id="pagination">Pagination<a class="headerlink" href="#pagination" title="Permanent link">&para;</a></h4>
 <p>For each API type, you can control how the results will be paginated in order to improve performances.</p>
 <p><img alt="&quot;OData paging" class="center" src="../../../assets/webparts/data_visualizer/odata/paging_options.png" /></p>
@@ -1843,6 +1873,23 @@ or
 <span class="w">    </span><span class="nt">&quot;numberOfLinks&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
+<h4 id="static-data-configuration">Static Data Configuration<a class="headerlink" href="#static-data-configuration" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sort</strong></td>
+<td>Configure the sort settings of the data source. The sort property should be entered manually in the Sort Field. For a particular field, you can define if it should be used for initial sort (i.e. when the results are loaded for the first time) or be only available for users in the sort control (i.e. after the results are loaded). <strong>The sort control does not consider default sort fields (i.e. select them by default) and you can only sort on a single field at a time according the fields you defined</strong>. If no user sort fields are defined in the configuration, the sort control won't be displayed. The Sort will work for 'Text' and 'Number' fields only.</td>
+<td>None.</td>
+</tr>
+</tbody>
+</table>
 <p>Now to consume this data, you can either start from an existing layout, or use a custom one. See the <a href="../../../extensibility/templating/">templating documentation</a> to know more.</p>
 <h3 id="microsoft-search">Microsoft Search<a class="headerlink" href="#microsoft-search" title="Permanent link">&para;</a></h3>
 <p>The <em>'Microsoft Search'</em> data source retrieve items from the Microsoft search engine.</p>
@@ -1867,12 +1914,13 @@ or
 <td>false</td>
 </tr>
 <tr>
-<td><strong>Sort order</strong></td>
-<td>The initial sort order for the results. Sorting is supported only for SharePoint and OneDrive items. The property to be sorted on should be Sortable in the search schema.</td>
-<td>ascending</td>
+<td><strong>Sort</strong></td>
+<td>Configure the sort settings of the data source. Properties listed in the dropdown are all static properties marked as <em>'Sortable'</em> in the <a href="https://docs.microsoft.com/sharepoint/technical-reference/">SharePoint search schema</a>. However, it does not list all possible <em>RefinableXXX</em> or aliases fields. To use them, you must enter the value manually and press 'Enter' to validate. For a particular field, you can define if it should be used for initial sort (i.e. when the results are loaded for the first time) or be only available for users in the sort control (i.e. after the results are loaded). <strong>The sort control does not consider default sort fields (i.e. select them by default) and you can only sort on a single field at a time according the fields you defined</strong>. If no user sort fields are defined in the configuration, the sort control won't be displayed.</td>
+<td>None.</td>
 </tr>
 </tbody>
 </table>
+<!-- | **Sort order** | The initial sort order for the results. Sorting is supported only for SharePoint and OneDrive items. The property to be sorted on should be Sortable in the search schema. | ascending -->
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Filters (aka 'refiners') are only available with the <strong>beta</strong> endpoint.</p>
@@ -2072,7 +2120,7 @@ or
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fc8c2696.min.js"></script>
       
     
   </body>

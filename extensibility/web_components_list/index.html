@@ -17,7 +17,7 @@
         <link rel="next" href="../../getting_started/tutorials/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.402914a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7bf56d0a.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -1036,6 +1036,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sort-field" class="md-nav__link">
+    Sort Field
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1141,6 +1148,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sort-field" class="md-nav__link">
+    Sort Field
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1169,6 +1183,7 @@
 <li>&lt;aequos-panel&gt;</li>
 <li>&lt;aequos-collapsible&gt;</li>
 <li>&lt;aequos-persona&gt;</li>
+<li>&lt;aequos-sortfield&gt;</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1452,13 +1467,13 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Description</label><label for="__tabbed_6_2">Usage</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Expand/collapse the <code>collapsible-content</code> contetn when the text with <code>data-group-name</code> is clicked.</p>
+<p>Expand/collapse the <code>collapsible-content</code> content when the text with <code>data-group-name</code> is clicked.</p>
 <p><img alt="&quot;Collapsible component&quot;" class="center" src="../../assets/extensibility/web_components/collapsible_component.png" /></p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">aequos-collapsible</span> 
     <span class="na">data-group-name</span><span class="o">=</span><span class="s">&quot;Collapsible content&quot;</span> 
-    <span class="na">data-is-default-collapsed</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>
+    <span class="na">data-default-collapsed</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">template</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;collapsible-header&quot;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1489,7 +1504,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>data-is-default-collapsed</strong></td>
+<td><strong>data-default-collapsed</strong></td>
 <td>If the content should be collapsed by default <code>true/false</code>.</td>
 </tr>
 <tr>
@@ -1555,6 +1570,107 @@
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
+</div>
+<h2 id="sort-field">Sort Field<a class="headerlink" href="#sort-field" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Description</label><label for="__tabbed_8_2">Usage</label><label for="__tabbed_8_3">Limits</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Render a sort dropdown to sort the data results. 
+<img alt="&quot;File icon component&quot;" class="center" src="../../assets/extensibility/web_components/sortfield_component.png" /></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">aequos-sortfield</span> 
+    <span class="na">data-fields</span><span class="o">=</span><span class="s">&#39;[&quot;Author&quot;,&quot;Filename&quot;]&#39;</span> 
+    <span class="na">data-default-selected-field</span><span class="o">=</span><span class="s">&quot;Author&quot;</span> 
+    <span class="na">data-default-direction</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">aequos-sortfield</span><span class="p">&gt;</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>data-fields</strong></td>
+<td>The array of Sort fields.</td>
+</tr>
+<tr>
+<td><strong>data-default-selected-field</strong></td>
+<td>The default sort field.</td>
+</tr>
+<tr>
+<td><strong>data-default-direction</strong></td>
+<td>If <code>1</code>, the default direction will be ascending, if <code>2</code>, it will be descending.</td>
+</tr>
+<tr>
+<td><strong>data-theme-variant</strong></td>
+<td>The current Microsoft 365 theme. Itended to work with {{JSONstringify @root.theme}}.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p>For SharePoint and Microsoft data sources, only below Sortable fields are allowed.</p>
+<p>'AADObjectID',
+'Author',
+'ClassificationLastScan',
+'ClickStreamClickedCount',
+'ClickStreamLastClickCount',
+'ClickStreamSkippedCount',
+'ClickStreamSkippedCount',
+'CommunityMembersCount',
+'CommunityRepliesCount',
+'CommunityTopicsCount',
+'ComplianceTag',
+'ComplianceTagWrittenTime',
+'Created',
+'DMSDocAccessRight',
+'DMSDocAuthor',
+'DMSDocTitle',
+'DetectedLanguageRanking',
+'DocumentAnalyticsLastActivityTimestamp',
+'DocumentAnalyticsLastActivityTimestamp',
+'EndDateOWSDATE',
+'EventDateOWSDATE',
+'EventRate',
+'EventsRollUpEndDate',
+'EventsRollUpStartDate',
+'ExpirationTime',
+'FileExtension',
+'Filename',
+'FirstName',
+'FirstPublishedDate',
+'IRMProtected',
+'IRMTemplateName',
+'InboundLinkCount',
+'IsExternalContent',
+'LastModifiedTime',
+'LastModifiedTimeForRetention',
+'LastName',
+'LevelsToTop',
+'ModifiedBy',
+'ModifierAADIDs',
+'NonWordBrokenComplianceTag',
+'ProductCatalogGroupNumberOWSTEXT',
+'PromotedState',
+'QLogClicks',
+'QLogLastClicks',
+'QLogSiteClicks',
+'QLogSiteLastClicks',
+'QLogSiteSkips',
+'QLogSkips',
+'RecentViewCount',
+'RecentViewCount',
+'RecsClickedLifeTime',
+'RecsClickedRecent'.        </p>
 </div>
 </div>
 </div>
@@ -1647,7 +1763,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fc8c2696.min.js"></script>
       
     
   </body>

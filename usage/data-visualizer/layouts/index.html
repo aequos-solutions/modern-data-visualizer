@@ -17,7 +17,7 @@
         <link rel="next" href="../connections/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7bf56d0a.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -1346,7 +1346,7 @@
 <tbody>
 <tr>
 <td><strong>Manage columns</strong></td>
-<td>Allows you to build you own table view by adding or removing columns dynamically. For each column, you get the following options:<br /><p align="center"><a href="../../../assets/webparts/data_visualizer/layouts/details_list_fields.png"><img alt="&quot;Manage columns&quot;" src="../../../assets/webparts/data_visualizer/layouts/details_list_fields.png" /></a></p><ul><li><strong>Sort order</strong>: the order of the column in the table.</li><li><strong>Column name</strong>: the column friendly name to display.</li><li><strong>Column value</strong>: you can choose here either a field from the data source current results set (from the list or as free text) without any transformation or use an Handlebars expression by clicking on the checkbox next to it. In this case, all Handlebars helpers from the main template are available and you can also add you own HTML markup in the column value. For HTML fields you can use the special variable <code>@root.theme</code> to use theme colors (ex: <code>@root.theme.palette.themePrimary</code>).<br /><img alt="Handlebars Expression" src="../../../assets/webparts/data_visualizer/layouts/details_list_hb_expr.png" /><br /><br /><img alt="Handlebars Expression 2" src="../../../assets/webparts/data_visualizer/layouts/details_list_hb_expr2.png" /></li><li><strong>Minimum width in px</strong>: the minimum width of the column in pixels.</li><li><strong>Maximum width in px</strong>: the maximum width of the column in pixels.</li><li><strong>Sortable</strong>: allows you to sort column values alphabetically when the column header is clicked (ascending or descending). The sort is done statically on the current page results set and works only when the column value is not an Handlebars expression.</li><li><strong>Resizable</strong>: allows you to resize the column dynamically in display mode.</li><li><strong>Multiline</strong>: if the column column should be multiline. By default only ellipsis (...) will be display for larger text.</li></ul></td>
+<td>Allows you to build you own table view by adding or removing columns dynamically. For each column, you get the following options:<br><p align="center"><a href="../../../assets/webparts/search-results/layouts/details_list_fields.png"><img alt="&quot;Manage columns&quot;" src="../../../assets/webparts/search-results/layouts/details_list_fields.png" /></a></p><ul><li><strong>Sort order</strong>: the order of the column in the table.</li><li><strong>Column name</strong>: the column friendly name to display.</li><li><strong>Column value</strong>: you can choose here either a field from the data source current results set (from the list or as free text) without any transformation or use an Handlebars expression by clicking on the checkbox next to it. In this case, all Handlebars helpers from the main template are available and you can also add you own HTML markup in the column value. For HTML fields you can use the special variable <code>@root.theme</code> to use theme colors (ex: <code>@root.theme.palette.themePrimary</code>).<br>You can specify a different field for sorting when using an Handlebars expression by specifying the field from the separate dropdown.<br><img alt="Handlebars Expression" src="../../../assets/webparts/search-results/layouts/details_list_hb_expr.png" /><br><br><img alt="Handlebars Expression 2" src="../../../assets/webparts/search-results/layouts/details_list_hb_expr2.png" /></li><li><strong>Minimum width in px</strong>: the minimum width of the column in pixels.</li><li><strong>Maximum width in px</strong>: the maximum width of the column in pixels.</li><li><strong>Sortable</strong>: allows you to sort column values according to the <strong>data source sort settings</strong>. It means you must first configure the sort setting at data source level with option <em>'User sort'</em> to <code>true</code> to see them in the details list columns configuration. Sort is perfromed one column at a time.</li><li><strong>Resizable</strong>: allows you to resize the column dynamically in display mode.</li><li><strong>Multiline</strong>: if the column column should be multiline. By default only ellipsis (...) will be display for larger text.</li></ul></td>
 <td></td>
 </tr>
 <tr>
@@ -1487,7 +1487,7 @@
 More information <a href="https://docs.microsoft.com/en-us/graph/toolkit/components/person-card">here</a>.</p>
 <h3 id="teams">Teams<a class="headerlink" href="#teams" title="Permanent link">&para;</a></h3>
 <p>The <strong>Teams</strong> layout can be used to display information about Microsoft Teams teams and Microsoft 365 groups:</p>
-<p><img alt="&quot;Teams Layout - Overview&quot;" class="center" src="../../../assets/webparts/data_visualizer/layouts/teams/teams_layout.png" /></p>
+<p><img alt="&quot;Teams Layout - Overview&quot;" class="center img-width" src="../../../assets/webparts/data_visualizer/layouts/teams/teams_layout.png" /></p>
 <table>
 <thead>
 <tr>
@@ -1611,6 +1611,8 @@ More information <a href="https://docs.microsoft.com/en-us/graph/toolkit/compone
 </tr>
 </tbody>
 </table>
+<p>This layout displays now the information about archive status of a Team. The information is visible with this icon <img alt="&quot;Teams Layout - Archive icon&quot;" class="icon" src="../../../assets/webparts/data_visualizer/layouts/teams/archive.png" /></p>
+<p><img alt="&quot;Teams Layout - Archive status&quot;" class="center img-width" src="../../../assets/webparts/data_visualizer/layouts/teams/teams_layout_archived.png" /></p>
 <h3 id="debug">Debug<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h3>
 <p>The 'debug' layout allows you to see all relevant data used by layout templates or data sources during render.</p>
 <p><img alt="&quot;Debug layout&quot;" class="center" src="../../../assets/webparts/data_visualizer/layouts/debug_layout.png" /> </p>
@@ -1810,7 +1812,7 @@ More information <a href="https://docs.microsoft.com/en-us/graph/toolkit/compone
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fc8c2696.min.js"></script>
       
     
   </body>
