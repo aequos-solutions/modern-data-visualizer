@@ -9,6 +9,7 @@ Here are the list of all **reusable** web components you can use to customize yo
 - &lt;aequos-panel&gt;
 - &lt;aequos-collapsible&gt;
 - &lt;aequos-persona&gt;
+- &lt;aequos-sortfield&gt;
 
 !!! info
     All other web components you will see in builtin layout templates are considered **internal** and are not supported for custom use.
@@ -178,7 +179,7 @@ Here are the list of all **reusable** web components you can use to customize yo
 
     === "Description"
 
-        Expand/collapse the `collapsible-content` contetn when the text with `data-group-name` is clicked.
+        Expand/collapse the `collapsible-content` content when the text with `data-group-name` is clicked.
 
         !["Collapsible component"](../assets/extensibility/web_components/collapsible_component.png){: .center}
 
@@ -187,7 +188,7 @@ Here are the list of all **reusable** web components you can use to customize yo
         ```html
         <aequos-collapsible 
             data-group-name="Collapsible content" 
-            data-is-default-collapsed="true">
+            data-default-collapsed="true">
 
             <template id="collapsible-header">
                 <div>
@@ -212,7 +213,7 @@ Here are the list of all **reusable** web components you can use to customize yo
 
         | Parameter | Description |
         | --------- | ----------- |
-        |**data-is-default-collapsed**|If the content should be collapsed by default `true/false`.
+        |**data-default-collapsed**|If the content should be collapsed by default `true/false`.
         |**data-group-name** |The header group name for expand/collapse.
 
 ## Persona card
@@ -246,3 +247,87 @@ Here are the list of all **reusable** web components you can use to customize yo
         |**data-tertiary-text**|The tertiary text to display (ex: work phone).
         |**data-optional-text**|The optional text to display.
         |**data-persona-size**|The size of the persona **item** to display (no only the picture). Valid values are <ul><li>tiny = 0</li><li>extraExtraSmall = 1</li><li>extraSmall = 2</li><li>small = 3</li><li>regular = 4</li><li>large = 5</li><li>extraLarge = 6</li></ul>
+
+## Sort Field
+
+!!! example
+    === "Description"
+
+        Render a sort dropdown to sort the data results. 
+        !["File icon component"](../assets/extensibility/web_components/sortfield_component.png){: .center}
+
+    === "Usage"
+
+        ```html
+        <aequos-sortfield 
+            data-fields='["Author","Filename"]' 
+            data-default-selected-field="Author" 
+            data-default-direction="1">
+        </aequos-sortfield>
+        ```
+
+        | Parameter | Description |
+        | --------- | ----------- |
+        |**data-fields**|The array of Sort fields.
+        |**data-default-selected-field**| The default sort field.
+        |**data-default-direction**|If `1`, the default direction will be ascending, if `2`, it will be descending.
+        |**data-theme-variant**| The current Microsoft 365 theme. Itended to work with {{JSONstringify @root.theme}}.
+
+
+    === "Limits"
+
+        For SharePoint and Microsoft data sources, only below Sortable fields are allowed.
+
+        'AADObjectID',
+        'Author',
+        'ClassificationLastScan',
+        'ClickStreamClickedCount',
+        'ClickStreamLastClickCount',
+        'ClickStreamSkippedCount',
+        'ClickStreamSkippedCount',
+        'CommunityMembersCount',
+        'CommunityRepliesCount',
+        'CommunityTopicsCount',
+        'ComplianceTag',
+        'ComplianceTagWrittenTime',
+        'Created',
+        'DMSDocAccessRight',
+        'DMSDocAuthor',
+        'DMSDocTitle',
+        'DetectedLanguageRanking',
+        'DocumentAnalyticsLastActivityTimestamp',
+        'DocumentAnalyticsLastActivityTimestamp',
+        'EndDateOWSDATE',
+        'EventDateOWSDATE',
+        'EventRate',
+        'EventsRollUpEndDate',
+        'EventsRollUpStartDate',
+        'ExpirationTime',
+        'FileExtension',
+        'Filename',
+        'FirstName',
+        'FirstPublishedDate',
+        'IRMProtected',
+        'IRMTemplateName',
+        'InboundLinkCount',
+        'IsExternalContent',
+        'LastModifiedTime',
+        'LastModifiedTimeForRetention',
+        'LastName',
+        'LevelsToTop',
+        'ModifiedBy',
+        'ModifierAADIDs',
+        'NonWordBrokenComplianceTag',
+        'ProductCatalogGroupNumberOWSTEXT',
+        'PromotedState',
+        'QLogClicks',
+        'QLogLastClicks',
+        'QLogSiteClicks',
+        'QLogSiteLastClicks',
+        'QLogSiteSkips',
+        'QLogSkips',
+        'RecentViewCount',
+        'RecentViewCount',
+        'RecsClickedLifeTime',
+        'RecsClickedRecent'.        
+
