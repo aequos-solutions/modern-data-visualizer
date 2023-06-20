@@ -29,7 +29,3 @@ The options for a vertical are as follow:
 > The 'Data Verticals' Web Part does not need to be connected to any Web Part. However, it is meant to be used by a 'Data Visualizer' Web Part to get it work. More info about configuration [here](../data-visualizer/connections/index.md).
 
 > We recommend to configure the 'Data Visualizer' Web Parts that will use verticals **before connecting them to the verticals Web Part**.
-
-## Import/Export
-
-{!importExport.md!}

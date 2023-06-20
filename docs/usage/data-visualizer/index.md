@@ -19,7 +19,3 @@ The data visualizer Web Part configuration is divided into four parts each corre
 2. [**Layouts**](./layouts/index.md): How to render them.
 3. [**Connections**](./connections/index.md): How the Web Part will be connected to others in the page.
 3. [**Extensibility**](../../extensibility/index.md): How the Web Part will be connected to others in the page.
-
-## Import/Export
-
-{!importExport.md!}
