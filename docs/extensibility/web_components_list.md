@@ -331,3 +331,26 @@ Here are the list of all **reusable** web components you can use to customize yo
         'RecsClickedLifeTime',
         'RecsClickedRecent'.        
 
+## Export Results
+
+!!! example
+    === "Description"
+
+        Render an export dropdown to download the data results.
+        !["File icon component"](../assets/extensibility/web_components/export_component.png){: .center}
+
+    === "Usage"
+
+        ```html
+                    <aequos-export 
+                        data-columns-configuration="[{name: 'Title', value: 'Title', useHandlebarsExpr: true},{name: 'Created', value: 'Created', useHandlebarsExpr: true}]"
+                        data-data-source-key="SharePointSearch"
+                    >
+                    </aequos-export>        
+        
+        ```
+
+        | Parameter | Description |
+        | --------- | ----------- |
+        |**data-columns-configuration**|The array of Export fields.
+        |**data-data-source-key**| The data source key.
