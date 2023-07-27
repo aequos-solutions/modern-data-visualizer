@@ -10,6 +10,7 @@ Here are the list of all **reusable** web components you can use to customize yo
 - &lt;aequos-collapsible&gt;
 - &lt;aequos-persona&gt;
 - &lt;aequos-sortfield&gt;
+- &lt;aequos-export&gt;
 
 !!! info
     All other web components you will see in builtin layout templates are considered **internal** and are not supported for custom use.
